@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+caption {
+  font-weight: normal;
+}
+
+img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.btnBlue {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.btnYellow {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+:root {
+  --border-radius: 10px;
+  --font-squada: 'Squada One', cursive;
+  --font-family: 'Poppins', sans-serif;
+  --color-orange: #f76b1c;
+}

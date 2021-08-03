@@ -1,0 +1,114 @@
+.banner {
+  background-image: url('../../assets/services_banner 1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 750px;
+}
+
+.logoService {
+  background-image: url('../../assets/logo-service.png');
+  background-size: cover;
+  width: 125px;
+  height: 117px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.phone {
+  background-image: url('../../assets/phone.svg');
+  background-size: cover;
+
+  width: 70px;
+  position: relative;
+  right: 40%;
+  height: 70px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.content {
+  text-align: center;
+  padding-top: 165px;
+}
+
+.title {
+  font-style: normal;
+  font-family: 'Squada One', cursive;
+  font-weight: normal;
+  font-size: 65px;
+  line-height: 68px;
+
+  text-align: center;
+
+  color: #323131;
+}
+
+.description {
+  font-family: 'Poppins', sans-serif;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #323131;
+}
+
+.buttons {
+  margin-bottom: 128px;
+}
+
+.btnBlue {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.btnYellow {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.call {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  width: 518px;
+  height: 166px;
+  padding: 39px 58px;
+  margin: 0 auto;
+}
+
+.call h3 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 52px;
+  text-align: left;
+  color: #323131;
+}
+
+.call p {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 52px;
+
+  color: #323131;
+}

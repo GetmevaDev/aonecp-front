@@ -1,0 +1,147 @@
+.choose {
+  margin-top: 100px;
+  display: flex;
+  background: #f6f6f6;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.cardTitle {
+  font-weight: normal;
+  font-size: 39px;
+  line-height: 48px;
+  font-family: 'Squada One', cursive;
+
+  color: #323131;
+}
+
+.cardTitle b {
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 48px;
+  font-family: 'Squada One', cursive;
+
+  color: #f76b1c;
+}
+
+.handImg {
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.rightblock {
+  margin-left: 120px;
+}
+
+.title {
+  font-family: 'Squada One', cursive;
+
+  font-size: 60px;
+  line-height: 48px;
+
+  color: #323131;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+  width: 60%;
+  color: #323131;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  position: absolute;
+  width: 35%;
+  left: 280px;
+  bottom: -799px;
+  padding: 36px 52px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.btnBlue {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.btnYellow {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.leftBlock {
+  margin-top: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleLeft {
+  font-size: 60px;
+  line-height: 48px;
+  font-family: 'Squada One', cursive;
+
+  color: #323131;
+}
+
+.descriptionLeft {
+  font-size: 16px;
+  line-height: 26px;
+  width: 50%;
+  color: #323131;
+}
+
+.imgYoung {
+  position: relative;
+}
+
+.img {
+  border-radius: var(--border-radius);
+}
+
+.cardRight {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  position: absolute;
+  width: 369px;
+  margin: 0 auto;
+  top: 2290px;
+  right: 360px;
+  padding: 36px 52px;
+}
+
+.cardTitleRight {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #323131;
+}

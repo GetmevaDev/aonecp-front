@@ -1,0 +1,20 @@
+.pricing {
+  margin-top: 25px;
+  background-image: url('../../assets/pricing.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 418px;
+}
+
+.title {
+  font-family: 'Squada One', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 65px;
+  line-height: 68px;
+  padding-top: 185px;
+  text-align: center;
+
+  color: #323131;
+}

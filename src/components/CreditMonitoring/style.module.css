@@ -1,0 +1,22 @@
+.credit {
+  margin-top: 100px;
+  background: #f6f6f6;
+
+  border-radius: 10px;
+}
+
+.credit p {
+  padding: 90px 83px 0;
+  font-size: 38px;
+  line-height: 48px;
+
+  font-family: var(--font-squada);
+  text-align: center;
+
+  color: #323131;
+}
+
+.credit div {
+  text-align: center;
+  padding-bottom: 100px;
+}

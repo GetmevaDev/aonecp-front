@@ -1,0 +1,59 @@
+.benefits {
+  margin-top: 110px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding-left: 78px;
+}
+
+.benefitsBackImg {
+  background-image: url('../../assets/logo-gray.svg');
+  background-size: contain;
+  width: 573px;
+  height: 509px;
+  position: absolute;
+
+  bottom: -610px;
+  right: 300px;
+
+  background-repeat: no-repeat;
+}
+
+.titleBenefits {
+  font-family: 'Squada One', cursive;
+
+  font-size: 70px;
+  line-height: 48px;
+  padding-top: 100px;
+  color: #323131;
+}
+
+.paragraph {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 58px;
+  position: relative;
+  padding-left: 50px;
+  color: #323131;
+  font-family: 'Poppins', sans-serif;
+}
+
+.paragraph svg {
+  position: absolute;
+  left: 6px;
+  top: 12px;
+}
+
+.btnBlue {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: none;
+  outline: none;
+  margin-bottom: 97px;
+  color: #ffffff;
+}

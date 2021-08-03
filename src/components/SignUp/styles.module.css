@@ -1,0 +1,73 @@
+.easyTitle {
+  font-family: var(--font-squada);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 48px;
+
+  text-align: center;
+
+  color: #323131;
+}
+
+.easyDesc {
+  font-family: var(--font-family);
+
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 37px;
+  text-align: center;
+
+  color: #323131;
+}
+
+.color {
+  color: var(--color-orange);
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  flex-basis: 304px;
+  height: 304px;
+  margin-top: 30px;
+  text-align: center;
+  height: 60%;
+}
+
+.cardInner {
+}
+
+.cardSvg {
+  padding-top: 73px;
+  text-align: center;
+}
+.cards {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-left: 10px;
+}
+
+.cardDesc {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  font-family: var(--font-family);
+  color: #323131;
+  padding-top: 44px;
+  padding-bottom: 45px;
+}
+
+.cardsOrange {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
