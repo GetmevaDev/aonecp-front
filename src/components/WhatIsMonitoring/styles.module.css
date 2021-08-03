@@ -1,0 +1,38 @@
+.monitoring {
+  margin-top: 100px;
+}
+
+.monitoringBlock {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.monitoringBlockRight {
+  text-align: left;
+  margin-left: 120px;
+}
+
+.monitoringTitleLeft {
+  margin-right: 120px;
+  text-align: right;
+}
+
+.monitoringDescLeft {
+  text-align: right;
+  margin-right: 120px;
+}
+
+.monitoringTitle {
+  font-size: 60px;
+  line-height: 48px;
+
+  color: #323131;
+}
+
+.monitoringDesc {
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #323131;
+}

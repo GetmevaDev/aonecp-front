@@ -6,3 +6,4 @@ export { default as ChooseUs } from './ChooseUs';
 export { default as BannerProps } from './BannerProps';
 export { default as SignUp } from './SignUp';
 export { default as CreditMonitoring } from './CreditMonitoring';
+export { default as AskQuestion } from './AskQuestion';

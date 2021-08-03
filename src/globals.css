@@ -92,6 +92,23 @@ button {
   color: #ffffff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Squada One', cursive;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  border-radius: 10px;
+}
+
 :root {
   --border-radius: 10px;
   --font-squada: 'Squada One', cursive;

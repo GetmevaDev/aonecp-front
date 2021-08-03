@@ -1,0 +1,42 @@
+.ask {
+  margin-top: 80 px;
+}
+
+.title {
+  font-family: var(--font-squada);
+  font-size: 60px;
+  line-height: 48px;
+
+  text-align: center;
+
+  color: #323131;
+}
+
+.freq {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.freqLeftInner {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 10px;
+  padding: 21px 50px;
+  margin-top: 40px;
+}
+
+.freqLeft {
+  width: 28%;
+}
+
+.freqLeft a {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #ffffff;
+}
+
+.freqRight {
+  width: 63%;
+}
