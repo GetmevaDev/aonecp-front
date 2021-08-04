@@ -15,8 +15,8 @@ const Benefits = () => {
         <div className={styles.benefits}>
           <h1 className={styles.titleBenefits}>Benefits</h1>
           {paragraph.map(({ title }, index) => (
-            <div className={styles.benefitsLeft}>
-              <p className={styles.paragraph} key={index}>
+            <div className={styles.benefitsLeft} key={index}>
+              <p className={styles.paragraph}>
                 {title}
                 <svg
                   width="35"
@@ -36,8 +36,8 @@ const Benefits = () => {
                       x2="15.3648"
                       y2="47.3844"
                       gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#FBDA61" />
-                      <stop offset="1" stop-color="#F76B1C" />
+                      <stop stopColor="#FBDA61" />
+                      <stop offset="1" stopColor="#F76B1C" />
                     </linearGradient>
                   </defs>
                 </svg>
