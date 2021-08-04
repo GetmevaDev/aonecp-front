@@ -8,8 +8,10 @@ import CreditMonitory from './pages/CreditMonitory';
 import { Switch, Route } from 'react-router-dom';
 
 import './globals.css';
+import useScrollToTop from './components/scrollToTop';
 
 function App() {
+  useScrollToTop();
   return (
     <div>
       <Switch>

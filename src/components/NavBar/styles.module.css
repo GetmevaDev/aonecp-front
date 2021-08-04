@@ -18,6 +18,15 @@
   font-family: 'Poppins', sans-serif;
   color: #323131;
   margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.itemActive {
+  color: #f76b1c;
+}
+
+.item:hover {
+  color: #f76b1c;
 }
 
 .item + .item {

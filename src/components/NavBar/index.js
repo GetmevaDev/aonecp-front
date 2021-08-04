@@ -1,14 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import styles from './styles.module.css';
 export const list = [
-  { title: 'How it works', href: '/' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Credit Monitoring', href: '/creditmonitory' },
-  { title: 'Credit Education Blog', href: '/faq' },
-  { title: 'Get Started Now', href: '/getstarted' },
+  { title: 'How it works', href: '' },
+  { title: 'Pricing', href: 'pricing' },
+  { title: 'Credit Monitoring', href: 'creditmonitory' },
+  { title: 'Credit Education Blog', href: 'faq' },
+  { title: 'Get Started Now', href: 'getstarted' },
 ];
 const NavBar = () => {
+  const location = useLocation();
+
+  const { pathname } = location;
+
+  const splitLocation = pathname.split('/');
   return (
     <div className="container">
       <div className={styles.navbar}>
@@ -16,9 +21,13 @@ const NavBar = () => {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             {list.map(({ title, href }, index) => (
-              <Link className={styles.item} key={index} to={href}>
+              <NavLink
+                className={styles.item}
+                activeClassName={splitLocation[1] === href ? styles.itemActive : ''}
+                key={index}
+                to={href}>
                 {title}
-              </Link>
+              </NavLink>
             ))}
           </ul>
         </nav>
