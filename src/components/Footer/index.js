@@ -9,9 +9,9 @@ const Footer = () => {
     <div className="container">
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          {list.map((item, index) => (
-            <li className={styles.item} key={index}>
-              {item}
+          {list.map(({ title, href }, index) => (
+            <li className={styles.item} key={index} to={href}>
+              {title}
             </li>
           ))}
         </ul>

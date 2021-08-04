@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+import SignSvgPhone from '../../assets/phone.svg';
+
 const Banner = () => {
   return (
     <div className={styles.banner}>
@@ -13,9 +15,11 @@ const Banner = () => {
           <button className={styles.btnYellow}>Free Consultation</button>
         </div>
         <div className={styles.call}>
-          <div className={styles.phone}></div>
-          {/* <h3>Call now</h3> */}
-          {/* <p>516-828-2338</p> */}
+          <img className={styles.callSvg} src={SignSvgPhone} alt="" />
+
+          <div>
+            Call now <br /> <b>516-828-2338</b>
+          </div>
         </div>
       </div>
     </div>

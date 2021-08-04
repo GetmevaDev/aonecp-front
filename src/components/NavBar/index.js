@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 export const list = [
-  'How it works',
-  'Pricing',
-  'Credit Monitoring',
-  'Credit Education Blog',
-  'Get Started Now',
+  { title: 'How it works', href: '/' },
+  { title: 'Pricing', href: '/pricing' },
+  { title: 'Credit Monitoring', href: '/creditmonitory' },
+  { title: 'Credit Education Blog', href: '/faq' },
+  { title: 'Get Started Now', href: '/getstarted' },
 ];
 const NavBar = () => {
   return (
@@ -14,10 +15,10 @@ const NavBar = () => {
         <div className={styles.imgLogo}></div>
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            {list.map((item, index) => (
-              <li className={styles.item} key={index}>
-                {item}
-              </li>
+            {list.map(({ title, href }, index) => (
+              <Link className={styles.item} key={index} to={href}>
+                {title}
+              </Link>
             ))}
           </ul>
         </nav>
