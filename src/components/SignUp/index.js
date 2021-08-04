@@ -43,7 +43,7 @@ const SignUp = () => {
       <div className={styles.cardsOrange}>
         {arr1.map((num, index) => {
           return (
-            <div className={styles.card}>
+            <div className={`${styles.card} ${styles.cardBottom}`}>
               <div className={styles.cardInner}>
                 <img className={styles.cardSvg} src={SignPhone} alt="" />
                 <p className={styles.cardDesc}>Unlimited challenge validation letters</p>

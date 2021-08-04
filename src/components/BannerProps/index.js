@@ -2,10 +2,11 @@ import styles from './styles.module.css';
 import React from 'react';
 import Pricing from '../../assets/pricing.png';
 
-const BannerProps = ({ title }) => {
+const BannerProps = ({ title, imgUrl }) => {
   return (
     <div className={styles.pricing}>
       <div>
+        <img src={imgUrl} alt="" />
         <h1 className={styles.title}>{title}</h1>
       </div>
     </div>

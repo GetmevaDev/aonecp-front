@@ -6,7 +6,7 @@ const Pricing = () => {
   return (
     <div>
       <NavBar />
-      <BannerProps title="Pricing" />
+      <BannerProps title="Pricing" imgUrl={pricing} />
       <SignUp />
       <CreditMonitoring />
       <Footer />

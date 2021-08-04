@@ -50,7 +50,18 @@
 }
 
 .card {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+
+.card:nth-last-child(3) {
+  margin-left: 180px;
+}
+.cardBottom:nth-last-child(3) {
+  margin-left: 20px;
+}
+
+.cardBottom:nth-last-child(2) {
+  margin-left: 350px;
 }
 
 .cardDesc {

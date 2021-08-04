@@ -18,6 +18,13 @@
   color: #323131;
   margin-top: 30px;
 }
+.itemActive {
+  color: #f76b1c;
+}
+
+.item:hover {
+  color: #f76b1c;
+}
 
 .item + .item {
   padding-left: 35px;

@@ -59,4 +59,12 @@
   margin-top: 30px;
   color: #323131;
   border-radius: 22.5px;
+  transition: all 0.4s ease;
+}
+
+.button:hover {
+  border: 1px solid #82848b;
+  color: #fff;
+
+  background-color: #999b9e;
 }
