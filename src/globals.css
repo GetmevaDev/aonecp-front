@@ -75,11 +75,20 @@ button {
   border: none;
   outline: none;
   color: #ffffff;
+  transition: background 0.6s ease;
+}
+
+.btnBlue:hover {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #184b75 96.04%);
+}
+
+.btnYellow:hover {
 }
 
 .btnYellow {
   background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
   border-radius: 28px;
+  transition: all 0.4s ease;
   font-weight: bold;
   font-size: 15px;
   margin-left: 10px;

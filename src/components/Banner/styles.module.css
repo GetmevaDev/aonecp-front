@@ -38,6 +38,9 @@
   font-size: 65px;
   line-height: 68px;
 
+  margin-top: 25px;
+  margin-bottom: 0;
+
   text-align: center;
 
   color: #323131;
@@ -45,7 +48,7 @@
 
 .description {
   font-family: 'Poppins', sans-serif;
-
+  margin-top: 0;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;

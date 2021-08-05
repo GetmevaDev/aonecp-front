@@ -11,8 +11,8 @@ const Banner = () => {
         <h1 className={styles.title}>Restoring lives the easy way</h1>
         <p className={styles.description}>Free for the first 30 days</p>
         <div className={styles.buttons}>
-          <button className={styles.btnBlue}>Get Started Now</button>
-          <button className={styles.btnYellow}>Free Consultation</button>
+          <button className="btnBlue">Get Started Now</button>
+          <button className="btnYellow">Free Consultation</button>
         </div>
         <div className={styles.call}>
           <img className={styles.callSvg} src={SignSvgPhone} alt="" />

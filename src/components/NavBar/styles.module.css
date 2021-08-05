@@ -18,6 +18,7 @@
   font-family: 'Poppins', sans-serif;
   color: #323131;
   margin-top: 30px;
+  position: relative;
   transition: all 0.3s ease;
 }
 
@@ -31,6 +32,17 @@
 
 .item + .item {
   padding-left: 35px;
+}
+
+.item:first-child::before {
+  content: '';
+  background-image: url('../../assets/checksvg.svg');
+  background-repeat: no-repeat;
+  width: 8px;
+  position: absolute;
+  left: 117px;
+    top: 7px;
+  height: 5px;
 }
 
 .imgLogo {
