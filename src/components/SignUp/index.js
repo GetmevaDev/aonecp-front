@@ -1,5 +1,6 @@
 import React from 'react';
 import SignPhone from '../../assets/sign-phone.svg';
+import Doc from '../../assets/2arr.svg';
 
 import styles from './styles.module.css';
 const SignUp = () => {
@@ -45,7 +46,7 @@ const SignUp = () => {
           return (
             <div className={`${styles.card} ${styles.cardBottom}`}>
               <div className={styles.cardInner}>
-                <img className={styles.cardSvg} src={SignPhone} alt="" />
+                <img className={styles.cardSvg} src={Doc} alt="" />
                 <p className={styles.cardDesc}>Unlimited challenge validation letters</p>
               </div>
             </div>

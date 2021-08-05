@@ -1,10 +1,10 @@
 import React from 'react';
 import { asks } from '../CreditScore';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import styles from '../style.module.css';
 
-const TodoHelp = () => {
+const TodoHelp = ({ location }) => {
   return (
     <div className={styles.ask}>
       <div className="container">
@@ -19,7 +19,7 @@ const TodoHelp = () => {
                     pathname: href,
                   }}
                   className={styles.freqLeftAsk}
-                  activeClassName={styles.freqLeftAskActive}
+                  activeClassName={location.pathname === href ? styles.freqLeftAskActive : ''}
                   key={index}>
                   {title}
                 </NavLink>
@@ -41,4 +41,4 @@ const TodoHelp = () => {
   );
 };
 
-export default TodoHelp;
+export default withRouter(TodoHelp);

@@ -2,16 +2,11 @@ import React from 'react';
 import { list } from '../NavBar/index';
 import styles from './styles.module.css';
 
-import { useLocation, NavLink } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 
 import RGM from '../../assets/rgm.png';
 
-const Footer = () => {
-  const location = useLocation();
-
-  const { pathname } = location;
-
-  const splitLocation = pathname.split('/');
+const Footer = ({ location }) => {
   return (
     <div className="container">
       <nav className={styles.nav}>
@@ -19,7 +14,7 @@ const Footer = () => {
           {list.map(({ title, href }, index) => (
             <NavLink
               className={styles.item}
-              activeClassName={splitLocation[1] === href ? styles.itemActive : ''}
+              activeClassName={location.pathname === href ? styles.itemActive : styles.item}
               key={index}
               to={href}>
               {title}
@@ -39,4 +34,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);

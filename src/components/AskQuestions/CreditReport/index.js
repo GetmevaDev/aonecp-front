@@ -1,10 +1,10 @@
 import React from 'react';
 import { asks } from '../CreditScore';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import styles from '../style.module.css';
 
-const CreditReport = () => {
+const CreditReport = ({ location }) => {
   return (
     <div className={styles.ask}>
       <div className="container">
@@ -19,7 +19,7 @@ const CreditReport = () => {
                     pathname: href,
                   }}
                   className={styles.freqLeftAsk}
-                  activeClassName={styles.freqLeftAskActive}
+                  activeClassName={location.pathname === href ? styles.freqLeftAskActive : ''}
                   key={index}>
                   {title}
                 </NavLink>
@@ -41,4 +41,4 @@ const CreditReport = () => {
   );
 };
 
-export default CreditReport;
+export default withRouter(CreditReport);
