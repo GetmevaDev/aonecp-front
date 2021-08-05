@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../style.module.css';
 
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export const asks = [
-  { title: 'What is a good credit score?', href: '/faq' },
+  { title: 'What is a good credit score?', href: '' },
   { title: 'What is a credit report?', href: '/faq/credit-report' },
   { title: 'Can I Fix My Credit Myself?', href: '/faq/credit-myself' },
   { title: 'How Long does bankruptcy stay on a credit report?', href: '/faq/credit-howlong' },
@@ -18,6 +18,11 @@ export const asks = [
 ];
 
 const CreditScore = () => {
+  const location = useLocation();
+
+  const { pathname } = location;
+
+  const splitLocation = pathname.split('/');
   return (
     <div className={styles.ask}>
       <div className="container">
@@ -32,7 +37,7 @@ const CreditScore = () => {
                     pathname: href,
                   }}
                   className={styles.freqLeftAsk}
-                  activeClassName={styles.freqLeftAskActive}
+                  activeClassName={splitLocation[1] === href ? styles.freqLeftAskActive : ''}
                   key={index}>
                   {title}
                 </NavLink>

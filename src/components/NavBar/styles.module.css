@@ -24,6 +24,13 @@
 
 .itemActive {
   color: #f76b1c;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 30px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 .item:hover {
@@ -41,7 +48,7 @@
   width: 8px;
   position: absolute;
   left: 117px;
-    top: 7px;
+  top: 7px;
   height: 5px;
 }
 
