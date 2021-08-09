@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Banner, Benefits, ChooseUs, Footer, NavBar } from '../components/';
 
 const Home = () => {
@@ -7,6 +7,7 @@ const Home = () => {
       <NavBar />
       <Banner />
       <ChooseUs />
+
       <Benefits />
       <Footer />
     </div>

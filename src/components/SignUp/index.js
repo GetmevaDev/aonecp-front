@@ -1,8 +1,8 @@
 import React from 'react';
 import SignPhone from '../../assets/sign-phone.svg';
 import Doc from '../../assets/2arr.svg';
-
 import styles from './styles.module.css';
+
 const SignUp = () => {
   const arr = ['1', '2', '3', '4', '5', '6', '7'];
   const arr1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];

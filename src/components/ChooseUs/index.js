@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import shakingHands from '../../assets/shaking-hands.png';
 import twoYoung from '../../assets/two-young.png';
 import styles from './style.module.css';
@@ -38,7 +39,6 @@ const ChooseUs = () => {
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className={styles.leftBlock}>
           <div className={styles.descriptionLeft}>

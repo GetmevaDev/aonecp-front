@@ -11,7 +11,7 @@ const CreditMonitoring = () => {
           accounts without any interruption. If you are already using a credit monitoring service,
           you can provide these details to use during the sign up proce
         </p>
-        <div>
+        <div className={styles.buttons}>
           <button className="btnBlue">How it Works</button>
           <button className="btnYellow">Free Consultation</button>
         </div>

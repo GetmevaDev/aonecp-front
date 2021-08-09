@@ -61,35 +61,6 @@
   margin-bottom: 128px;
 }
 
-.btnBlue {
-  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
-  border-radius: 28px;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 22px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 15px 37px;
-  border: none;
-  outline: none;
-  color: #ffffff;
-}
-
-.btnYellow {
-  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
-  border-radius: 28px;
-  font-weight: bold;
-  font-size: 15px;
-  margin-left: 10px;
-  line-height: 22px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 15px 30px;
-  border: none;
-  outline: none;
-  color: #ffffff;
-}
-
 .call {
   background: #ffffff;
   box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
@@ -115,4 +86,69 @@
   position: absolute;
   left: 60px;
   top: 51px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .cardRight {
+    display: none;
+  }
+}
+
+/* 768 width+  */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .call {
+    background: #ffffff;
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    width: 300px;
+    height: 168px;
+    margin: 0 auto;
+    position: relative;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: left;
+    padding: 40px 43px 51px 88px;
+    line-height: 34px;
+    font-family: var(--font-family);
+    color: #323131;
+  }
+
+  .callSvg {
+    width: 50px;
+    left: 34px;
+  }
+
+  .cardRight {
+    top: 3252px;
+    position: none;
+    right: 70px;
+    padding: 14px 52px;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .call {
+    background: #ffffff;
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    width: 250px;
+    height: 148px;
+    margin: 0 auto;
+    position: relative;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: left;
+    padding: 40px 43px 51px 88px;
+    line-height: 34px;
+    font-family: var(--font-family);
+    color: #323131;
+    bottom: 116px;
+  }
+
+  .callSvg {
+    width: 50px;
+    left: 34px;
+  }
 }

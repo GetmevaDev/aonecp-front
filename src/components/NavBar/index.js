@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import styles from './styles.module.css';
 export const list = [
   { id: 1, title: 'How it works', href: '/' },
@@ -12,7 +12,10 @@ const NavBar = ({ location }) => {
   return (
     <div className="container">
       <div className={styles.navbar}>
-        <div className={styles.imgLogo}></div>
+        <Link to="/">
+          <div className={styles.imgLogo}></div>
+        </Link>
+
         <nav className={styles.nav}>
           <ul className={styles.list}>
             {list.map(({ title, href, id }, index) => (

@@ -6,7 +6,7 @@ const BannerProps = ({ title, imgUrl }) => {
   return (
     <div className={styles.pricing}>
       <div>
-        <img src={imgUrl} alt="" />
+        <img className={styles.imgProp} src={imgUrl} alt="" />
         <h1 className={styles.title}>{title}</h1>
       </div>
     </div>

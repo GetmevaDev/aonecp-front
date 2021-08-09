@@ -9,11 +9,13 @@ import { Switch, Route } from 'react-router-dom';
 
 import './globals.css';
 import useScrollToTop from './components/scrollToTop';
+import MobileNav from './components/MobileNav';
 
 function App() {
   useScrollToTop();
   return (
     <div>
+      {/* <MobileNav /> */}
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/pricing" component={Pricing} />

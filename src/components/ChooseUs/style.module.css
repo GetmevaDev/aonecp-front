@@ -29,6 +29,8 @@ p {
 .handImg {
   border-radius: var(--border-radius);
   position: relative;
+
+  background-size: contain;
 }
 
 .rightblock {
@@ -144,4 +146,149 @@ p {
   text-align: center;
 
   color: #323131;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .choose {
+    flex-direction: column;
+  }
+  .handImg {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .rightblock {
+    margin-left: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .card {
+    background: #ffffff;
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    position: absolute;
+    width: 30%;
+    left: 280px;
+    bottom: -799px;
+    padding: 16px 22px;
+  }
+
+  .leftBlock {
+    flex-direction: column;
+  }
+
+  .descriptionLeft {
+    width: 100%;
+  }
+
+  .titleLeft {
+    text-align: center;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+/* 768 width+  */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .choose {
+    flex-direction: column;
+  }
+  .handImg {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .rightblock {
+    margin-left: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .card {
+    background: #ffffff;
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    position: absolute;
+    width: 30%;
+    left: 280px;
+    display: none;
+    bottom: -799px;
+    padding: 16px 22px;
+  }
+
+  .leftBlock {
+    flex-direction: column;
+  }
+
+  .descriptionLeft {
+    width: 100%;
+  }
+
+  .titleLeft {
+    text-align: center;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .choose {
+    flex-direction: column;
+  }
+  .handImg {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .rightblock {
+    margin-left: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .card {
+    background: #ffffff;
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    position: absolute;
+    width: 30%;
+    left: 280px;
+    display: none;
+    bottom: -799px;
+    padding: 16px 22px;
+  }
+  .leftBlock {
+    flex-direction: column;
+  }
+
+  .descriptionLeft {
+    width: 100%;
+  }
+
+  .titleLeft {
+    text-align: center;
+  }
+  .img {
+    width: 100%;
+  }
 }

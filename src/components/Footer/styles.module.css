@@ -60,3 +60,24 @@
 .footerRight b {
   color: rgb(182, 161, 67);
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .item {
+    padding-left: 0;
+  }
+}
+
+/* 768 width+  */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .item {
+    padding-left: 0;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .item {
+    padding-left: 0;
+  }
+}

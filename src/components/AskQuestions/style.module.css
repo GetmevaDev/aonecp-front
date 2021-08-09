@@ -27,6 +27,14 @@
   margin-top: 30px;
   padding-left: 30px;
   color: #323131;
+  transition: all 0.5s ease;
+}
+
+.freqLeftAsk:hover {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .freqLeftAskActive {
@@ -48,4 +56,61 @@
 
 .freqRight {
   width: 63%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .freq {
+    flex-direction: column;
+  }
+
+  .freqLeft {
+    width: 100%;
+  }
+
+  .freqRight {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #000;
+    font-weight: 700;
+  }
+}
+
+/* 768 width+  */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .freq {
+    flex-direction: column;
+  }
+
+  .freqLeft {
+    width: 100%;
+  }
+
+  .freqRight {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #000;
+    font-weight: 700;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .freq {
+    flex-direction: column;
+  }
+
+  .freqLeft {
+    width: 100%;
+  }
+
+  .freqRight {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #000;
+    font-weight: 700;
+  }
 }
