@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-  position: fixed;
 }
 
 .title {
@@ -24,6 +23,6 @@
   top: 20.51%;
   display: flex;
   bottom: 89.59%;
-  position: fixed;
+  position: absolute;
   color: #323131;
 }
