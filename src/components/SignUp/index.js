@@ -1,11 +1,36 @@
-import React from 'react';
-import SignPhone from '../../assets/sign-phone.svg';
-import Doc from '../../assets/2arr.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import styles from './styles.module.css';
 
 const SignUp = () => {
-  const arr = ['1', '2', '3', '4', '5', '6', '7'];
-  const arr1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+  const [firstSign, setFirstSign] = useState([]);
+  const [secondSign, setSecondSign] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchData = () => {
+    const firstContent = 'http://localhost:1337/pricingcontents';
+    const secondContent = 'http://localhost:1337/pricing-content-twos';
+
+    const getApiFirst = axios.get(firstContent);
+    const getApiSecond = axios.get(secondContent);
+
+    axios.all([getApiFirst, getApiSecond]).then(
+      axios.spread((...allData) => {
+        const allDataFirstContent = allData[0].data;
+        const allDataSecondContent = allData[1].data;
+
+        setFirstSign(allDataFirstContent);
+        console.log(allDataSecondContent);
+        setSecondSign(allDataSecondContent);
+      }),
+    );
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="container">
       <h1 className={styles.easyTitle}>Easy sign up process</h1>
@@ -18,18 +43,18 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cards}>
-        {arr.map((num, index) => {
+        {firstSign.map((item, index) => {
           return (
-            <div className={styles.card}>
+            <div className={styles.card} key={index}>
               <div className={styles.cardInner}>
-                <img className={styles.cardSvg} src={SignPhone} alt="" />
-                <p className={styles.cardDesc}>Unlimited challenge validation letters</p>
+                <img className={styles.cardSvg} src={item.pricingImg.url} alt="" />
+                <p className={styles.cardDesc}>{item.description}</p>
               </div>
             </div>
           );
         })}
       </div>
-
+      <button className="btnBlue btnAny">any more</button>
       <p className={styles.easyDesc}>
         Because of our competitive rates, clients are required to signup for credit monitoring
         services with Identiyiq.com which starts at a <b>$</b>
@@ -42,12 +67,12 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cardsOrange}>
-        {arr1.map((num, index) => {
+        {secondSign.map((item, index) => {
           return (
             <div className={`${styles.card} ${styles.cardBottom}`}>
               <div className={styles.cardInner}>
-                <img className={styles.cardSvg} src={Doc} alt="" />
-                <p className={styles.cardDesc}>Unlimited challenge validation letters</p>
+                <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
+                <p className={styles.cardDesc}>{item.description}</p>
               </div>
             </div>
           );

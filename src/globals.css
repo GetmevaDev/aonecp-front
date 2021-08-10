@@ -94,6 +94,13 @@ button {
   color: #ffffff;
 }
 
+.btnAny {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 h1,
 h2,
 h3,

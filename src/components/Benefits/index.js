@@ -22,6 +22,7 @@ const Benefits = () => {
         },
       );
   }, [data]);
+
   return (
     <>
       <div className="container">
