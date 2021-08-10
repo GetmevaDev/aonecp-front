@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import axios from 'axios';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 import styles from './styles.module.css';
-
+import { css } from '@emotion/react';
 const SignUp = () => {
   const [firstSign, setFirstSign] = useState([]);
   const [secondSign, setSecondSign] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  let [color, setColor] = useState('#09136e');
+  const override = css`
+    display: block;
+    margin: 0 auto;
+  `;
 
   const fetchData = () => {
-    const firstContent = 'http://localhost:1337/pricingcontents';
-    const secondContent = 'http://localhost:1337/pricing-content-twos';
+    const firstContent = 'https://a1cp-back.herokuapp.com/pricingcontents';
+    const secondContent = 'https://a1cp-back.herokuapp.com/pricing-content-twos';
 
     const getApiFirst = axios.get(firstContent);
     const getApiSecond = axios.get(secondContent);
@@ -21,13 +27,19 @@ const SignUp = () => {
         const allDataSecondContent = allData[1].data;
 
         setFirstSign(allDataFirstContent);
-        console.log(allDataSecondContent);
         setSecondSign(allDataSecondContent);
       }),
     );
   };
 
+  const loading = useCallback(() => {
+    setTimeout(() => {
+      setIsLoading(!loading);
+    }, 1000);
+  }, []);
+
   useEffect(() => {
+    loading();
     fetchData();
   }, []);
 
@@ -43,16 +55,24 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cards}>
-        {firstSign.map((item, index) => {
-          return (
-            <div className={styles.card} key={index}>
-              <div className={styles.cardInner}>
-                <img className={styles.cardSvg} src={item.pricingImg.url} alt="" />
-                <p className={styles.cardDesc}>{item.description}</p>
-              </div>
-            </div>
-          );
-        })}
+        {isLoading ? (
+          <h1>
+            <BeatLoader css={override} size={10} speedMultiplier={3} color={color} />
+          </h1>
+        ) : (
+          <>
+            {firstSign.map((item, index) => {
+              return (
+                <div className={styles.card} key={index}>
+                  <div className={styles.cardInner}>
+                    <img className={styles.cardSvg} src={item.pricingImg.url} alt="" />
+                    <p className={styles.cardDesc}>{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </>
+        )}
       </div>
       <button className="btnBlue btnAny">any more</button>
       <p className={styles.easyDesc}>
@@ -67,16 +87,24 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cardsOrange}>
-        {secondSign.map((item, index) => {
-          return (
-            <div className={`${styles.card} ${styles.cardBottom}`}>
-              <div className={styles.cardInner}>
-                <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
-                <p className={styles.cardDesc}>{item.description}</p>
-              </div>
-            </div>
-          );
-        })}
+        {isLoading ? (
+          <h1>
+            <BeatLoader css={override} size={10} speedMultiplier={3} color={color} />
+          </h1>
+        ) : (
+          <>
+            {secondSign.map((item, index) => {
+              return (
+                <div className={`${styles.card} ${styles.cardBottom}`}>
+                  <div className={styles.cardInner}>
+                    <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
+                    <p className={styles.cardDesc}>{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </>
+        )}
       </div>
     </div>
   );
