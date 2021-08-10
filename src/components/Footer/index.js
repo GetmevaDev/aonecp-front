@@ -25,9 +25,12 @@ const Footer = ({ location }) => {
       <div className={styles.footerBlock}>
         <h4 className={styles.footerLeft}>© 2021 A1 Credit Partners. All Rights Reserved. </h4>
         <p className={styles.footerRight}>
+          <div className={styles.logoInner}></div>
           <img src={RGM} alt="RGM" className={styles.logo} />
           Web Design & Digital Marketing <br />
-          by <b>Robert Gerov Media</b>
+          <div className={styles.rgmInner}>
+            by <b>Robert Gerov Media</b>
+          </div>
         </p>
       </div>
     </div>

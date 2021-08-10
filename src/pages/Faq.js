@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { BannerProps, Footer, NavBar } from '../components/';
 import CreditReport from '../components/AskQuestions/CreditReport';
 
@@ -18,7 +19,9 @@ const Faq = () => {
       <NavBar />
       <BannerProps imgUrl={FaqBanner} title="FAQ" />
       <Switch>
-        <Route path={'/faq'} component={CreditScore} exact></Route>;
+        <Route path={'/faq'} exact>
+          <CreditScore />
+        </Route>
         <Route path={'/faq/credit-report'} component={CreditReport}></Route>
         <Route path={'/faq/credit-myself'} component={CreditMyself}></Route>;
         <Route path={'/faq/credit-howlong'} component={HowLong}></Route>

@@ -21,7 +21,7 @@ const Benefits = () => {
           setError(error);
         },
       );
-  }, [data]);
+  }, []);
 
   return (
     <>
