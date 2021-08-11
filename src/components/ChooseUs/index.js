@@ -11,7 +11,7 @@ const ChooseUs = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('http://localhost:1337/choose-us-right-blocks');
+      const result = await axios('https://a1cp-back.herokuapp.com/choose-us-right-blocks');
       setData(result.data);
       setLoading(false);
       console.log(data);
