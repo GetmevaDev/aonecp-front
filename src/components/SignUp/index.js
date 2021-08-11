@@ -7,7 +7,7 @@ import { css } from '@emotion/react';
 const SignUp = () => {
   const [firstSign, setFirstSign] = useState([]);
   const [secondSign, setSecondSign] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   let [color, setColor] = useState('#09136e');
   const override = css`
     display: block;
@@ -28,20 +28,20 @@ const SignUp = () => {
 
         setFirstSign(allDataFirstContent);
         setSecondSign(allDataSecondContent);
+        setLoading(false);
       }),
     );
   };
-
-  const loading = useCallback(() => {
-    setTimeout(() => {
-      setIsLoading(!loading);
-    }, 1000);
-  }, []);
-
   useEffect(() => {
-    loading();
     fetchData();
   }, []);
+
+  if (loading)
+    return (
+      <div style={{ marginTop: 100, textAlign: 'center' }}>
+        <BeatLoader />
+      </div>
+    );
 
   return (
     <div className="container">
@@ -55,24 +55,18 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cards}>
-        {isLoading ? (
-          <h1>
-            <BeatLoader css={override} size={10} speedMultiplier={3} color={color} />
-          </h1>
-        ) : (
-          <>
-            {firstSign.map((item, index) => {
-              return (
-                <div className={styles.card} key={index}>
-                  <div className={styles.cardInner}>
-                    <img className={styles.cardSvg} src={item.pricingImg.url} alt="" />
-                    <p className={styles.cardDesc}>{item.description}</p>
-                  </div>
+        <>
+          {firstSign.map((item, index) => {
+            return (
+              <div className={styles.card} key={index}>
+                <div className={styles.cardInner}>
+                  <img className={styles.cardSvg} src={item.pricingImg.url} alt="" />
+                  <p className={styles.cardDesc}>{item.description}</p>
                 </div>
-              );
-            })}
-          </>
-        )}
+              </div>
+            );
+          })}
+        </>
       </div>
       <button className="btnBlue btnAny">any more</button>
       <p className={styles.easyDesc}>
@@ -87,24 +81,18 @@ const SignUp = () => {
       </p>
 
       <div className={styles.cardsOrange}>
-        {isLoading ? (
-          <h1>
-            <BeatLoader css={override} size={10} speedMultiplier={3} color={color} />
-          </h1>
-        ) : (
-          <>
-            {secondSign.map((item, index) => {
-              return (
-                <div className={`${styles.card} ${styles.cardBottom}`}>
-                  <div className={styles.cardInner}>
-                    <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
-                    <p className={styles.cardDesc}>{item.description}</p>
-                  </div>
+        <>
+          {secondSign.map((item, index) => {
+            return (
+              <div className={`${styles.card} ${styles.cardBottom}`} key={index}>
+                <div className={styles.cardInner}>
+                  <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
+                  <p className={styles.cardDesc}>{item.description}</p>
                 </div>
-              );
-            })}
-          </>
-        )}
+              </div>
+            );
+          })}
+        </>
       </div>
     </div>
   );
