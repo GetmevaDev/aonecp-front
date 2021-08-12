@@ -18,7 +18,7 @@ const NavBar = ({ location }) => {
 
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            {list.map(({ title, href, id }, index) => (
+            {list.map(({ title, href }, index) => (
               <NavLink
                 className={styles.item}
                 activeClassName={location.pathname === href ? styles.itemActive : styles.item}

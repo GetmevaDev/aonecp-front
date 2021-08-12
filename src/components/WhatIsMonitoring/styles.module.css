@@ -2,10 +2,6 @@
   margin-top: 100px;
 }
 
-.imgWidth {
-  width: 100%;
-}
-
 .monitoringBlock {
   display: flex;
   margin-top: 50px;
@@ -64,6 +60,9 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  .imgWidth {
+    width: 100%;
+  }
 
   .monitoringBlockRight {
     margin-left: 0;
@@ -95,6 +94,9 @@
     max-width: 1320px;
     padding: 0 10px;
     margin: 0 auto;
+  }
+  .imgWidth {
+    width: 100%;
   }
 
   .monitoringBlock {
