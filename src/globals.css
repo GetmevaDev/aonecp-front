@@ -136,6 +136,7 @@ button {
 
 .accordion-wrapper .accordion-item h3.accordion-title button {
   background: none;
+  color: #000;
 }
 
 .btnAny {
