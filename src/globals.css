@@ -171,6 +171,15 @@ img {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .accordion-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .accordion-wrapper .accordion-item .accordion-panel .panel-open {
+    margin-left: 0;
+  }
 }
 
 /* 768 width+  */
