@@ -26,3 +26,18 @@
   position: absolute;
   color: #323131;
 }
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .title {
+    position: static;
+    display: block;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .title {
+    position: static;
+    display: block;
+  }
+}

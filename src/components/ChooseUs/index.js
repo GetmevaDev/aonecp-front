@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 import axios from 'axios';
-import shakingHands from '../../assets/shaking-hands.png';
-import twoYoung from '../../assets/two-young.png';
+
 import styles from './style.module.css';
+
 const ChooseUs = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,7 +14,6 @@ const ChooseUs = () => {
       const result = await axios('https://a1cp-back.herokuapp.com/choose-us-right-blocks');
       setData(result.data);
       setLoading(false);
-      console.log(data);
     };
 
     fetchData();

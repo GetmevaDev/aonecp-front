@@ -15,7 +15,7 @@ function App() {
   useScrollToTop();
   return (
     <div>
-      {/* <MobileNav /> */}
+      <MobileNav />
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/pricing" component={Pricing} />

@@ -17,7 +17,7 @@ export const asks = [
   },
 ];
 
-const CreditScore = ({ location }) => {
+const CreditScore = ({ location, data }) => {
   return (
     <div className={styles.ask}>
       <div className="container">

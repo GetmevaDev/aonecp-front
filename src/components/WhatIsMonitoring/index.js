@@ -32,7 +32,7 @@ const WhatIsMonitoring = () => {
           <div>
             <div className={styles.monitoringBlock}>
               <div className={styles.monitoringBlockLeft}>
-                <img src={data[0].img.url} alt="" />
+                <img className={styles.imgWidth} src={data[0].img.url} alt="" />
               </div>
               <div className={styles.monitoringBlockRight}>
                 <h1 className={styles.monitoringTitle}>{data[0].title}</h1>
@@ -49,12 +49,12 @@ const WhatIsMonitoring = () => {
                 </p>
               </div>
               <div className={styles.monitoringBlockLeft}>
-                <img src={data[2].img.url} alt="" />
+                <img className={styles.imgWidth} src={data[2].img.url} alt="" />
               </div>
             </div>
             <div className={styles.monitoringBlock}>
               <div className={styles.monitoringBlockLeft}>
-                <img src={data[1].img.url} alt="" />
+                <img className={styles.imgWidth} src={data[1].img.url} alt="" />
               </div>
               <div className={styles.monitoringBlockRight}>
                 <h1 className={styles.monitoringTitle}>{data[2].title}</h1>

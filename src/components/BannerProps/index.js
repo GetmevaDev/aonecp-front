@@ -1,6 +1,5 @@
-import styles from './styles.module.css';
 import React from 'react';
-import Pricing from '../../assets/pricing.png';
+import styles from './styles.module.css';
 
 const BannerProps = ({ title, imgUrl }) => {
   return (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BannerProps, Footer, NavBar } from '../components/';
 import CreditReport from '../components/AskQuestions/CreditReport';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 import { Switch, Route } from 'react-router-dom';
 import FaqBanner from '../assets/faqbg.png';
@@ -14,13 +15,34 @@ import RemovedCredit from '../components/AskQuestions/RemovedCreditReport';
 import CreditScore from '../components/AskQuestions/CreditScore';
 
 const Faq = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios('https://a1cp-back.herokuapp.com/frequently-asked-questions');
+      setData(result.data);
+      setLoading(false);
+      console.log(result.data);
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading)
+    return (
+      <div style={{ marginTop: 100, textAlign: 'center' }}>
+        <BeatLoader />
+      </div>
+    );
+
   return (
     <div>
       <NavBar />
       <BannerProps imgUrl={FaqBanner} title="FAQ" />
       <Switch>
         <Route path={'/faq'} exact>
-          <CreditScore />
+          <CreditScore data={data} />
         </Route>
         <Route path={'/faq/credit-report'} component={CreditReport}></Route>
         <Route path={'/faq/credit-myself'} component={CreditMyself}></Route>;
