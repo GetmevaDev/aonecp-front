@@ -146,6 +146,10 @@ button {
   margin-top: 50px;
 }
 
+.accordion-wrapper .accordion-item h3.accordion-title button.active {
+  border: none;
+}
+
 h1,
 h2,
 h3,

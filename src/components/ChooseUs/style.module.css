@@ -291,4 +291,10 @@ p {
   .img {
     width: 100%;
   }
+
+  .cardRight {
+    right: 0;
+    left: 0;
+    top: 3351px;
+  }
 }
