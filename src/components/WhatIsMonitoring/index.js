@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
-import axios from 'axios';
-
 import BeatLoader from 'react-spinners/BeatLoader';
+import { useQuery, gql } from '@apollo/client';
 
 const WhatIsMonitoring = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('https://a1cp-back.herokuapp.com/what-is-monitorings');
-      setData(result.data);
-      setLoading(false);
-    };
-
-    fetchData();
-  }, []);
+  const EXCHANGE_RATES = gql`
+    query Monitoring {
+      whatIsMonitorings {
+        title
+        description
+        img {
+          url
+        }
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
 
   if (loading)
     return (
@@ -24,6 +23,7 @@ const WhatIsMonitoring = () => {
         <BeatLoader />
       </div>
     );
+  if (error) return <p>Error :(</p>;
 
   return (
     <div className={styles.monitoring}>
@@ -32,33 +32,33 @@ const WhatIsMonitoring = () => {
           <div>
             <div className={styles.monitoringBlock}>
               <div className={styles.monitoringBlockLeft}>
-                <img className={styles.imgWidth} src={data[0].img.url} alt="" />
+                <img className={styles.imgWidth} src={data.whatIsMonitorings[0].img.url} alt="" />
               </div>
               <div className={styles.monitoringBlockRight}>
-                <h1 className={styles.monitoringTitle}>{data[0].title}</h1>
-                <p className={styles.monitoringDesc}>{data[0].description}</p>
+                <h1 className={styles.monitoringTitle}>{data.whatIsMonitorings[0].title}</h1>
+                <p className={styles.monitoringDesc}>{data.whatIsMonitorings[0].description}</p>
               </div>
             </div>
             <div className={styles.monitoringBlock}>
               <div className={styles.monitoringBlockRight}>
                 <h1 className={`${styles.monitoringTitle} ${styles.monitoringTitleLeft}`}>
-                  {data[1].title}
+                  {data.whatIsMonitorings[1].title}
                 </h1>
                 <p className={`${styles.monitoringDesc} ${styles.monitoringDescLeft}`}>
-                  {data[1].description}
+                  {data.whatIsMonitorings[1].description}
                 </p>
               </div>
               <div className={styles.monitoringBlockLeft}>
-                <img className={styles.imgWidth} src={data[2].img.url} alt="" />
+                <img className={styles.imgWidth} src={data.whatIsMonitorings[2].img.url} alt="" />
               </div>
             </div>
             <div className={styles.monitoringBlock}>
               <div className={styles.monitoringBlockLeft}>
-                <img className={styles.imgWidth} src={data[1].img.url} alt="" />
+                <img className={styles.imgWidth} src={data.whatIsMonitorings[1].img.url} alt="" />
               </div>
               <div className={styles.monitoringBlockRight}>
-                <h1 className={styles.monitoringTitle}>{data[2].title}</h1>
-                <p className={styles.monitoringDesc}>{data[2].description}</p>
+                <h1 className={styles.monitoringTitle}>{data.whatIsMonitorings[2].title}</h1>
+                <p className={styles.monitoringDesc}>{data.whatIsMonitorings[2].description}</p>
               </div>
             </div>
           </div>

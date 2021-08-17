@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import BeatLoader from 'react-spinners/BeatLoader';
 
-import axios from 'axios';
+import { useQuery, gql } from '@apollo/client';
 
 import styles from './style.module.css';
 
 const ChooseUs = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('https://a1cp-back.herokuapp.com/choose-us-right-blocks');
-      setData(result.data);
-      setLoading(false);
-    };
-
-    fetchData();
-  }, []);
+  const EXCHANGE_RATES = gql`
+    query GetRightBlock {
+      chooseUsRightBlocks {
+        paragraph
+        title
+        img {
+          url
+        }
+        paragraphLRightBlock
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
 
   if (loading)
     return (
@@ -25,11 +26,12 @@ const ChooseUs = () => {
         <BeatLoader />
       </div>
     );
+  if (error) return <p>Error :(</p>;
 
   return (
     <>
       <div className={styles.choose}>
-        <img className={styles.handImg} src={data[5].img.url} alt="" />
+        <img className={styles.handImg} src={data.chooseUsRightBlocks[5].img.url} alt="" />
         <div className="container">
           <div className={styles.card}>
             <h1 className={styles.cardTitle}>
@@ -39,9 +41,9 @@ const ChooseUs = () => {
           </div>
 
           <div className={styles.rightblock}>
-            <h1 className={styles.title}>{data[5].title}</h1>
+            <h1 className={styles.title}> {data.chooseUsRightBlocks[5].title}</h1>
             <div className={styles.description}>
-              {data.map(({ paragraphLRightBlock }, index) => (
+              {data.chooseUsRightBlocks.map(({ paragraphLRightBlock }, index) => (
                 <p key={index}>{paragraphLRightBlock}</p>
               ))}
             </div>
@@ -51,15 +53,15 @@ const ChooseUs = () => {
       <div className="container">
         <div className={styles.leftBlock}>
           <div className={styles.descriptionLeft}>
-            <h1 className={styles.titleLeft}>{data[0].title}</h1>
-            {data.map(({ paragraph }, index) => (
+            <h1 className={styles.titleLeft}>{data.chooseUsRightBlocks[0].title}</h1>
+            {data.chooseUsRightBlocks.map(({ paragraph }, index) => (
               <div key={index}>
                 <p>{paragraph}</p>
               </div>
             ))}
           </div>
           <div className={styles.imgYoung}>
-            <img className={styles.img} src={data[4].img.url} alt="twoYoung" />
+            <img className={styles.img} src={data.chooseUsRightBlocks[4].img.url} alt="twoYoung" />
           </div>
 
           <div className={styles.cardRight}>
