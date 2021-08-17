@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { BannerProps, Footer, NavBar, CreditScore } from '../components/';
 import BeatLoader from 'react-spinners/BeatLoader';
 import FaqBanner from '../assets/faqbg.png';
+import { useQuery, gql } from '@apollo/client';
 
 const Faq = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('https://a1cp-back.herokuapp.com/frequently-asked-questions');
-      setData(result.data);
-      setLoading(false);
-      console.log(result.data);
-    };
-
-    fetchData();
-  }, []);
+  const EXCHANGE_RATES = gql`
+    query faq {
+      frequentlyAskedQuestions {
+        ask
+        description
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
 
   if (loading)
     return (
@@ -25,6 +21,7 @@ const Faq = () => {
         <BeatLoader />
       </div>
     );
+  if (error) return <p>Error :(</p>;
 
   return (
     <div>
