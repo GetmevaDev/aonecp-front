@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Banner, Benefits, ChooseUs, Footer, NavBar } from '../components/';
 
 const Home = () => {

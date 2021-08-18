@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
 
@@ -8,7 +8,6 @@ const SignUp = () => {
   const [firstSign, setFirstSign] = useState([]);
   const [secondSign, setSecondSign] = useState([]);
   const [loading, setLoading] = useState(true);
-  let [color, setColor] = useState('#09136e');
   const override = css`
     display: block;
     margin: 0 auto;
@@ -39,7 +38,7 @@ const SignUp = () => {
   if (loading)
     return (
       <div style={{ marginTop: 100, textAlign: 'center' }}>
-        <BeatLoader />
+        <BeatLoader css={override} />
       </div>
     );
 
