@@ -29,7 +29,7 @@ p {
 .handImg {
   border-radius: var(--border-radius);
   position: relative;
-
+  width: 50%;
   background-size: contain;
 }
 
@@ -227,6 +227,10 @@ p {
     display: none;
     bottom: -799px;
     padding: 16px 22px;
+  }
+
+  .cardRight {
+    display: none;
   }
 
   .leftBlock {

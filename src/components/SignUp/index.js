@@ -53,8 +53,8 @@ const SignUp = () => {
         <b>month </b> for the full package which includes the following benefits:
       </p>
 
-      <div className={styles.cards}>
-        <>
+      <div className={styles.inner}>
+        <div className={styles.cards}>
           {firstSign.map((item, index) => {
             return (
               <div className={styles.card} key={index}>
@@ -65,7 +65,7 @@ const SignUp = () => {
               </div>
             );
           })}
-        </>
+        </div>
       </div>
       <button className="btnBlue btnAny">any more</button>
       <p className={styles.easyDesc}>
@@ -79,19 +79,21 @@ const SignUp = () => {
         analysis and you will get all of the following benefits:
       </p>
 
-      <div className={styles.cardsOrange}>
-        <>
-          {secondSign.map((item, index) => {
-            return (
-              <div className={`${styles.card} ${styles.cardBottom}`} key={index}>
-                <div className={styles.cardInner}>
-                  <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
-                  <p className={styles.cardDesc}>{item.description}</p>
+      <div className={styles.inner}>
+        <div className={styles.cardsOrange}>
+          <>
+            {secondSign.map((item, index) => {
+              return (
+                <div className={`${styles.card} ${styles.cardBottom}`} key={index}>
+                  <div className={styles.cardInner}>
+                    <img className={styles.cardSvg} src={item.PricingImgTwo.url} alt="" />
+                    <p className={styles.cardDesc}>{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </>
+              );
+            })}
+          </>
+        </div>
       </div>
     </div>
   );

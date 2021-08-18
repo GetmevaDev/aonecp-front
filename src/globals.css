@@ -110,6 +110,7 @@ button {
 
 .accordion-wrapper .accordion-item .accordion-panel .panel-open {
   margin-left: 50px;
+  background: none;
 }
 
 .accordion-wrapper .accordion-item h3.accordion-title button.active {
@@ -148,6 +149,10 @@ button {
 
 .accordion-wrapper .accordion-item h3.accordion-title button.active {
   border: none;
+}
+
+.accordion-wrapper .accordion-item .accordion-panel .panel-close {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
 }
 
 h1,
