@@ -14,13 +14,16 @@ const Banner = () => {
           <button className="btnBlue">Get Started Now</button>
           <button className="btnYellow">Free Consultation</button>
         </div>
-        <div className={styles.call}>
-          <img className={styles.callSvg} src={SignSvgPhone} alt="" />
+        <a href="tel:516-828-2338">
+          <div className={styles.call}>
+            <img className={styles.callSvg} src={SignSvgPhone} alt="" />
 
-          <div>
-            Call now <br /> <b>516-828-2338</b>
+            <div>
+              Call now <br />
+              <b>516-828-2338</b>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

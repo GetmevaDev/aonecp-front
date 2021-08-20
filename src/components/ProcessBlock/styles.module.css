@@ -1,0 +1,136 @@
+.block {
+  margin-top: 100px;
+  display: flex;
+}
+
+.btnBlue {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 37px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.btnYellow {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.cardRight {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  width: 369px;
+  height: 243px;
+}
+
+.cardTitleRight {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 40px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #323131;
+}
+
+.imgYoung {
+  z-index: 1;
+}
+
+.imgYoung {
+  width: 80%;
+  background-size: cover;
+}
+
+.cardRight {
+  position: relative;
+  bottom: 163px;
+  left: 70px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.titleLeft {
+  font-size: 60px;
+  line-height: 48px;
+  font-family: 'Squada One', cursive;
+
+  color: #323131;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .block {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .imgYoung {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .block {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgYoung {
+    width: 100%;
+  }
+
+  .cardRight {
+    position: static;
+  }
+}
+
+/* 480 width */
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .block {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    width: 230%;
+  }
+  .right {
+    width: 100%;
+  }
+  .cardRight {
+    position: static;
+    margin: 0 auto;
+  }
+}

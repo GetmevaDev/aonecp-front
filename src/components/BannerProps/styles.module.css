@@ -18,12 +18,11 @@
   font-size: 65px;
   line-height: 68px;
   text-align: center;
-  left: 45.62%;
-  right: 45.62%;
-  top: 20.51%;
-  display: flex;
+
+  top: -250px;
+
   bottom: 89.59%;
-  position: absolute;
+  position: relative;
   color: #323131;
 }
 

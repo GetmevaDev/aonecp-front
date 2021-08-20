@@ -6,6 +6,84 @@
   display: flex;
 }
 
+.firstitem {
+  transition: all 0.5s ease;
+  margin-top: 30px;
+  margin-right: 35px;
+}
+
+.dropdown {
+  padding-left: 0;
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  width: 215px;
+  height: 201px;
+  position: absolute;
+  display: none;
+}
+
+.dropdown:nth-child(1) {
+  width: 176px;
+  position: absolute;
+  right: 250px;
+  display: none;
+  height: 116px;
+}
+
+.firstitem:hover .dropdown {
+  display: block;
+  z-index: 999;
+}
+
+.dropdownLink:first-child {
+  margin-top: 24px;
+}
+
+.dropdownLink {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  padding-left: 29px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 18px;
+  color: #323131;
+  transition: all 0.5 ease;
+}
+
+.dropdownLink:hover {
+  color: #f76b1c;
+}
+
+.button:hover .dropdown {
+  display: block;
+  left: 0px;
+  position: absolute;
+  z-index: 999;
+}
+
+.dropdownLinkBtn a {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 18px;
+  color: #323131;
+}
+
+.dropdownLinkBtn a:hover {
+  color: #f76b1c;
+}
+
+.dropdownLinkBtn {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 18px;
+  color: #323131;
+}
+
 .nav {
   margin: 0;
 }
@@ -75,6 +153,7 @@
   line-height: 21px;
   margin-left: 50px;
   text-align: center;
+  position: relative;
   text-transform: uppercase;
   margin-top: 30px;
   color: #323131;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { list } from '../NavBar/index';
+import { list } from '../NavBar/';
 import styles from './styles.module.css';
 
 import { withRouter, NavLink } from 'react-router-dom';
@@ -11,6 +11,12 @@ const Footer = ({ location }) => {
     <div className="container">
       <nav className={styles.nav}>
         <ul className={styles.list}>
+          <NavLink
+            className={styles.item}
+            activeClassName={location.pathname === '/' ? styles.itemActive : styles.item}
+            to="/">
+            How It Works
+          </NavLink>
           {list.map(({ title, href }, index) => (
             <NavLink
               className={styles.item}

@@ -7,3 +7,4 @@ export { default as BannerProps } from './BannerProps';
 export { default as SignUp } from './SignUp';
 export { default as CreditMonitoring } from './CreditMonitoring';
 export { default as CreditScore } from './AskQuestions';
+export { default as ProcessBlock } from './ProcessBlock';
