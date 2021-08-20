@@ -18,7 +18,7 @@ const Banner = () => {
           <div className={styles.call}>
             <img className={styles.callSvg} src={SignSvgPhone} alt="" />
 
-            <div>
+            <div className={styles.tel}>
               Call now <br />
               <b>516-828-2338</b>
             </div>

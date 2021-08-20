@@ -235,6 +235,7 @@ p {
 
   .leftBlock {
     flex-direction: column;
+    margin-top: 0;
   }
 
   .descriptionLeft {
@@ -282,6 +283,7 @@ p {
     padding: 16px 22px;
   }
   .leftBlock {
+    margin-top: 0;
     flex-direction: column;
   }
 
