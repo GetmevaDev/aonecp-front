@@ -54,9 +54,11 @@
 .logo {
   position: relative;
   top: 22px;
+  width: 74px;
+  height: 28px;
 }
 .rgmInner {
-  margin-left: 66px;
+  margin-left: 76px;
 }
 
 .footerRight b {

@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 import { withRouter, NavLink } from 'react-router-dom';
 
-import RGM from '../../assets/rgm.png';
+import RGM from '../../assets/logoo.svg';
 
 const Footer = ({ location }) => {
   return (
@@ -32,11 +32,13 @@ const Footer = ({ location }) => {
         <h4 className={styles.footerLeft}>© 2021 A1 Credit Partners. All Rights Reserved. </h4>
         <p className={styles.footerRight}>
           <div className={styles.logoInner}></div>
-          <img src={RGM} alt="RGM" className={styles.logo} />
-          Web Design & Digital Marketing <br />
-          <div className={styles.rgmInner}>
-            by <b>Robert Gerov Media</b>
-          </div>
+          <a href="https://robertgerov.com/" style={{ color: '#000', fontWeight: 500 }}>
+            <img src={RGM} alt="RGM" className={styles.logo} />
+            Web Design & Digital Marketing <br />
+            <div className={styles.rgmInner}>
+              by <b>Robert Gerov Media</b>
+            </div>
+          </a>
         </p>
       </div>
     </div>
