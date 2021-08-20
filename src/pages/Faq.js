@@ -2,6 +2,7 @@ import React from 'react';
 import { BannerProps, Footer, NavBar, CreditScore } from '../components/';
 import BeatLoader from 'react-spinners/BeatLoader';
 import FaqBanner from '../assets/faqbg.png';
+import { Helmet } from 'react-helmet';
 import { useQuery, gql } from '@apollo/client';
 
 const Faq = () => {
@@ -23,14 +24,18 @@ const Faq = () => {
     );
   if (error) return <p>Error :(</p>;
 
+  console.log(data);
+
   return (
     <div>
+      <Helmet>
+        <title>FAQ</title>
+        <meta name="description" content="FAQ " />
+      </Helmet>
       <NavBar />
       <BannerProps imgUrl={FaqBanner} title="FAQ" />
-
       <CreditScore data={data} />
-
-      <Footer />
+      <Footer />{' '}
     </div>
   );
 };

@@ -3,8 +3,6 @@ import styles from './styles.module.css';
 import BeatLoader from 'react-spinners/BeatLoader';
 import { useQuery, gql } from '@apollo/client';
 
-import twoYoung from '../../assets/two-young.png';
-
 const ProcessBlock = () => {
   const EXCHANGE_RATES = gql`
     query process {
