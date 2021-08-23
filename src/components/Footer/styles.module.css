@@ -136,6 +136,9 @@
   .item + .item {
     padding-left: 0;
   }
+  .firstitem {
+    margin-left: 0;
+  }
 }
 
 /* 480 width */
