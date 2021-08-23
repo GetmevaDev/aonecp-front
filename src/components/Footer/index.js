@@ -1,8 +1,9 @@
 import React from 'react';
 import { list } from '../NavBar/';
 import styles from './styles.module.css';
+import Fade from 'react-reveal/Fade';
 
-import { withRouter, NavLink } from 'react-router-dom';
+import { withRouter, NavLink, Link } from 'react-router-dom';
 
 import RGM from '../../assets/logoo.svg';
 
@@ -11,12 +12,31 @@ const Footer = ({ location }) => {
     <div className="container">
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          <NavLink
-            className={styles.item}
-            activeClassName={location.pathname === '/' ? styles.itemActive : styles.item}
-            to="/">
-            How It Works
-          </NavLink>
+          <li className={styles.firstitem}>
+            <NavLink
+              className={styles.item}
+              activeClassName={location.pathname === '/' ? styles.itemActive : styles.item}
+              to="/">
+              How It Works
+            </NavLink>
+
+            <Fade>
+              <ul className={styles.dropdown}>
+                <Link to="/our-process">
+                  <li className={styles.dropdownLink}>Our Process</li>
+                </Link>
+                <Link>
+                  <li className={styles.dropdownLink}>Free Consultation</li>
+                </Link>
+                <Link>
+                  <li className={styles.dropdownLink}>Get Started</li>
+                </Link>
+                <Link to="/faq">
+                  <li className={styles.dropdownLink}>FAQ</li>
+                </Link>
+              </ul>
+            </Fade>
+          </li>
           {list.map(({ title, href }, index) => (
             <NavLink
               className={styles.item}

@@ -39,4 +39,8 @@
     position: static;
     display: block;
   }
+
+  .pricing {
+    height: 0%;
+  }
 }

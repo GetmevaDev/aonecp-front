@@ -243,8 +243,8 @@
   .menu__btn {
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 20px;
+    position: relative;
+    top: 7px;
     left: 20px;
 
     width: 26px;

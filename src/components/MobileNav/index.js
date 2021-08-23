@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { list } from '../NavBar';
 
 import styles from './styles.css';
 const Mobile = ({ location }) => {
+  const [openModal, setOpenModal] = useState(true);
+
+  const handleClickOpen = () => {
+    setOpenModal(!openModal);
+  };
   return (
     <div>
       <div className="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
-        <label className="menu__btn" for="menu__toggle">
+        <label className="menu__btn" for="menu__toggle" onClick={handleClickOpen}>
           <span></span>
         </label>
 
