@@ -5,7 +5,7 @@ import { list } from '../NavBar';
 
 import styles from './styles.css';
 const Mobile = ({ location }) => {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleClickOpen = () => {
     setOpenModal(!openModal);
