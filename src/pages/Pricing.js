@@ -8,7 +8,15 @@ const Pricing = () => {
     <div>
       <Helmet>
         <title>A1CP - Pricing</title>
-        <meta name="description" content="A1CP Pricings" />
+        <meta name="description" content="A1CP Pricing" />
+          <meta
+              property="og:url"
+              content=""
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="A1CP -  Pricing" />
+          <meta property="og:description" content="" />
+          <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
       <BannerProps title="Pricing" imgUrl={pricing} />
