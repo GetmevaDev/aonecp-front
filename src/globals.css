@@ -108,6 +108,10 @@ button {
   width: 100%;
 }
 
+.hamburger-react {
+  position: absolute !important;
+}
+
 .accordion-wrapper .accordion-item .accordion-panel .panel-open {
   margin-left: 50px;
   background: none;

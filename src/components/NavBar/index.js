@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
@@ -10,6 +10,12 @@ export const list = [
   { id: 5, title: 'Get Started Now', href: '/getstarted' },
 ];
 const NavBar = ({ location }) => {
+  const dropdownRef = useRef(null);
+  const [login, setLogin] = useState(dropdownRef, false);
+
+  const onClick = () => {
+    setLogin(!login);
+  };
   return (
     <div className="container">
       <div className={styles.navbar}>
@@ -57,19 +63,17 @@ const NavBar = ({ location }) => {
           </ul>
         </nav>
         <>
-          <a className={styles.button} href="/#">
+          <a className={styles.button} href="/#" ref={dropdownRef} onClick={onClick}>
             Login as
-            <Fade>
-              <ul className={styles.dropdown}>
-                <li className={styles.dropdownLinkBtn}>
-                  <a href="https://www.creditrestorationportal.com/account/login">Client</a>
-                </li>
+            <ul className={styles.dropdown}>
+              <li className={styles.dropdownLinkBtn}>
+                <a href="https://www.creditrestorationportal.com/account/login">Client</a>
+              </li>
 
-                <li className={styles.dropdownLinkBtn}>
-                  <a href="https://www.affiliatecreditrepairportal.com/account/login">Affiliate</a>
-                </li>
-              </ul>
-            </Fade>
+              <li className={styles.dropdownLinkBtn}>
+                <a href="https://www.affiliatecreditrepairportal.com/account/login">Affiliate</a>
+              </li>
+            </ul>
           </a>
         </>
       </div>

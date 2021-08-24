@@ -177,10 +177,9 @@
 
   .menu__box {
     display: block;
-    position: fixed;
-    visibility: hidden;
+    position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     z-index: 5;
     width: 300px;
     height: 100%;
@@ -278,10 +277,9 @@
 
   .menu__box {
     display: block;
-    position: fixed;
-    visibility: hidden;
+    position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     z-index: 5;
     width: 300px;
     height: 100%;

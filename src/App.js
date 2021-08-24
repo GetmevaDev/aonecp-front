@@ -17,6 +17,7 @@ const client = new ApolloClient({
   uri: 'https://a1cp-back.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 });
+
 function App() {
   useScrollToTop();
   return (
