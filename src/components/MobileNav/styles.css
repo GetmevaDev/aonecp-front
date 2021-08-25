@@ -243,11 +243,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    top: 7px;
-    left: 20px;
-
+    top: 14px;
+    left: 16px;
     width: 26px;
-    height: 26px;
+    height: 1px;
 
     cursor: pointer;
     z-index: 100;

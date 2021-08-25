@@ -105,16 +105,21 @@ button {
 }
 
 .accordion-title {
-  width: 100%;
+  width: 80%;
 }
 
 .hamburger-react {
   position: absolute !important;
 }
 
+.accordion-wrapper .accordion-item .accordion-panel .panel-close {
+  font-weight: 600;
+}
+
 .accordion-wrapper .accordion-item .accordion-panel .panel-open {
   margin-left: 50px;
   background: none;
+  font-weight: 600;
 }
 
 .accordion-wrapper .accordion-item h3.accordion-title button.active {
@@ -223,5 +228,9 @@ img {
 
   .btnBlue {
     margin-bottom: 20px;
+  }
+
+  .accordion-title {
+    width: 100%;
   }
 }

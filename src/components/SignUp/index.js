@@ -67,7 +67,7 @@ const SignUp = () => {
           })}
         </div>
       </div>
-      <button className="btnBlue btnAny">any more</button>
+      <button className="btnBlue btnAny">and more</button>
       <p className={styles.easyDesc}>
         Because of our competitive rates, clients are required to signup for credit monitoring
         services with Identiyiq.com which starts at a <b>$</b>

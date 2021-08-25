@@ -101,6 +101,7 @@
 
   .monitoringBlock {
     display: flex;
+    margin-top: 5px;
     flex-direction: column;
     justify-content: space-between;
   }

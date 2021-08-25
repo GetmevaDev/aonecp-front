@@ -254,6 +254,8 @@ p {
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .choose {
     flex-direction: column;
+
+    margin-top: 30px;
   }
   .handImg {
     width: 100%;
