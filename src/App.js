@@ -5,6 +5,7 @@ import Pricing from './pages/Pricing';
 import Faq from './pages/Faq';
 import CreditMonitory from './pages/CreditMonitory';
 import OurProcess from './pages/OurProcess';
+import Consultation from './pages/Consultation';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/pricing" component={Pricing} />
           <Route path="/our-process" component={OurProcess} />
+          <Route path="/thankyou" component={Consultation} />
           <Route path="/faq" component={Faq} />
           <Route path="/creditmonitory" component={CreditMonitory} />
         </Switch>

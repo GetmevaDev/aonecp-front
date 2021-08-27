@@ -36,10 +36,10 @@ const Mobile = ({ location }) => {
                     <Link to="/our-process">
                       <li className="dropdownLink">Our Process</li>
                     </Link>
-                    <Link>
+                    <Link to="/thankyou">
                       <li className="dropdownLink">Free Consultation</li>
                     </Link>
-                    <Link>
+                    <Link to="#">
                       <li className="dropdownLink">Get Started</li>
                     </Link>
                     <Link to="/faq">

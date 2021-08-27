@@ -94,6 +94,20 @@ button {
   color: #ffffff;
 }
 
+.arrow {
+  position: relative;
+}
+
+.svg-arrow {
+  content: '';
+  position: absolute;
+  background-image: url('./assets/arrow.svg');
+  width: 20px;
+  height: 20px;
+  left: -24px;
+  top: 6px;
+}
+
 .accordion {
   border: none !important;
   border-radius: 2px;
