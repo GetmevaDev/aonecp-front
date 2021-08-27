@@ -20,12 +20,7 @@ const Consultation = () => {
           You've taken your first step towards a brighter future. Select a day and time to speak
           with one of our knowleadeable team members
         </p>
-        <div>
-          <Link to="/" className="arrow" style={{ fontSize: 20, color: '#000' }}>
-            <span className="svg-arrow" />
-            Back to Home
-          </Link>
-        </div>
+
         <div
           className="calendly-inline-widget"
           data-url="https://calendly.com/a1creditpartners"
