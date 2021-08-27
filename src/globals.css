@@ -94,6 +94,13 @@ button {
   color: #ffffff;
 }
 
+.btnBlue a {
+  color: #fff;
+}
+
+.btnYellow a{
+  color: #fff;
+}
 .accordion {
   border: none !important;
   border-radius: 2px;

@@ -17,6 +17,16 @@
   color: #ffffff;
 }
 
+.btnBlue a{
+  color: #ffffff;
+
+}
+
+.btnYellow a{
+  color: #ffffff;
+
+}
+
 .btnYellow {
   background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
   border-radius: 28px;
@@ -54,7 +64,7 @@
   line-height: 30px;
   padding-top: 40px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #323131;
 }
 
@@ -80,7 +90,7 @@
 .titleLeft {
   font-size: 60px;
   line-height: 48px;
-  font-family: 'Squada One', cursive;
+  font-family: "Squada One", cursive;
 
   color: #323131;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import BeatLoader from 'react-spinners/BeatLoader';
 import { useQuery, gql } from '@apollo/client';
+import {Link} from "react-router-dom";
 
 const ProcessBlock = () => {
   const EXCHANGE_RATES = gql`
@@ -36,8 +37,8 @@ const ProcessBlock = () => {
           <div className={styles.cardRight}>
             <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
             <div className={styles.buttons}>
-              <button className={styles.btnBlue}>Get Started Now</button>
-              <button className={styles.btnYellow}>Free Consultation</button>
+              <button className={styles.btnBlue}><Link to="#">Get Started Now</Link></button>
+              <button  className={styles.btnYellow}><Link to="/thankyou">Free Consultation</Link></button>
             </div>
           </div>
         </div>

@@ -25,10 +25,10 @@ const Footer = ({ location }) => {
                 <Link to="/our-process">
                   <li className={styles.dropdownLink}>Our Process</li>
                 </Link>
-                <Link>
+                <Link to='/thankyou'>
                   <li className={styles.dropdownLink}>Free Consultation</li>
                 </Link>
-                <Link>
+                <Link to="#">
                   <li className={styles.dropdownLink}>Get Started</li>
                 </Link>
                 <Link to="/faq">
@@ -52,6 +52,7 @@ const Footer = ({ location }) => {
         <h4 className={styles.footerLeft}>© 2021 A1 Credit Partners. All Rights Reserved. </h4>
         <p className={styles.footerRight}>
           <div className={styles.logoInner}></div>
+
           <a href="https://robertgerov.com/" style={{ color: '#000', fontWeight: 500 }}>
             <img src={RGM} alt="RGM" className={styles.logo} />
             Web Design & Digital Marketing <br />
