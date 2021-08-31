@@ -18,12 +18,19 @@
   font-size: 65px;
   line-height: 68px;
   text-align: center;
-
+  position: absolute;
   top: -250px;
   z-index: 100;
   bottom: 89.59%;
   position: relative;
   color: #323131;
+}
+
+.title::before {
+  background: #8b5555;
+  opacity: 0.5;
+  filter: blur(64px);
+  position: relative;
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
