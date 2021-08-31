@@ -6,8 +6,7 @@ import Fade from 'react-reveal/Fade';
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
   { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
-  // { id: 4, title: 'Credit Education Blog', href: '/faq' },
-  { id: 5, title: 'Get Started Now', href: '/getstarted' },
+  { id: 4, title: 'Credit Education Blog', href: '/faq' },
 ];
 const NavBar = ({ location }) => {
   const dropdownRef = useRef(null);
@@ -60,10 +59,24 @@ const NavBar = ({ location }) => {
                 {title}
               </NavLink>
             ))}
+
+            <li className={styles.seconditem}>
+              <Link className={styles.item}>Get Started</Link>
+              <Fade>
+                <ul className={styles.dropdown}>
+                  <Link to="/client-form">
+                    <li className={styles.dropdownLink}>Client Form</li>
+                  </Link>
+                  <Link to="/affiliate-form">
+                    <li className={styles.dropdownLink}>Affiliate Form </li>
+                  </Link>
+                </ul>
+              </Fade>
+            </li>
           </ul>
         </nav>
         <>
-          <a className={styles.button} href="/#" ref={dropdownRef} onClick={onClick}>
+          <div className={styles.button} href="/#">
             Login as
             <ul className={styles.dropdown}>
               <li className={styles.dropdownLinkBtn}>
@@ -74,7 +87,7 @@ const NavBar = ({ location }) => {
                 <a href="https://www.affiliatecreditrepairportal.com/account/login">Affiliate</a>
               </li>
             </ul>
-          </a>
+          </div>
         </>
       </div>
     </div>

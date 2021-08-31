@@ -20,7 +20,7 @@
   text-align: center;
 
   top: -250px;
-
+  z-index: 100;
   bottom: 89.59%;
   position: relative;
   color: #323131;

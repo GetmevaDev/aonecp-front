@@ -6,35 +6,53 @@ import Faq from './pages/Faq';
 import CreditMonitory from './pages/CreditMonitory';
 import OurProcess from './pages/OurProcess';
 import Consultation from './pages/Consultation';
+import Affiliate from './pages/AffiliateForm';
 
 import { Switch, Route } from 'react-router-dom';
+import { useQuery, gql } from '@apollo/client';
 
 import './globals.css';
 import useScrollToTop from './components/scrollToTop';
 import MobileNav from './components/MobileNav';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
-const client = new ApolloClient({
-  uri: 'https://a1cp-back.herokuapp.com/graphql',
-  cache: new InMemoryCache(),
-});
+import ClientForm from './pages/ClientForm';
 
 function App() {
   useScrollToTop();
+  const EXCHANGE_RATES = gql`
+    query faq {
+      seos {
+        homemeta
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  if (loading) return '';
+  if (error) return <p>Error :(</p>;
+  console.log(data);
+
   return (
     <div>
-      {' '}
-      <ApolloProvider client={client}>
-        <MobileNav />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/pricing" component={Pricing} />
-          <Route path="/our-process" component={OurProcess} />
-          <Route path="/thankyou" component={Consultation} />
-          <Route path="/faq" component={Faq} />
-          <Route path="/creditmonitory" component={CreditMonitory} />
-        </Switch>
-      </ApolloProvider>
+      <MobileNav />
+      <Switch>
+        <Route path="/" exact>
+          <Home data={data} />
+        </Route>
+        <Route path="/pricing">
+          <Pricing data={data} />
+        </Route>
+        <Route path="/our-process">
+          <OurProcess data={data} />
+        </Route>
+        <Route path="/thankyou" component={Consultation} />
+        <Route path="/faq">
+          <Faq data={data} />
+        </Route>
+        <Route path="/creditmonitory">
+          <CreditMonitory data={data} />
+        </Route>
+        <Route path="/affiliate-form" component={Affiliate} />
+        <Route path="/client-form" component={ClientForm} />
+      </Switch>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import BeatLoader from 'react-spinners/BeatLoader';
-
+import { Link } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 
 import styles from './style.module.css';
@@ -67,8 +67,12 @@ const ChooseUs = () => {
           <div className={styles.cardRight}>
             <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
             <div className={styles.buttons}>
-              <button className={styles.btnBlue}>Get Started Now</button>
-              <button className={styles.btnYellow}>Free Consultation</button>
+              <button className="btnBlue">
+                <Link to="#">Get Started Now</Link>
+              </button>
+              <button className="btnYellow">
+                <Link to="/thankyou">Free Consultation</Link>
+              </button>
             </div>
           </div>
         </div>

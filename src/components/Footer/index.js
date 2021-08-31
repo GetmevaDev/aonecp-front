@@ -25,7 +25,7 @@ const Footer = ({ location }) => {
                 <Link to="/our-process">
                   <li className={styles.dropdownLink}>Our Process</li>
                 </Link>
-                <Link to='/thankyou'>
+                <Link to="/thankyou">
                   <li className={styles.dropdownLink}>Free Consultation</li>
                 </Link>
                 <Link to="#">
@@ -53,7 +53,9 @@ const Footer = ({ location }) => {
         <p className={styles.footerRight}>
           <div className={styles.logoInner}></div>
 
-          <a href="https://robertgerov.com/" style={{ color: '#000', fontWeight: 500 }}>
+          <a
+            href="https://robertgerov.com/"
+            style={{ color: '#000', fontWeight: 500, whiteSpace: 'nowrap' }}>
             <img src={RGM} alt="RGM" className={styles.logo} />
             Web Design & Digital Marketing <br />
             <div className={styles.rgmInner}>

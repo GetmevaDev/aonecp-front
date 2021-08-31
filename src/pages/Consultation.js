@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { NavBar } from '../components';
+import { Footer, NavBar } from '../components';
 const Consultation = () => {
   useEffect(() => {
     const head = document.querySelector('head');
@@ -26,6 +26,7 @@ const Consultation = () => {
           data-url="https://calendly.com/a1creditpartners"
           style={{ minWidth: '320px', height: '630px' }}></div>
       </div>
+      <Footer />
     </>
   );
 };

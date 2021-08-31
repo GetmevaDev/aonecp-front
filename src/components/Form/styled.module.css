@@ -1,0 +1,56 @@
+.form {
+  background: #ffffff;
+  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 10px;
+  position: relative;
+  width: 1200px;
+  height: 579px;
+  margin: 0 auto;
+  top: -80px;
+}
+
+.form ul {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
+}
+
+.form ul li {
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.inputForm {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.textInput {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+
+  color: #323131;
+}
+
+.name {
+}
+
+.btnSend {
+  background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
+  border-radius: 28px;
+  padding: 16px 32px;
+  border: none;
+  width: 206px;
+  color: #fff;
+  outline: none;
+  margin-left: 470px;
+}

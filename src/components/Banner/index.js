@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import SignSvgPhone from '../../assets/phone.svg';
 
@@ -12,8 +12,12 @@ const Banner = () => {
         <h1 className={styles.title}>Restoring lives the easy way</h1>
         <p className={styles.description}>Free for the first 30 days</p>
         <div className={styles.buttons}>
-          <button className="btnBlue"><Link to="#">Get Started Now</Link></button>
-          <button  className="btnYellow"><Link to="/thankyou">Free Consultation</Link></button>
+          <button className="btnBlue">
+            <Link to="#">Get Started Now</Link>
+          </button>
+          <button className="btnYellow">
+            <Link to="/thankyou">Free Consultation</Link>
+          </button>
         </div>
         <a href="tel:516-828-2338">
           <div className={styles.call}>
@@ -21,7 +25,7 @@ const Banner = () => {
 
             <div className={styles.tel}>
               Call now <br />
-              <b>516-828-2338</b>
+              <b>800-974-7917</b>
             </div>
           </div>
         </a>

@@ -29,16 +29,14 @@ const Faq = () => {
   return (
     <div>
       <Helmet>
-        <title>FAQ</title>
+        <title>FAQ - A1 Credit Partner</title>
+
         <meta name="description" content="FAQ " />
-          <meta
-              property="og:url"
-              content=""
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="A1CP - FAQ" />
-          <meta property="og:description" content="" />
-          <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="A1CP - FAQ" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
       <BannerProps imgUrl={FaqBanner} title="FAQ" />

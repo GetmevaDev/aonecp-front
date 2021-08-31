@@ -12,13 +12,25 @@
   margin-right: 35px;
 }
 
+.seconditem {
+  transition: all 0.5s ease;
+  margin-top: 30px;
+  margin-right: 35px;
+  margin-left: 30px;
+}
+
+.seconditem:hover .dropdown {
+  display: block;
+  z-index: 999;
+}
+
 .dropdown {
   padding-left: 0;
   background: #ffffff;
   box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
   border-radius: 10px;
   width: 215px;
-  height: 201px;
+  height: 20%;
   position: absolute;
   display: none;
 }
