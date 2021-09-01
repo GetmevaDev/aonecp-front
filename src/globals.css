@@ -94,11 +94,25 @@ button {
   color: #ffffff;
 }
 
+.PhoneInputInput {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 5px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  color: #323131;
+}
 .btnBlue a {
   color: #fff;
 }
 
-.btnYellow a{
+.btnYellow a {
   color: #fff;
 }
 .accordion {

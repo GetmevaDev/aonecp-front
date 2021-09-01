@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
   { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
-  { id: 4, title: 'Credit Education Blog', href: '/faq' },
+  { id: 4, title: 'Credit Education Blog', href: '#' },
 ];
 const NavBar = ({ location }) => {
   const dropdownRef = useRef(null);

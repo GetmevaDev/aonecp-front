@@ -1,8 +1,6 @@
 .pricing {
   margin-top: 25px;
-
   height: 418px;
-  position: relative;
 }
 
 .imgProp {
@@ -16,21 +14,27 @@
   font-style: normal;
   font-weight: normal;
   font-size: 65px;
+
   line-height: 68px;
   text-align: center;
-  position: absolute;
-  top: -250px;
-  z-index: 100;
-  bottom: 89.59%;
   position: relative;
+  top: -300px;
+  z-index: 100;
+
+  border-radius: 50%;
+  bottom: 89.59%;
   color: #323131;
 }
 
 .title::before {
-  background: #8b5555;
-  opacity: 0.5;
-  filter: blur(64px);
+  content: '';
   position: relative;
+  -webkit-backdrop-filter: blur(54px);
+  backdrop-filter: blur(20px);
+  background: #fff;
+  width: 921px;
+  height: 335px;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
