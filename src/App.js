@@ -18,37 +18,37 @@ import ClientForm from './pages/ClientForm';
 
 function App() {
   useScrollToTop();
-  const EXCHANGE_RATES = gql`
-    query faq {
-      seos {
-        homemeta
-      }
-    }
-  `;
-  const { loading, error, data } = useQuery(EXCHANGE_RATES);
-  if (loading) return '';
-  if (error) return <p>Error :(</p>;
-  console.log(data);
+  // const EXCHANGE_RATES = gql`
+  //   query faq {
+  //     seos {
+  //       homemeta
+  //     }
+  //   }
+  // `;
+  // const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  // if (loading) return '';
+  // if (error) return <p>Error :(</p>;
+  // console.log(data);
 
   return (
     <div>
       <MobileNav />
       <Switch>
         <Route path="/" exact>
-          <Home data={data} />
+          <Home />
         </Route>
         <Route path="/pricing">
-          <Pricing data={data} />
+          <Pricing />
         </Route>
         <Route path="/our-process">
-          <OurProcess data={data} />
+          <OurProcess />
         </Route>
         <Route path="/thankyou" component={Consultation} />
         <Route path="/faq">
-          <Faq data={data} />
+          <Faq />
         </Route>
         <Route path="/creditmonitory">
-          <CreditMonitory data={data} />
+          <CreditMonitory />
         </Route>
         <Route path="/affiliate-form" component={Affiliate} />
         <Route path="/client-form" component={ClientForm} />

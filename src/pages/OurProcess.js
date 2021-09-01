@@ -4,11 +4,13 @@ import { Helmet } from 'react-helmet';
 
 import Process from '../assets/process.png';
 
-const OurProcess = ({ data }) => {
+const OurProcess = () => {
   return (
     <div>
       <Helmet>
-        <title>{data.seos[3].homemeta}</title>
+        <title>A1CP - Our Process</title>
+
+        {/* {data.seos[3].homemeta} */}
         <meta name="description" content="A1CP OUR PROCESS" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />

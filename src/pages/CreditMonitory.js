@@ -4,12 +4,13 @@ import WhatIsMonitoring from '../components/WhatIsMonitoring';
 import CreditMonitoring from '../assets/creditmonitoringbg.png';
 import { Helmet } from 'react-helmet';
 
-const CreditMonitory = ({ data }) => {
+const CreditMonitory = () => {
   return (
     <div>
       <Helmet>
-        <title>{data.seos[2].homemeta}</title>
+        <title>A1CP - CreditMonitory</title>
 
+        {/* {data.seos[2].homemeta} */}
         <meta name="description" content="A1CP CreditMonitory" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />

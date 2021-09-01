@@ -3,13 +3,12 @@ import { BannerProps, CreditMonitoring, Footer, NavBar, SignUp } from '../compon
 import pricing from '../assets/Slides.svg';
 import { Helmet } from 'react-helmet';
 
-const Pricing = ({ data }) => {
-  console.log(data);
+const Pricing = () => {
   return (
     <div>
       <Helmet>
-        <title>{data.seos[4].homemeta}</title>
-
+        <title>A1CP - Pricing</title>
+        {/* {data.seos[4].homemeta} */}
         <meta name="description" content="A1CP Pricing" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />

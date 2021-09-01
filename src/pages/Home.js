@@ -6,7 +6,8 @@ const Home = ({ data }) => {
   return (
     <div>
       <Helmet>
-        <title>{data.seos[0].homemeta}</title>
+        <title></title>
+        {/* {data.seos[0].homemeta} */}
         <meta name="description" content="A1CP HOME" />
         <meta property="og:url" content="" />
         <meta property="og:type" content="website" />

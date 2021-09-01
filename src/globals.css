@@ -82,6 +82,7 @@ button {
 .btnYellow {
   background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
   border-radius: 28px;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 15px;
   margin-left: 10px;
