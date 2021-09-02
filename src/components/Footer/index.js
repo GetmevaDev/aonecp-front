@@ -2,6 +2,7 @@ import React from 'react';
 import { list } from '../NavBar/';
 import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
+import Popup from 'reactjs-popup';
 
 import { withRouter, NavLink, Link } from 'react-router-dom';
 
@@ -46,6 +47,23 @@ const Footer = ({ location }) => {
               {title}
             </NavLink>
           ))}
+
+          <Popup
+            trigger={
+              <li className={styles.item} style={{ cursor: 'pointer' }}>
+                Get Started Now
+              </li>
+            }
+            position="top center">
+            <div>
+              <Link to="/client-form">
+                <li className="dropdownLink">Client Form</li>
+              </Link>
+              <Link to="/affiliate-form">
+                <li className="dropdownLink">Affiliate Form </li>
+              </Link>
+            </div>
+          </Popup>
         </ul>
       </nav>
       <div className={styles.footerBlock}>

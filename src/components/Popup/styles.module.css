@@ -1,0 +1,13 @@
+.dropdownLink {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  padding-left: 29px;
+  font-family: 'Poppins', sans-serif;
+  color: #323131;
+  transition: all 0.5s ease;
+}
+
+.dropdownLink:hover {
+  color: #f76b1c;
+}

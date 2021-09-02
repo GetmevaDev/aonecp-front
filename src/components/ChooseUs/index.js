@@ -2,8 +2,9 @@ import React from 'react';
 import BeatLoader from 'react-spinners/BeatLoader';
 import { Link } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
-
+import 'reactjs-popup/dist/index.css';
 import styles from './style.module.css';
+import Pupup from '../Popup';
 
 const ChooseUs = () => {
   const EXCHANGE_RATES = gql`
@@ -37,7 +38,7 @@ const ChooseUs = () => {
             <h1 className={styles.cardTitle}>
               Get started restoring your credit free for the first <b>30</b> days
             </h1>
-            <button className={styles.btnBlue}>Get Started Now</button>
+            <Pupup />
           </div>
 
           <div className={styles.rightblock}>
@@ -67,9 +68,7 @@ const ChooseUs = () => {
           <div className={styles.cardRight}>
             <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
             <div className={styles.buttons}>
-              <button className="btnBlue">
-                <Link to="#">Get Started Now</Link>
-              </button>
+              <Pupup />
               <button className="btnYellow">
                 <Link to="/thankyou">Free Consultation</Link>
               </button>

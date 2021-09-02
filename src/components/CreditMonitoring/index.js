@@ -1,7 +1,8 @@
 import React from 'react';
 
 import styles from './style.module.css';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import Pupup from '../Popup';
 
 const CreditMonitoring = () => {
   return (
@@ -13,8 +14,10 @@ const CreditMonitoring = () => {
           you can provide these details to use during the sign up proce
         </p>
         <div className={styles.buttons}>
-          <button className="btnBlue"><Link to="#">Get Started Now</Link></button>
-          <button  className="btnYellow"><Link to="/thankyou">Free Consultation</Link></button>
+          <Pupup />
+          <button className="btnYellow">
+            <Link to="/thankyou">Free Consultation</Link>
+          </button>
         </div>
       </div>
     </div>

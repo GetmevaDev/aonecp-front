@@ -29,6 +29,10 @@
   width: 100%;
 }
 
+.inputFormLast {
+  width: 225%;
+}
+
 .textInput {
   font-weight: 500;
   font-size: 13px;
@@ -51,7 +55,6 @@
   border: none;
   width: 17%;
   margin: 0 auto;
-
   color: #fff;
   outline: none;
   cursor: pointer;
@@ -60,4 +63,43 @@
 .btnSend:focus {
   background: linear-gradient(224.86deg, #158492 4.87%, #06365d 96.04%);
   color: rgb(255, 255, 255);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .form {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .form {
+    position: static;
+  }
+
+  .form ul {
+    grid-template-columns: 1fr;
+  }
+
+  .btnSend {
+    width: 50%;
+  }
+
+  .inputFormLast {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .form {
+    position: static;
+  }
+  .form ul {
+    grid-template-columns: 1fr;
+  }
+  .btnSend {
+    width: 50%;
+  }
+  .inputFormLast {
+    width: 100%;
+  }
 }

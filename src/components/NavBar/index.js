@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
+import Popup from 'reactjs-popup';
 
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
@@ -60,19 +61,22 @@ const NavBar = ({ location }) => {
               </NavLink>
             ))}
 
-            <li className={styles.seconditem}>
-              <Link className={styles.item}>Get Started</Link>
-              <Fade>
-                <ul className={styles.dropdown}>
-                  <Link to="/client-form">
-                    <li className={styles.dropdownLink}>Client Form</li>
-                  </Link>
-                  <Link to="/affiliate-form">
-                    <li className={styles.dropdownLink}>Affiliate Form </li>
-                  </Link>
-                </ul>
-              </Fade>
-            </li>
+            <Popup
+              trigger={
+                <li className={styles.item} style={{ cursor: 'pointer' }}>
+                  Get Started Now
+                </li>
+              }
+              position="bottom center">
+              <div>
+                <Link to="/client-form">
+                  <li className="dropdownLink">Client Form</li>
+                </Link>
+                <Link to="/affiliate-form">
+                  <li className="dropdownLink">Affiliate Form </li>
+                </Link>
+              </div>
+            </Popup>
           </ul>
         </nav>
         <>

@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
-
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import SignSvgPhone from '../../assets/phone.svg';
+import Pupup from '../Popup';
 
 const Banner = () => {
   return (
@@ -12,9 +14,7 @@ const Banner = () => {
         <h1 className={styles.title}>Restoring lives the easy way</h1>
         <p className={styles.description}>Free for the first 30 days</p>
         <div className={styles.buttons}>
-          <button className="btnBlue">
-            <Link to="#">Get Started Now</Link>
-          </button>
+          <Pupup />
           <button className="btnYellow">
             <Link to="/thankyou">Free Consultation</Link>
           </button>

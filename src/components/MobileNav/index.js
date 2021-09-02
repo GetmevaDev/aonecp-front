@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { list } from '../NavBar';
+import Popup from 'reactjs-popup';
 
 import styles from './styles.css';
 const Mobile = ({ location }) => {
@@ -57,6 +58,23 @@ const Mobile = ({ location }) => {
                   {title}
                 </NavLink>
               ))}
+
+              <Popup
+                trigger={
+                  <li className="menu__item" style={{ cursor: 'pointer' }}>
+                    Get Started Now
+                  </li>
+                }
+                position="top center">
+                <div>
+                  <Link to="/client-form">
+                    <li className="dropdownLink">Client Form</li>
+                  </Link>
+                  <Link to="/affiliate-form">
+                    <li className="dropdownLink">Affiliate Form </li>
+                  </Link>
+                </div>
+              </Popup>
               <a className="login-button" href="/#">
                 Login as
                 <Fade>

@@ -4,8 +4,17 @@ import styles from './styled.module.css';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import emailjs from 'emailjs-com';
-
 const Form = () => {
+  const [firstName, setFirstName] = useState();
+  const [lastname, setLastname] = useState();
+  const [companyName, setCompanyName] = useState();
+  const [address, setAddress] = useState();
+  const [city, setCity] = useState();
+  const [state, setState] = useState();
+  const [zipCode, setZipCode] = useState();
+  const [promotionals, setPromotionals] = useState();
+  const [comments, setComments] = useState();
+
   const [email, setEmail] = useState('');
   const [emailDirty, setEmailDirty] = useState(false);
   const [emailError, setEmailError] = useState('Email is a required field');
@@ -21,7 +30,7 @@ const Form = () => {
       setEmailError('Incorrect email');
     } else {
       setEmailError('');
-    } 
+    }
   };
 
   useEffect(() => {
@@ -34,18 +43,29 @@ const Form = () => {
 
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs
       .sendForm('service_mqtpv9t', 'template_hxleb5a', e.target, 'user_iw2a3XOS7O7HrGbR8S31M')
       .then(
         (result) => {
           console.log(result.text);
+          setEmail('');
+          setPhone('');
+          setFirstName('');
+          setLastname('');
+          setCompanyName('');
+          setAddress('');
+          setCity('');
+          setState('');
+          setZipCode('');
+          setPromotionals('');
+          setComments('');
         },
         (error) => {
           console.log(error.text);
         },
       );
   }
+  //
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -56,7 +76,6 @@ const Form = () => {
         break;
     }
   };
-
   return (
     <div className="container">
       <form className={styles.form} onSubmit={sendEmail}>
@@ -64,47 +83,47 @@ const Form = () => {
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> First Name</h5>
-              <input className={styles.inputForm} name="name" type="text" />
+              <input className={styles.inputForm} value={firstName} name="name" type="text" />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> Last Name</h5>
-              <input className={styles.inputForm} name="lastname" type="text" />
+              <input className={styles.inputForm} value={lastname} name="lastname" type="text" />
             </label>
           </li>
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}>Company Name</h5>
-              <input className={styles.inputForm} name="company" type="text" />
+              <input className={styles.inputForm} value={companyName} name="company" type="text" />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> Address</h5>
-              <input className={styles.inputForm} name="address" type="text" />
+              <input className={styles.inputForm} value={address} name="address" type="text" />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}>City</h5>
-              <input className={styles.inputForm} name="city" type="text" />
+              <input className={styles.inputForm} value={city} name="city" type="text" />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> State</h5>
-              <input className={styles.inputForm} name="state" type="text" />
+              <input className={styles.inputForm} value={state} name="state" type="text" />
             </label>
           </li>
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> ZIP code</h5>
-              <input className={styles.inputForm} name="zipcode" type="text" />
+              <input className={styles.inputForm} value={zipCode} name="zipcode" type="text" />
             </label>
           </li>
 
@@ -142,17 +161,22 @@ const Form = () => {
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> Promotional Methods</h5>
-              <input className={styles.inputForm} name="promotionals" type="text" />
+              <input
+                className={styles.inputForm}
+                value={promotionals}
+                name="promotionals"
+                type="text"
+              />
             </label>
           </li>
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}>Comment Box</h5>
               <input
-                className={styles.inputForm}
-                style={{ width: '225%' }}
+                className={`${styles.inputForm} ${styles.inputFormLast}`}
                 name="comment"
                 type="text"
+                value={comments}
               />
             </label>
           </li>

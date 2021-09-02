@@ -6,6 +6,11 @@ import PhoneInput from 'react-phone-number-input';
 import emailjs from 'emailjs-com';
 
 const Form = () => {
+  const [firstName, setFirstName] = useState();
+  const [lastname, setLastname] = useState();
+  const [wouldyoulike, setWouldYouLike] = useState();
+  const [howDid, setHoWdid] = useState();
+
   const [email, setEmail] = useState('');
   const [emailDirty, setEmailDirty] = useState(false);
   const [emailError, setEmailError] = useState('Email is a required field');
@@ -40,6 +45,12 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setFirstName('');
+          setLastname('');
+          setPhone('');
+          setEmail('');
+          setWouldYouLike('');
+          setHoWdid('');
         },
         (error) => {
           console.log(error.text);
@@ -64,14 +75,14 @@ const Form = () => {
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> First Name</h5>
-              <input className={styles.inputForm} name="name" type="text" />
+              <input className={styles.inputForm} value={firstName} name="name" type="text" />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> Last Name</h5>
-              <input className={styles.inputForm} name="lastname" type="text" />
+              <input className={styles.inputForm} value={lastname} name="lastname" type="text" />
             </label>
           </li>
 
@@ -109,14 +120,19 @@ const Form = () => {
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> Would you like a free Consultation?</h5>
-              <input className={styles.inputForm} name="wouldyoulike" type="text" />
+              <input
+                className={styles.inputForm}
+                value={wouldyoulike}
+                name="wouldyoulike"
+                type="text"
+              />
             </label>
           </li>
 
           <li>
             <label className={styles.name}>
               <h5 className={styles.textInput}> How did you hear about us?</h5>
-              <input className={styles.inputForm} name="howdid" type="text" />
+              <input className={styles.inputForm} value={howDid} name="howdid" type="text" />
             </label>
           </li>
         </ul>
