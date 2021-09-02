@@ -44,7 +44,7 @@ const Form = () => {
   function sendEmail(e) {
     e.preventDefault();
     emailjs
-      .sendForm('service_mqtpv9t', 'template_hxleb5a', e.target, 'user_iw2a3XOS7O7HrGbR8S31M')
+      .sendForm('service_mw3qmm3', 'template_hxleb5a', e.target, 'user_iw2a3XOS7O7HrGbR8S31M')
       .then(
         (result) => {
           console.log(result.text);

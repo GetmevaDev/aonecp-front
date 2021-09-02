@@ -67,12 +67,12 @@ const Mobile = ({ location }) => {
                 }
                 position="top center">
                 <div>
-                  <Link to="/client-form">
+                  <NavLink to="/client-form">
                     <li className="dropdownLink">Client Form</li>
-                  </Link>
-                  <Link to="/affiliate-form">
+                  </NavLink>
+                  <NavLink to="/affiliate-form">
                     <li className="dropdownLink">Affiliate Form </li>
-                  </Link>
+                  </NavLink>
                 </div>
               </Popup>
               <a className="login-button" href="/#">

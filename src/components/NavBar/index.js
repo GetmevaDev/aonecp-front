@@ -7,6 +7,8 @@ import Popup from 'reactjs-popup';
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
   { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
+  { id: 4, title: 'Privacy Policy', href: '/privacy' },
+
   // { id: 4, title: 'Credit Education Blog', href: '#' },
 ];
 const NavBar = ({ location }) => {
