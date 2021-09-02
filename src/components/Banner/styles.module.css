@@ -1,8 +1,9 @@
 .banner {
-  background-image: url("../../assets/home.png");
+  background-image: url('../../assets/home.png');
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 750px;
+  background-position: 26%;
   margin-top: 30px;
 }
 
@@ -110,10 +111,8 @@
 /* 768 width+  */
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-
   .banner {
     margin-top: 0;
-
   }
   .call {
     background: #ffffff;
@@ -161,7 +160,6 @@
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .banner {
     margin-top: 0;
-
   }
 
   .call {
