@@ -1,5 +1,5 @@
 .banner {
-  background-image: url('../../assets/home.png');
+  background-image: url("../../assets/home.png");
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 750px;
@@ -110,6 +110,11 @@
 /* 768 width+  */
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+
+  .banner {
+    margin-top: 0;
+
+  }
   .call {
     background: #ffffff;
     box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
@@ -143,10 +148,22 @@
     text-align: center;
     padding-top: 0;
   }
+
+  .tel {
+    display: block;
+    padding-top: 0;
+    padding-left: 0;
+    flex-direction: column;
+  }
 }
 
 /* 480 width */
 @media screen and (min-width: 300px) and (max-width: 479px) {
+  .banner {
+    margin-top: 0;
+
+  }
+
   .call {
     background: #ffffff;
     box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
@@ -175,6 +192,14 @@
   }
 
   .tel b {
-    font-size: 16px;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+
+  .tel {
+    display: block;
+    padding-top: 0;
+    padding-left: 0;
+    flex-direction: column;
   }
 }
