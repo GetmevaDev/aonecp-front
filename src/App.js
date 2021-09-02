@@ -15,6 +15,7 @@ import './globals.css';
 import useScrollToTop from './components/scrollToTop';
 import MobileNav from './components/MobileNav';
 import ClientForm from './pages/ClientForm';
+import Privacy from './pages/Privacy';
 
 function App() {
   useScrollToTop();
@@ -49,6 +50,10 @@ function App() {
         </Route>
         <Route path="/creditmonitory">
           <CreditMonitory />
+        </Route>
+
+        <Route path="/privacy">
+          <Privacy />
         </Route>
         <Route path="/affiliate-form" component={Affiliate} />
         <Route path="/client-form" component={ClientForm} />
