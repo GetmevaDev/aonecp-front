@@ -1,6 +1,24 @@
 .pricing {
   margin-top: 25px;
   height: 418px;
+  position: relative;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  filter: blur(5px);
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  width: 921px;
+  top: 20%;
+  left: 25%;
+  border-radius: 20%;
+  background: #fff;
+  height: 205px;
+  opacity: 0.5;
 }
 
 .imgProp {
@@ -26,21 +44,25 @@
   color: #323131;
 }
 
-.title::before {
-  content: '';
-  position: relative;
-  -webkit-backdrop-filter: blur(54px);
-  backdrop-filter: blur(20px);
-  background: #fff;
-  width: 921px;
-  height: 335px;
-  opacity: 0.5;
-}
-
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .title {
-    position: static;
+    position: relative;
     display: block;
+  }
+
+  .pricing::before {
+    content: '';
+
+    filter: blur(0);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    width: 0;
+    top: 20%;
+    left: 25%;
+    height: 0;
+    opacity: 1;
   }
 }
 
@@ -54,5 +76,20 @@
   .pricing {
     margin-top: 15px;
     height: 0%;
+  }
+
+  .pricing::before {
+    content: '';
+
+    filter: blur(0);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    width: 0;
+    top: 20%;
+    left: 25%;
+    height: 0;
+    opacity: 1;
   }
 }

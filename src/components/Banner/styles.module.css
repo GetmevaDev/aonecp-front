@@ -7,6 +7,23 @@
   margin-top: 30px;
 }
 
+.banner:before {
+  content: '';
+  position: absolute;
+  filter: blur(64px);
+  -webkit-filter: blur(400px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  width: 100%;
+  top: 45%;
+  left: 25%;
+  border-radius: 20%;
+  background: #fff;
+  height: 205px;
+  opacity: 1;
+}
+
 .logoService {
   background-image: url('../../assets/logo-service.png');
   background-size: cover;
