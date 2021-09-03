@@ -7,11 +7,14 @@
   margin-top: 30px;
 }
 
-.banner:before {
+.bannerInner {
+  position: relative;
+}
+
+.bannerInner:before {
   content: '';
-  position: absolute;
   filter: blur(64px);
-  -webkit-filter: blur(400px);
+  -webkit-filter: blur(450px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
@@ -21,7 +24,7 @@
   border-radius: 20%;
   background: #fff;
   height: 205px;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .logoService {
@@ -36,7 +39,6 @@
 .phone {
   background-image: url('../../assets/phone.svg');
   background-size: cover;
-
   width: 70px;
   position: relative;
   right: 40%;
@@ -56,12 +58,9 @@
   font-weight: normal;
   font-size: 65px;
   line-height: 68px;
-
   margin-top: 25px;
   margin-bottom: 0;
-
   text-align: center;
-
   color: #323131;
 }
 
