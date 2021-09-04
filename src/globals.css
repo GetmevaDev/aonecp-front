@@ -79,6 +79,23 @@ button {
   color: #ffffff;
 }
 
+.button {
+  background-color: #fff;
+  border: 3px dashed rgb(0, 0, 0);
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  line-height: 2em;
+  margin: 10px 15px;
+  outline: 0;
+  padding: 0 30px;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
 .btnYellow {
   background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
   border-radius: 28px;

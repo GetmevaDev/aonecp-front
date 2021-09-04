@@ -25,6 +25,8 @@ const Benefits = () => {
     <>
       <div className="container">
         <div className={styles.benefits}>
+          <div className={styles.benefitsBackImg}></div>
+
           <div>
             <h1 className={styles.titleBenefits}>Benefits</h1>
             {data.benefits.map(({ benefit }, index) => (

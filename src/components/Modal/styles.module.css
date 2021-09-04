@@ -1,0 +1,12 @@
+.item {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: #323131;
+  margin-top: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}

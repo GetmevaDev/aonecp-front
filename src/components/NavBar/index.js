@@ -18,6 +18,11 @@ const NavBar = ({ location }) => {
   const onClick = () => {
     setLogin(!login);
   };
+  const contentStyle = {
+    maxWidth: '370px',
+    width: '90%',
+  };
+
   return (
     <div className="container">
       <div className={styles.navbar}>
@@ -52,7 +57,6 @@ const NavBar = ({ location }) => {
                 </ul>
               </Fade>
             </li>
-
             {list.map(({ title, href }, index) => (
               <NavLink
                 className={styles.item}
@@ -66,18 +70,43 @@ const NavBar = ({ location }) => {
             <Popup
               trigger={
                 <li className={styles.item} style={{ cursor: 'pointer' }}>
-                  Get Started Now
+                  Sign Up
                 </li>
               }
-              position="bottom center">
-              <div>
-                <Link to="/client-form">
-                  <li className="dropdownLink">Client Form</li>
-                </Link>
-                <Link to="/affiliate-form">
-                  <li className="dropdownLink">Affiliate Form </li>
-                </Link>
-              </div>
+              modal
+              contentStyle={contentStyle}>
+              {(close) => (
+                <div className="modal">
+                  <a
+                    className="close"
+                    onClick={close}
+                    style={{ float: 'right', cursor: 'pointer', fontSize: 30 }}>
+                    &times;
+                  </a>
+
+                  <div className="content">
+                    <iframe
+                      title="sign up"
+                      name="frame_agreement"
+                      id="frame_agreement"
+                      src="https://www.clientdisputemanager.com/Agreement/AgreementForm?CompanyId=266939"
+                      height="400"
+                      width="350"
+                      frameborder="0"
+                      scrolling="yes"
+                      onload="resizeIframe(this)"></iframe>
+                  </div>
+                  <div className="actions" style={{ textAlign: 'center' }}>
+                    <button
+                      className="button"
+                      onClick={() => {
+                        close();
+                      }}>
+                      close
+                    </button>
+                  </div>
+                </div>
+              )}
             </Popup>
           </ul>
         </nav>

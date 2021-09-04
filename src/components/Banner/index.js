@@ -1,21 +1,24 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import SignSvgPhone from '../../assets/phone.svg';
 import Pupup from '../Popup';
+import Modal from '../Modal';
 
 const Banner = () => {
   return (
-    <div className={styles.banner}>
-      <div className={styles.bannerInner}>
+    <>
+      <div className={styles.blockInner}></div>
+      <div className={styles.banner}>
         <div className={styles.content}>
           <div className={styles.logoService}></div>
+
           <h1 className={styles.title}>Restoring lives the easy way</h1>
           <p className={styles.description}>Free for the first 30 days</p>
           <div className={styles.buttons}>
-            <Pupup />
+            <Modal />
+
             <button className="btnYellow">
               <Link to="/thankyou">Free Consultation</Link>
             </button>
@@ -32,7 +35,7 @@ const Banner = () => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -7,24 +7,22 @@
   margin-top: 30px;
 }
 
-.bannerInner {
-  position: relative;
+.content {
+  text-align: center;
+  padding-top: 165px;
 }
 
-.bannerInner:before {
+.content::after {
   content: '';
-  filter: blur(64px);
-  -webkit-filter: blur(450px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  width: 100%;
-  top: 45%;
+  backdrop-filter: blur(8px);
+  width: 50%;
+  z-index: 0;
+  top: 40%;
+  opacity: 0.5;
   left: 25%;
   border-radius: 20%;
   background: #fff;
-  height: 205px;
-  opacity: 0.5;
+  height: 30%;
 }
 
 .logoService {
@@ -40,16 +38,10 @@
   background-image: url('../../assets/phone.svg');
   background-size: cover;
   width: 70px;
-  position: relative;
   right: 40%;
   height: 70px;
   margin: 0 auto;
   background-repeat: no-repeat;
-}
-
-.content {
-  text-align: center;
-  padding-top: 165px;
 }
 
 .title {
@@ -124,7 +116,7 @@
   }
 }
 
-/* 768 width+  */
+/* 768 width+ */
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .banner {
