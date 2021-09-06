@@ -10,29 +10,11 @@
 }
 
 .content {
-  position: absolute;
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-}
-
-.contentInner {
-  left: 90%;
-
-  top: -200px;
-}
-
-.buttonsInner {
-  left: 90%;
-  top: -200px;
-}
-
-.content {
   text-align: center;
   margin-bottom: 100px;
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 33%;
 }
 
 .bannerBg::after {
