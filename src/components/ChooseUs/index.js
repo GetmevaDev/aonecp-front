@@ -40,7 +40,6 @@ const ChooseUs = () => {
               Get started restoring your credit free for the first <b>30</b> days
             </h1>
             <div className={styles.signBtn}>
-              <Pupup />
               <SignUp />
             </div>
           </div>
@@ -73,8 +72,6 @@ const ChooseUs = () => {
             <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
             <div className={styles.buttons}>
               <div className={styles.signifram}>
-                <Pupup />
-
                 <SignUp />
                 <button className="btnYellow">
                   <Link to="/thankyou">Free Consultation</Link>
