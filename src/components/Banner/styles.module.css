@@ -1,28 +1,51 @@
-.banner {
+.bannerBg {
   background-image: url('../../assets/home.png');
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 750px;
+  height: 750px;
   background-position: 26%;
   margin-top: 30px;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.contentInner {
+  left: 90%;
+
+  top: -200px;
+}
+
+.buttonsInner {
+  left: 90%;
+  top: -200px;
 }
 
 .content {
   text-align: center;
-  padding-top: 165px;
+  margin-bottom: 100px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 
-.content::after {
+.bannerBg::after {
   content: '';
-  backdrop-filter: blur(8px);
-  width: 50%;
-  z-index: 0;
-  top: 40%;
+  position: absolute;
+  filter: blur(64px);
+  width: 100%;
   opacity: 0.5;
-  left: 25%;
+  top: 30%;
+
   border-radius: 20%;
   background: #fff;
-  height: 30%;
+  height: 550px;
 }
 
 .logoService {
@@ -114,6 +137,23 @@
   .cardRight {
     display: none;
   }
+
+  .content {
+    left: 10%;
+    top: 35px;
+  }
+  .bannerBg::after {
+    content: '';
+    position: absolute;
+    filter: blur(64px);
+    width: 100%;
+    opacity: 0.5;
+    top: 20%;
+
+    border-radius: 20%;
+    background: #fff;
+    height: 550px;
+  }
 }
 
 /* 768 width+ */
@@ -126,8 +166,8 @@
     background: #ffffff;
     box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
     border-radius: 10px;
-    width: 300px;
-    height: 168px;
+    width: 265px;
+    height: 145px;
     margin: 0 auto;
     position: relative;
     font-weight: 500;
@@ -156,18 +196,45 @@
     padding-top: 0;
   }
 
+  .content {
+    left: 0;
+    top: 35px;
+  }
+
+  .call b {
+    white-space: nowrap;
+    font-size: 20px;
+  }
+
   .tel {
     display: block;
     padding-top: 0;
     padding-left: 0;
     flex-direction: column;
   }
+  .bannerBg::after {
+    content: '';
+    position: absolute;
+    filter: blur(64px);
+    width: 100%;
+    opacity: 0.5;
+    top: 20%;
+
+    border-radius: 20%;
+    background: #fff;
+    height: 550px;
+  }
 }
 
 /* 480 width */
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .banner {
-    margin-top: 0;
+    margin-top: -70px;
+  }
+
+  .content {
+    left: 0;
+    top: 35px;
   }
 
   .call {
@@ -185,6 +252,7 @@
     line-height: 34px;
     font-family: var(--font-family);
     color: #323131;
+    top: -100px;
     bottom: 116px;
   }
 
@@ -207,5 +275,18 @@
     padding-top: 0;
     padding-left: 0;
     flex-direction: column;
+  }
+
+  .bannerBg::after {
+    content: '';
+    position: absolute;
+    filter: blur(64px);
+    width: 100%;
+    opacity: 0.5;
+    top: 20%;
+
+    border-radius: 20%;
+    background: #fff;
+    height: 550px;
   }
 }

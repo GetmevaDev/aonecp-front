@@ -9,10 +9,10 @@ const Modal = () => {
     width: '90%',
   };
   return (
-    <div>
+    <div сlassName="mb">
       <Popup
         trigger={
-          <button className="btnBlue" style={{ padding: '15px 76px' }}>
+          <button className="btnBlue " style={{ padding: '15px 76px' }}>
             <li>Sign Up</li>
           </button>
         }

@@ -3,36 +3,38 @@ import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 import 'reactjs-popup/dist/index.css';
 import SignSvgPhone from '../../assets/phone.svg';
-import Pupup from '../Popup';
 import Modal from '../Modal';
 
 const Banner = () => {
   return (
     <>
-      <div className={styles.blockInner}></div>
       <div className={styles.banner}>
+        <div className={styles.bannerBg}></div>
         <div className={styles.content}>
-          <div className={styles.logoService}></div>
-
-          <h1 className={styles.title}>Restoring lives the easy way</h1>
-          <p className={styles.description}>Free for the first 30 days</p>
-          <div className={styles.buttons}>
-            <Modal />
-
-            <button className="btnYellow">
-              <Link to="/thankyou">Free Consultation</Link>
-            </button>
+          <div className={styles.contentInner}>
+            <div className={styles.logoService}></div>
+            <h1 className={styles.title}>Restoring lives the easy way</h1>
+            <p className={styles.description}>Free for the first 30 days</p>{' '}
           </div>
-          <a href="tel:516-828-2338">
-            <div className={styles.call}>
-              <img className={styles.callSvg} src={SignSvgPhone} alt="" />
+          <div className={styles.buttonsInner}>
+            <div className={styles.buttons}>
+              <Modal />
 
-              <div className={styles.tel}>
-                <span className={styles.callNow}>Call now</span> <br />
-                <b>800-974-7917</b>
+              <button className="btnYellow btnCons">
+                <Link to="/thankyou">Free Consultation</Link>
+              </button>
+            </div>{' '}
+            <a href="tel:516-828-2338">
+              <div className={styles.call}>
+                <img className={styles.callSvg} src={SignSvgPhone} alt="" />
+
+                <div className={styles.tel}>
+                  <span className={styles.callNow}>Call now</span> <br />
+                  <b>800-974-7917</b>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>{' '}
         </div>
       </div>
     </>
