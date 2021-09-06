@@ -10,7 +10,7 @@ const SignUp = () => {
   return (
     <Popup
       trigger={
-        <li className="btnBlue" style={{ cursor: 'pointer', marginTop: 10 }}>
+        <li className="btnBlue" style={{ cursor: 'pointer', marginTop: 10, fontFamily: 'Poppins' }}>
           Sign Up
         </li>
       }

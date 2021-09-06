@@ -120,7 +120,7 @@
 
   .content {
     left: 10%;
-    top: 35px;
+    top: -650px;
   }
   .bannerBg::after {
     content: '';
@@ -173,12 +173,9 @@
 
   .content {
     text-align: center;
-    padding-top: 0;
-  }
-
-  .content {
     left: 0;
-    top: 35px;
+    top: -650px;
+    padding-top: 0;
   }
 
   .call b {
@@ -214,7 +211,7 @@
 
   .content {
     left: 0;
-    top: 35px;
+    top: -650px;
   }
 
   .call {

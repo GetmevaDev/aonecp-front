@@ -163,6 +163,8 @@ p {
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .choose {
+    margin-top: -700px;
+
     flex-direction: column;
   }
   .handImg {
@@ -212,6 +214,7 @@ p {
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .choose {
+    margin-top: -700px;
     flex-direction: column;
   }
   .handImg {
@@ -266,9 +269,8 @@ p {
 /* 480 width */
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .choose {
+    margin-top: -800px;
     flex-direction: column;
-
-    margin-top: 30px;
   }
   .handImg {
     width: 100%;
@@ -316,6 +318,7 @@ p {
   .cardRight {
     right: 0;
     left: 0;
+    width: 100%;
     top: 3079px;
   }
 }
