@@ -1,6 +1,6 @@
 import React from 'react';
 import { BannerProps, CreditMonitoring, Footer, NavBar, SignUp } from '../components';
-import pricing from '../assets/Slides.svg';
+import pricing from '../assets/pricng.png';
 import { Helmet } from 'react-helmet';
 
 const Pricing = () => {

@@ -1,9 +1,9 @@
 .bannerBg {
-  background-image: url('../../assets/home.png');
+  background-image: url("../../assets/Image Background.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 750px;
-  background-position: 26%;
+  background-position: 100%;
   margin-top: 30px;
   position: relative;
 }
@@ -207,6 +207,11 @@
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .banner {
     margin-top: -70px;
+  }
+
+  .bannerBg {
+    background-position: 85%;
+
   }
 
   .content {

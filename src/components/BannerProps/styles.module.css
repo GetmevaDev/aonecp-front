@@ -25,6 +25,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
+  background-position: 50%;
+
+  object-fit: cover;
+  max-height: 415px;
 }
 
 .title {

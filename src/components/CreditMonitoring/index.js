@@ -17,7 +17,7 @@ const CreditMonitoring = () => {
           <Pupup />
           <button className="btnYellow">
             <Link to="/thankyou">Free Consultation</Link>
-          </button>ff
+          </button>
         </div>
       </div>
     </div>
