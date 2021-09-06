@@ -69,6 +69,19 @@ p {
   text-align: center;
 }
 
+.signBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.signifram {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .btnBlue {
   background: linear-gradient(224.86deg, #73ccd8 4.87%, #2b6b9f 96.04%);
   border-radius: 28px;
@@ -135,7 +148,7 @@ p {
   width: 369px;
   margin: 0 auto;
   top: 2290px;
-  right: 360px;
+  right: 334px;
   padding: 36px 52px;
 }
 

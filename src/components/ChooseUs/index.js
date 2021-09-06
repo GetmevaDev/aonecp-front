@@ -5,6 +5,7 @@ import { useQuery, gql } from '@apollo/client';
 import 'reactjs-popup/dist/index.css';
 import styles from './style.module.css';
 import Pupup from '../Popup';
+import SignUp from '../SignUpIframe';
 
 const ChooseUs = () => {
   const EXCHANGE_RATES = gql`
@@ -38,7 +39,10 @@ const ChooseUs = () => {
             <h1 className={styles.cardTitle}>
               Get started restoring your credit free for the first <b>30</b> days
             </h1>
-            <Pupup />
+            <div className={styles.signBtn}>
+              <Pupup />
+              <SignUp />
+            </div>
           </div>
 
           <div className={styles.rightblock}>
@@ -68,10 +72,14 @@ const ChooseUs = () => {
           <div className={styles.cardRight}>
             <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
             <div className={styles.buttons}>
-              <Pupup />
-              <button className="btnYellow">
-                <Link to="/thankyou">Free Consultation</Link>
-              </button>
+              <div className={styles.signifram}>
+                <Pupup />
+
+                <SignUp />
+                <button className="btnYellow">
+                  <Link to="/thankyou">Free Consultation</Link>
+                </button>
+              </div>{' '}
             </div>
           </div>
         </div>
