@@ -31,7 +31,7 @@
   border-radius: 10px;
   width: 215px;
   max-height: 35%;
-
+  padding-bottom: 15px;
   position: absolute;
   display: none;
 }
