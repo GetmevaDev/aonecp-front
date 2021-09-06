@@ -235,7 +235,7 @@ p {
 
   .card {
     background: #ffffff;
-    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 25%);
     border-radius: 10px;
     position: absolute;
     width: 30%;
@@ -288,21 +288,29 @@ p {
     text-align: center;
   }
 
+  .cardTitle {
+    font-size: 30px;
+  }
+
   .card {
     background: #ffffff;
-    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+    box-shadow: 20px 20px 100px rgb(0 0 0 / 25%);
     border-radius: 10px;
-    position: absolute;
-    width: 30%;
-    left: 280px;
-    display: none;
-    bottom: -799px;
+    position: relative;
+
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    bottom: 0px;
     padding: 16px 22px;
   }
   .leftBlock {
     margin-top: 0;
     flex-direction: column;
   }
+
+
 
   .descriptionLeft {
     width: 100%;
@@ -315,10 +323,15 @@ p {
     width: 100%;
   }
 
+  .signBtn {
+    width: 100%;
+  }
+
   .cardRight {
     right: 0;
     left: 0;
     width: 100%;
-    top: 3079px;
+    position: relative;
+    top: 0;
   }
 }
