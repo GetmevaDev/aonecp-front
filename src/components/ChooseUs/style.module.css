@@ -187,11 +187,28 @@ p {
     background: #ffffff;
     box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
     border-radius: 10px;
-    position: absolute;
-    width: 30%;
-    left: 280px;
-    bottom: -799px;
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+    left: 0;
     padding: 16px 22px;
+  }
+
+  .cardTitle {
+    text-align: center;
+  }
+
+  .signBtn {
+    margin: 0 auto;
+  }
+
+  .cardRight {
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0;
+    left: 0;
   }
 
   .leftBlock {
@@ -237,10 +254,10 @@ p {
     background: #ffffff;
     box-shadow: 20px 20px 100px rgb(0 0 0 / 25%);
     border-radius: 10px;
-    position: absolute;
-    width: 30%;
-    left: 280px;
-    display: none;
+    position: relative;
+    width: 80%;
+    top: 0;
+    left: 50px;
     bottom: -799px;
     padding: 16px 22px;
   }
@@ -309,8 +326,6 @@ p {
     margin-top: 0;
     flex-direction: column;
   }
-
-
 
   .descriptionLeft {
     width: 100%;

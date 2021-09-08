@@ -35,12 +35,14 @@ const ChooseUs = () => {
       <div className={styles.choose}>
         <img className={styles.handImg} src={data.chooseUsRightBlocks[5].img.url} alt="" />
         <div className="container">
-          <div className={styles.card}>
-            <h1 className={styles.cardTitle}>
-              Get started restoring your credit free for the first <b>30</b> days
-            </h1>
-            <div className={styles.signBtn}>
-              <SignUp />
+          <div className={styles.cardInner}>
+            <div className={styles.card}>
+              <h1 className={styles.cardTitle}>
+                Get started restoring your credit free for the first <b>30</b> days
+              </h1>
+              <div className={styles.signBtn}>
+                <SignUp />
+              </div>
             </div>
           </div>
 

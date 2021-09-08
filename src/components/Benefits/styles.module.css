@@ -62,7 +62,6 @@
 /* 768 width+  */
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
-
   .benefits {
     margin-top: 0;
   }
@@ -75,6 +74,10 @@
     font-size: 18px;
     margin-bottom: -10px;
   }
+  .benefitBlock {
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
 /* 480 width */
@@ -82,7 +85,6 @@
   .titleBenefits {
     text-align: center;
     padding-top: 0;
-
   }
 
   .benefits {
@@ -103,5 +105,10 @@
   .btnBlue {
     margin-top: 20px;
     margin-bottom: 0;
+  }
+
+  .benefitBlock {
+    margin-top: 10px;
+    text-align: center;
   }
 }
