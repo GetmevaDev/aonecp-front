@@ -1,5 +1,4 @@
 import React from 'react';
-import { list } from '../NavBar/';
 import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
 import Popup from 'reactjs-popup';
@@ -9,6 +8,14 @@ import { withRouter, NavLink, Link } from 'react-router-dom';
 import RGM from '../../assets/logoo.svg';
 
 const Footer = ({ location }) => {
+  const list = [
+    { id: 2, title: 'Pricing', href: '/pricing' },
+    { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
+    { id: 4, title: 'Privacy Policy', href: '/privacy' },
+
+    // { id: 4, title: 'Credit Education Blog', href: '#' },
+  ];
+
   return (
     <div className="container">
       <nav className={styles.nav}>

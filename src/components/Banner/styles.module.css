@@ -1,5 +1,5 @@
 .bannerBg {
-  background-image: url("../../assets/Image Background.png");
+  background-image: url('../../assets/Image Background.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 750px;
@@ -209,11 +209,6 @@
     margin-top: -70px;
   }
 
-  .bannerBg {
-    background-position: 85%;
-
-  }
-
   .content {
     left: 0;
     top: -650px;
@@ -269,6 +264,6 @@
 
     border-radius: 20%;
     background: #fff;
-    height: 550px;
+    height: 250px;
   }
 }

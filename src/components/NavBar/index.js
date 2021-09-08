@@ -7,7 +7,6 @@ import Popup from 'reactjs-popup';
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
   { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
-  { id: 4, title: 'Privacy Policy', href: '/privacy' },
 
   // { id: 4, title: 'Credit Education Blog', href: '#' },
 ];
@@ -113,7 +112,7 @@ const NavBar = ({ location }) => {
         <>
           <div className={styles.button} href="/#">
             Login as
-            <ul className={styles.dropdown}>
+            <ul className={styles.dropdownBtn}>
               <li className={styles.dropdownLinkBtn}>
                 <a href="https://www.creditrestorationportal.com/account/login">Client</a>
               </li>
