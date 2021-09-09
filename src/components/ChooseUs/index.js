@@ -6,6 +6,7 @@ import 'reactjs-popup/dist/index.css';
 import styles from './style.module.css';
 import Pupup from '../Popup';
 import SignUp from '../SignUpIframe';
+import ReactMarkdown from 'react-markdown';
 
 const ChooseUs = () => {
   const EXCHANGE_RATES = gql`
@@ -13,6 +14,7 @@ const ChooseUs = () => {
       chooseUsRightBlocks {
         paragraph
         title
+        getstarted
         img {
           url
         }
@@ -30,6 +32,8 @@ const ChooseUs = () => {
     );
   if (error) return <p>Error :(</p>;
 
+  console.log(data);
+
   return (
     <>
       <div className={styles.choose}>
@@ -38,7 +42,9 @@ const ChooseUs = () => {
           <div className={styles.cardInner}>
             <div className={styles.card}>
               <h1 className={styles.cardTitle}>
-                Get started restoring your credit free for the first <b>30</b> days
+                {data.chooseUsRightBlocks[7].getstarted}
+                <b>30 </b>
+                {data.chooseUsRightBlocks[8].getstarted}
               </h1>
               <div className={styles.signBtn}>
                 <SignUp />

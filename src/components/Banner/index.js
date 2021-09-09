@@ -14,7 +14,7 @@ const Banner = () => {
           <div className={styles.contentInner}>
             <div className={styles.logoService}></div>
             <h1 className={styles.title}>Restoring lives the easy way</h1>
-            <p className={styles.description}>Free for the first 30 days</p>{' '}
+            {/* <p className={styles.description}>Free for the first 30 days</p>{' '} */}
           </div>
           <div className={styles.buttonsInner}>
             <div className={styles.buttons}>
