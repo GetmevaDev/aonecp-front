@@ -17,14 +17,12 @@
   color: #ffffff;
 }
 
-.btnBlue a{
+.btnBlue a {
   color: #ffffff;
-
 }
 
-.btnYellow a{
+.btnYellow a {
   color: #ffffff;
-
 }
 
 .btnYellow {
@@ -54,8 +52,11 @@
   background: #ffffff;
   box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
   border-radius: 10px;
-  width: 369px;
-  height: 243px;
+  position: relative;
+  bottom: 143px;
+  left: 100px;
+  width: 309px;
+  height: 180px;
 }
 
 .cardTitleRight {
@@ -64,7 +65,7 @@
   line-height: 30px;
   padding-top: 40px;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #323131;
 }
 
@@ -77,20 +78,15 @@
   background-size: cover;
 }
 
-.cardRight {
-  position: relative;
-  bottom: 163px;
-  left: 70px;
-}
-
 .buttons {
   text-align: center;
+  padding-top: 30px;
 }
 
 .titleLeft {
   font-size: 60px;
   line-height: 48px;
-  font-family: "Squada One", cursive;
+  font-family: 'Squada One', cursive;
 
   color: #323131;
 }
@@ -142,6 +138,14 @@
   .cardRight {
     position: static;
     margin: 0 auto;
+  }
+
+  .btnYellow {
+    width: 100%;
+  }
+
+  .cardRight {
+    margin-left: 30px;
   }
 
   .btnBlue {

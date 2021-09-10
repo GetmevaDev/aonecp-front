@@ -43,7 +43,7 @@ const ChooseUs = () => {
             <div className={styles.card}>
               <h1 className={styles.cardTitle}>
                 {data.chooseUsRightBlocks[7].getstarted}
-                <b>30 </b>
+                <b> 30 </b>
                 {data.chooseUsRightBlocks[8].getstarted}
               </h1>
               <div className={styles.signBtn}>
@@ -77,7 +77,7 @@ const ChooseUs = () => {
           </div>
 
           <div className={styles.cardRight}>
-            <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1>
+            {/* <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1> */}
             <div className={styles.buttons}>
               <div className={styles.signifram}>
                 <SignUp />

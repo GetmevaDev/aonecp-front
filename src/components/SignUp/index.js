@@ -46,11 +46,13 @@ const SignUp = () => {
     <div className="container">
       <h1 className={styles.easyTitle}>Easy sign up process</h1>
       <p className={styles.easyDesc}>
-        Get your credit restoration program free for the first <b className={styles.color}>30 </b>
-        <b>days!</b> Then only
+        Get your credit restoration program free for
+        {/* <b className={styles.color}>30 </b> */}
+        {/* <b>days!</b> Then only */}
         <b> $</b>
         <b className={styles.color}>99/</b>
-        <b>month </b> for the full package which includes the following benefits:
+        {/* <b>month </b>  */}
+        for the full package which includes the following benefits:
       </p>
 
       <div className={styles.inner}>
