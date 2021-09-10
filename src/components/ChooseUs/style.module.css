@@ -59,10 +59,10 @@ p {
   box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
   border-radius: 10px;
   position: absolute;
-  width: 35%;
+  width: 30%;
   left: 166px;
-  bottom: -799px;
-  padding: 36px 52px;
+  bottom: -709px;
+  padding: 36px 50px;
 }
 
 .buttons {

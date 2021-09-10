@@ -43,8 +43,8 @@ const ChooseUs = () => {
             <div className={styles.card}>
               <h1 className={styles.cardTitle}>
                 {data.chooseUsRightBlocks[7].getstarted}
-                <b> 30 </b>
-                {data.chooseUsRightBlocks[8].getstarted}
+                {/* <b> 30 </b> */}
+                {/* {data.chooseUsRightBlocks[8].getstarted} */}
               </h1>
               <div className={styles.signBtn}>
                 <SignUp />
