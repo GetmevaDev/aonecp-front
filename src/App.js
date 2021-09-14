@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <MobileNav />
+      <MobileNav pageWrapId={'page-wrap'} outerContainerId={'App'} />
       <Switch>
         <Route path="/" exact>
           <Home />

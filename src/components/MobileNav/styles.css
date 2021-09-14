@@ -47,6 +47,85 @@
 .firstitem {
   transition: all 0.5s ease;
 }
+#page-wrap {
+  text-align: center;
+}
+
+/* Individual item */
+.bm-item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: 0.25s;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: #f76b1c;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  left: 21px;
+  top: 9px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #eceff1;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu__item.menu__item-block.active {
+  color: #000;
+}
 
 .firstitem::after {
   content: '';
@@ -55,8 +134,8 @@
   background-repeat: no-repeat;
   width: 8px;
   position: absolute;
-  left: 156px;
-  top: 213px;
+  left: 182px;
+  top: 204px;
   height: 5px;
 }
 
@@ -296,7 +375,6 @@
 
   .menu__item {
     display: block;
-    padding: 12px 24px;
 
     color: #333;
 
@@ -310,5 +388,13 @@
   }
   .menu__item:hover {
     background-color: #cfd8dc;
+  }
+  .bm-burger-button {
+    position: fixed;
+    width: 25px;
+    display: block;
+    height: 20px;
+    left: 21px;
+    top: 9px;
   }
 }

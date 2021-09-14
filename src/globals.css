@@ -63,6 +63,10 @@ button {
   cursor: pointer;
 }
 
+[role='tooltip'].popup-content {
+  z-index: 1990 !important;
+}
+
 .cardTitle {
   font-size: 30px;
   font-family: 'Squada One', cursive;

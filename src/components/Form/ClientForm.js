@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styled.module.css';
+import { useHistory } from 'react-router-dom';
 
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import emailjs from 'emailjs-com';
 
-const Form = () => {
+const Form = (props) => {
   const [firstName, setFirstName] = useState();
   const [lastname, setLastname] = useState();
   const [wouldyoulike, setWouldYouLike] = useState();
@@ -16,7 +17,7 @@ const Form = () => {
   const [emailError, setEmailError] = useState('Email is a required field');
   const [formValid, setFormValid] = useState(false);
   const [phone, setPhone] = useState();
-
+  const history = useHistory();
   const emailHandler = (e) => {
     setEmail(e.target.value);
     const re =
@@ -51,6 +52,7 @@ const Form = () => {
           setEmail('');
           setWouldYouLike('');
           setHoWdid('');
+          history.push('/thankyou');
         },
         (error) => {
           console.log(error.text);
@@ -113,18 +115,6 @@ const Form = () => {
                 value={phone}
                 formatPhoneNumber
                 onChange={setPhone}
-              />
-            </label>
-          </li>
-
-          <li>
-            <label className={styles.name}>
-              <h5 className={styles.textInput}> Would you like a free Consultation?</h5>
-              <input
-                className={styles.inputForm}
-                value={wouldyoulike}
-                name="wouldyoulike"
-                type="text"
               />
             </label>
           </li>

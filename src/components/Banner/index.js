@@ -18,13 +18,15 @@ const Banner = () => {
           </div>
           <div className={styles.buttonsInner}>
             <div className={styles.buttons}>
-              <button className="btnBlue" style={{ padding: '15px 76px' }}>
-                <Link to="/client-form">Sign Up</Link>
-              </button>
+              <Link to="/client-form">
+                <button className="btnBlue" style={{ padding: '15px 76px' }}>
+                  Sign Up
+                </button>
+              </Link>
 
-              <button className="btnYellow btnCons">
+              {/* <button className="btnYellow btnCons">
                 <Link to="/thankyou">Free Consultation</Link>
-              </button>
+              </button> */}
             </div>{' '}
             <a href="tel:516-828-2338">
               <div className={styles.call}>

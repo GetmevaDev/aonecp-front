@@ -47,9 +47,11 @@ const ChooseUs = () => {
                 {/* {data.chooseUsRightBlocks[8].getstarted} */}
               </h1>
               <div className={styles.signBtn}>
-                <button className="btnBlue" >
-                  <Link to="/client-form">Sign Up</Link>
-                </button>
+                <Link to="/client-form">
+                  <button className="btnBlue" style={{ width: '100%' }}>
+                    Sign Up
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -82,12 +84,14 @@ const ChooseUs = () => {
             {/* <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1> */}
             <div className={styles.buttons}>
               <div className={styles.signifram}>
-                <button className="btnBlue" style={{ padding: '15px 76px' }}>
-                  <Link to="/client-form">Sign Up</Link>
-                </button>
-                <button className="btnYellow">
+                <Link to="/client-form">
+                  <button className="btnBlue" style={{ width: '95%' }}>
+                    Sign Up
+                  </button>
+                </Link>
+                {/* <button className="btnYellow">
                   <Link to="/thankyou">Free Consultation</Link>
-                </button>
+                </button> */}
               </div>{' '}
             </div>
           </div>
