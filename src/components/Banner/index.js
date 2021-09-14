@@ -18,7 +18,9 @@ const Banner = () => {
           </div>
           <div className={styles.buttonsInner}>
             <div className={styles.buttons}>
-              <Modal />
+              <button className="btnBlue" style={{ padding: '15px 76px' }}>
+                <Link to="/client-form">Sign Up</Link>
+              </button>
 
               <button className="btnYellow btnCons">
                 <Link to="/thankyou">Free Consultation</Link>
