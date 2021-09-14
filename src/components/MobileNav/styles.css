@@ -48,6 +48,7 @@
   transition: all 0.5s ease;
 }
 #page-wrap {
+  border: none;
   text-align: center;
 }
 
@@ -57,7 +58,6 @@
   padding: 12px 24px;
 
   color: #333;
-
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -76,9 +76,11 @@
 /* The rest copied directly from react-burger-menu docs */
 
 /* Position and sizing of burger button */
+
 .bm-burger-button {
   display: none;
   position: fixed;
+  border: none;
   width: 25px;
   height: 20px;
   left: 21px;

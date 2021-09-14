@@ -17,7 +17,7 @@ const Banner = () => {
             {/* <p className={styles.description}>Free for the first 30 days</p>{' '} */}
           </div>
           <div className={styles.buttonsInner}>
-            <div className={styles.buttons}>
+            <div className={styles.buttons} style={{ marginTop: 20 }}>
               <Link to="/client-form">
                 <button className="btnBlue" style={{ padding: '15px 76px' }}>
                   Sign Up

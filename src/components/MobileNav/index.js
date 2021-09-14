@@ -15,7 +15,7 @@ export const Mobile = ({ location }, props) => {
   };
   return (
     <div>
-      <Menu {...props} isOpen={menuOpenState}>
+      <Menu {...props} isOpen={menuOpenState} onClose={closeMenu}>
         <Link to="/">
           <div className="imgLogo"></div>
         </Link>
