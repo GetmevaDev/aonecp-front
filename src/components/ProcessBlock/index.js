@@ -37,12 +37,12 @@ const ProcessBlock = () => {
           <div className={styles.cardRight}>
             {/* <h1 className={styles.cardTitleRight}>Free for the first 30 days</h1> */}
             <div className={styles.buttons}>
-              <button className={styles.btnBlue}>
+              {/* <button className={styles.btnBlue}>
                 <Link to="#">Get Started Now</Link>
-              </button>
-              <button className={styles.btnYellow}>
-                <Link to="/thankyou">Free Consultation</Link>
-              </button>
+              </button> */}
+              <Link to="/client-form">
+                <button className="btnBlue btnCons">Free Consultation</button>
+              </Link>
             </div>
           </div>
         </div>
