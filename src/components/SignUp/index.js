@@ -4,6 +4,7 @@ import BeatLoader from 'react-spinners/BeatLoader';
 
 import styles from './styles.module.css';
 import { css } from '@emotion/react';
+import { Link } from 'react-router-dom';
 const SignUp = () => {
   const [firstSign, setFirstSign] = useState([]);
   const [secondSign, setSecondSign] = useState([]);
@@ -69,7 +70,9 @@ const SignUp = () => {
           })}
         </div>
       </div>
-      <button className="btnBlue btnAny">and more</button>
+      <Link to="/credit-monitoring">
+        <button className="btnBlue btnAny">and more</button>
+      </Link>
       <p className={styles.easyDesc}>
         Because of our competitive rates, clients are required to signup for credit monitoring
         services with Identiyiq.com which starts at a <b>$</b>

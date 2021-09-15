@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 import { useQuery, gql } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 const Benefits = () => {
   const EXCHANGE_RATES = gql`
@@ -62,7 +63,9 @@ const Benefits = () => {
           </div>
 
           <div className={styles.benefitBlock}>
-            <button className={styles.btnBlue}>Learn More</button>
+            <Link to="/our-process">
+              <button className={styles.btnBlue}>Learn More</button>
+            </Link>
           </div>
         </div>
       </div>

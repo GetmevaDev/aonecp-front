@@ -3,18 +3,37 @@ import React from 'react';
 import styles from './style.module.css';
 import { Link } from 'react-router-dom';
 import Pupup from '../Popup';
+import { useQuery, gql } from '@apollo/client';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 const CreditMonitoring = () => {
+  const EXCHANGE_RATES = gql`
+    query GetRightBlock {
+      pricingCreditMonitorings {
+        creditTitle
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+
+  if (loading)
+    return (
+      <div style={{ marginTop: 100, textAlign: 'center' }}>
+        <BeatLoader />
+      </div>
+    );
+  if (error) return <p>Error :(</p>;
+
+  console.log(data);
+
   return (
     <div className="container">
       <div className={styles.credit}>
-        <p>
-          Credit monitoring is required monthly to ensure we can continue working on your inaccurate
-          accounts without any interruption. If you are already using a credit monitoring service,
-          you can provide these details to use during the sign up proce
-        </p>
+        <p>{data.pricingCreditMonitorings[0].creditTitle}</p>
         <div className={styles.buttons}>
-          <Pupup />
+          <Link to="/client-form">
+            <button className="btnBlue btnCons">Free Consultation</button>
+          </Link>
           {/* <button className="btnYellow">
             <Link to="/thankyou">Free Consultation</Link>
           </button> */}
