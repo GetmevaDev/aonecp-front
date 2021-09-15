@@ -6,7 +6,7 @@ import Popup from 'reactjs-popup';
 
 export const list = [
   { id: 2, title: 'Pricing', href: '/pricing' },
-  { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
+  { id: 3, title: 'Credit Monitoring', href: '/credit-monitoring' },
   { id: 4, title: 'Sign Up', href: '/client-form' },
   // { id: 4, title: 'Credit Education Blog', href: '#' },
 ];

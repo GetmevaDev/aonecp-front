@@ -24,8 +24,8 @@ const Banner = () => {
                 </button>
               </Link> */}
 
-              <button className="btnYellow btnCons">
-                <Link to="/thankyou">Free Consultation</Link>
+              <button className="btnBlue btnCons">
+                <Link to="/client-form">Free Consultation</Link>
               </button>
             </div>{' '}
             <a href="tel:516-828-2338">

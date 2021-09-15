@@ -52,8 +52,8 @@ const ChooseUs = () => {
                     Sign Up
                   </button>
                 </Link> */}
-                <button className="btnYellow">
-                  <Link to="/thankyou">Free Consultation</Link>
+                <button className="btnBlue btnCons">
+                  <Link to="/client-form">Free Consultation</Link>
                 </button>
               </div>
             </div>
@@ -92,8 +92,8 @@ const ChooseUs = () => {
                     Sign Up
                   </button>
                 </Link> */}
-                <button className="btnYellow">
-                  <Link to="/thankyou">Free Consultation</Link>
+                <button className="btnBlue btnCons">
+                  <Link to="/client-form">Free Consultation</Link>
                 </button>
               </div>{' '}
             </div>

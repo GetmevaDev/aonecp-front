@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { list } from '../NavBar';
@@ -6,7 +6,6 @@ import { slide as Menu } from 'react-burger-menu';
 import Popup from 'reactjs-popup';
 
 import styles from './styles.css';
-
 export const Mobile = ({ location }, props) => {
   const [menuOpenState, setMenuOpenState] = useState(false);
 
