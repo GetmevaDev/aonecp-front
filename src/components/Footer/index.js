@@ -10,7 +10,7 @@ import RGM from '../../assets/logoo.svg';
 const Footer = ({ location }) => {
   const list = [
     { id: 2, title: 'Pricing', href: '/pricing' },
-    { id: 3, title: 'Credit Monitoring', href: '/creditmonitory' },
+    { id: 3, title: 'Credit Monitoring', href: '/credit-monitoring' },
     { id: 4, title: 'Privacy Policy', href: '/privacy' },
 
     // { id: 4, title: 'Credit Education Blog', href: '#' },

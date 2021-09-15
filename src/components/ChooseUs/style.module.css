@@ -61,7 +61,7 @@ p {
   position: absolute;
   width: 30%;
   left: 166px;
-  bottom: -709px;
+  bottom: -759px;
   padding: 36px 50px;
 }
 
@@ -73,7 +73,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80%;
+  width: 70%;
 }
 
 .signifram {
@@ -147,8 +147,8 @@ p {
   position: absolute;
   width: 369px;
   margin: 0 auto;
-  top: 2330px;
-  right: 320px;
+  top: 2350px;
+  right: 340px;
   padding: 36px 52px;
 }
 
@@ -286,7 +286,7 @@ p {
 /* 480 width */
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .choose {
-    margin-top: -800px;
+    margin-top: -700px;
     flex-direction: column;
   }
   .handImg {

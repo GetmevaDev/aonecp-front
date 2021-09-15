@@ -18,15 +18,15 @@ const Banner = () => {
           </div>
           <div className={styles.buttonsInner}>
             <div className={styles.buttons} style={{ marginTop: 20 }}>
-              <Link to="/client-form">
+              {/* <Link to="/client-form">
                 <button className="btnBlue" style={{ padding: '15px 76px' }}>
                   Sign Up
                 </button>
-              </Link>
+              </Link> */}
 
-              {/* <button className="btnYellow btnCons">
+              <button className="btnYellow btnCons">
                 <Link to="/thankyou">Free Consultation</Link>
-              </button> */}
+              </button>
             </div>{' '}
             <a href="tel:516-828-2338">
               <div className={styles.call}>

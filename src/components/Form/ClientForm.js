@@ -126,7 +126,7 @@ const Form = (props) => {
             </label>
           </li>
         </ul>
-        <input disabled={!formValid} className={styles.btnSend} type="submit" value="Send" />
+        <input disabled={!formValid} className={styles.btnSend} type="submit" value="Submit" />
       </form>
     </div>
   );

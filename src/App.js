@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
@@ -10,6 +10,7 @@ import Affiliate from './pages/AffiliateForm';
 
 import { Switch, Route } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
+import ReactGa from 'react-ga';
 
 import './globals.css';
 import useScrollToTop from './components/scrollToTop';
@@ -31,6 +32,11 @@ function App() {
   // if (error) return <p>Error :(</p>;
   // console.log(data);
 
+  useEffect(() => {
+    ReactGa.initialize('G-GFN9PQZ5KT');
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  });
+
   return (
     <div>
       <MobileNav pageWrapId={'page-wrap'} outerContainerId={'App'} />
@@ -48,7 +54,7 @@ function App() {
         <Route path="/faq">
           <Faq />
         </Route>
-        <Route path="/creditmonitory">
+        <Route path="/credit-monitoring">
           <CreditMonitory />
         </Route>
 
