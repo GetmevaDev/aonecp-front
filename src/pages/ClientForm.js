@@ -14,10 +14,12 @@ const ClientForm = () => {
       <meta property="og:description" content="" />
       <meta property="og:image" content="" />
       <NavBar />
-      <BannerProps
+
+      {/* <BannerProps
         title="Please fill out the information below for a free consultation"
         imgUrl={bgGray}
-      />
+      /> */}
+
       <ClientFormTwo />
       <Footer />
     </>

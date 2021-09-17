@@ -36,7 +36,8 @@
   font-style: normal;
   font-weight: normal;
   font-size: 65px;
-
+  width: 100%;
+  white-space: wrap;
   line-height: 68px;
   text-align: center;
   position: relative;
@@ -75,6 +76,7 @@
   .title {
     position: static;
     display: block;
+    font-size: 30px;
   }
 
   .pricing {

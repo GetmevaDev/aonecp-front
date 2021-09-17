@@ -6,6 +6,7 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import emailjs from 'emailjs-com';
 
+import bgGray from '../../assets/woman.png';
 const Form = (props) => {
   const [firstName, setFirstName] = useState();
   const [lastname, setLastname] = useState();
@@ -71,64 +72,76 @@ const Form = (props) => {
   };
 
   return (
-    <div className="container">
-      <form className={styles.form} onSubmit={sendEmail}>
-        <ul>
-          <li>
-            <label className={styles.name}>
-              <h5 className={styles.textInput}> First Name</h5>
-              <input className={styles.inputForm} value={firstName} name="name" type="text" />
-            </label>
-          </li>
+    <>
+      <div className={styles.pricing}>
+        <div>
+          <img className={styles.imgProp} src={bgGray} alt="" />
+          <div className={styles.titleBlock}>
+            <h1 className={styles.title}>
+              Please fill out the information below for a free consultation
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <form className={styles.form} onSubmit={sendEmail}>
+          <ul>
+            <li>
+              <label className={styles.name}>
+                <h5 className={styles.textInput}> First Name</h5>
+                <input className={styles.inputForm} value={firstName} name="name" type="text" />
+              </label>
+            </li>
 
-          <li>
-            <label className={styles.name}>
-              <h5 className={styles.textInput}> Last Name</h5>
-              <input className={styles.inputForm} value={lastname} name="lastname" type="text" />
-            </label>
-          </li>
+            <li>
+              <label className={styles.name}>
+                <h5 className={styles.textInput}> Last Name</h5>
+                <input className={styles.inputForm} value={lastname} name="lastname" type="text" />
+              </label>
+            </li>
 
-          <li>
-            <label className={styles.name}>
-              {emailDirty && emailError && <div style={{ color: 'red' }}>{emailError}</div>}
-              <h5 className={styles.textInput}>Email</h5>
-              <input
-                onChange={(e) => emailHandler(e)}
-                value={email}
-                onBlur={(e) => blurHandler(e)}
-                className={styles.inputForm}
-                name="email"
-                type="email"
-              />
-            </label>
-          </li>
+            <li>
+              <label className={styles.name}>
+                {emailDirty && emailError && <div style={{ color: 'red' }}>{emailError}</div>}
+                <h5 className={styles.textInput}>Email</h5>
+                <input
+                  onChange={(e) => emailHandler(e)}
+                  value={email}
+                  onBlur={(e) => blurHandler(e)}
+                  className={styles.inputForm}
+                  name="email"
+                  type="email"
+                />
+              </label>
+            </li>
 
-          <li>
-            <label className={styles.name}>
-              <h5 className={styles.textInput}>Mobile Number</h5>
-              <PhoneInput
-                className={styles.textInput}
-                placeholder="Enter phone number"
-                name="phone"
-                countryCallingCodeEditable={false}
-                defaultCountry="US"
-                value={phone}
-                formatPhoneNumber
-                onChange={setPhone}
-              />
-            </label>
-          </li>
+            <li>
+              <label className={styles.name}>
+                <h5 className={styles.textInput}>Mobile Number</h5>
+                <PhoneInput
+                  className={styles.textInput}
+                  placeholder="Enter phone number"
+                  name="phone"
+                  countryCallingCodeEditable={false}
+                  defaultCountry="US"
+                  value={phone}
+                  formatPhoneNumber
+                  onChange={setPhone}
+                />
+              </label>
+            </li>
 
-          <li>
-            <label className={styles.name}>
-              <h5 className={styles.textInput}> How did you hear about us?</h5>
-              <input className={styles.inputForm} value={howDid} name="howdid" type="text" />
-            </label>
-          </li>
-        </ul>
-        <input disabled={!formValid} className={styles.btnSend} type="submit" value="Submit" />
-      </form>
-    </div>
+            <li>
+              <label className={styles.name}>
+                <h5 className={styles.textInput}> How did you hear about us?</h5>
+                <input className={styles.inputForm} value={howDid} name="howdid" type="text" />
+              </label>
+            </li>
+          </ul>
+          <input disabled={!formValid} className={styles.btnSend} type="submit" value="Submit" />
+        </form>
+      </div>
+    </>
   );
 };
 
