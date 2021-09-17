@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
 import 'reactjs-popup/dist/index.css';
 import styles from './style.module.css';
-import Pupup from '../Popup';
-import SignUp from '../SignUpIframe';
-import ReactMarkdown from 'react-markdown';
+// import Pupup from '../Popup';
+// import SignUp from '../SignUpIframe';
+// import ReactMarkdown from 'react-markdown';
 
 const ChooseUs = () => {
   const EXCHANGE_RATES = gql`
