@@ -1,274 +1,256 @@
   .bannerBg {
-  background-image: url('../../assets/Image Background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 750px;
-  background-position: 100%;
-  margin-top: 30px;
-  position: relative;
-}
-
-.content {
-  text-align: center;
-  margin-bottom: 100px;
-  position: relative;
-  top: -600px;
-}
-
-.bannerBg::after {
-  content: '';
-  position: absolute;
-  filter: blur(64px);
-  width: 100%;
-  opacity: 0.5;
-  top: 30%;
-
-  border-radius: 20%;
-  background: #fff;
-  height: 250px;
-}
-
-.logoService {
-  background-image: url('../../assets/logo-service.png');
-  background-size: cover;
-  width: 125px;
-  height: 117px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-}
-
-.phone {
-  background-image: url('../../assets/phone.svg');
-  background-size: cover;
-  width: 70px;
-  right: 40%;
-  height: 70px;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-}
-
-.title {
-  font-style: normal;
-  font-family: 'Squada One', cursive;
-  font-weight: normal;
-  font-size: 65px;
-  line-height: 68px;
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-align: center;
-  color: #323131;
-}
-
-.description {
-  font-family: 'Poppins', sans-serif;
-  margin-top: 0;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: center;
-  color: #323131;
-}
-
-.buttons {
-  margin-bottom: 128px;
-}
-
-.call {
-  background: #ffffff;
-  box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
-  border-radius: 10px;
-  width: 518px;
-  height: 166px;
-  margin: 0 auto;
-  position: relative;
-  font-weight: 500;
-  top: 100px;
-  font-size: 30px;
-  text-align: left;
-  line-height: 52px;
-  font-family: var(--font-family);
-  color: #323131;
-}
-
-.tel {
-  display: flex;
-  padding-top: 35px;
-  padding-left: 155px;
-  flex-direction: column;
-}
-
-.call span {
-  margin-bottom: -65px;
-}
-
-.call b {
-  display: inline-block;
-  font-weight: 700;
-  font-size: 43px;
-}
-
-.callSvg {
-  position: absolute;
-  left: 72px;
-  top: 51px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .cardRight {
-    display: none;
+      background-image: url('../../assets/Image Background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 750px;
+      background-position: 100%;
+      margin-top: 30px;
+      position: relative;
   }
-
+  
   .content {
-    left: 10%;
-    top: -650px;
+      text-align: center;
+      margin-bottom: 100px;
+      position: relative;
+      top: -600px;
   }
+  
   .bannerBg::after {
-    content: '';
-    position: absolute;
-    filter: blur(64px);
-    width: 100%;
-    opacity: 0.5;
-    top: 20%;
-
-    border-radius: 20%;
-    background: #fff;
-    height: 550px;
+      content: '';
+      position: absolute;
+      filter: blur(64px);
+      width: 100%;
+      opacity: 0.5;
+      top: 30%;
+      border-radius: 20%;
+      background: #fff;
+      height: 250px;
   }
-}
-
-/* 768 width+ */
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .banner {
-    margin-top: 0;
+  
+  .logoService {
+      background-image: url('../../assets/logo-service.png');
+      background-size: cover;
+      width: 125px;
+      height: 117px;
+      margin: 0 auto;
+      background-repeat: no-repeat;
   }
-  .call {
-    background: #ffffff;
-    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
-    border-radius: 10px;
-    width: 265px;
-    height: 145px;
-    margin: 0 auto;
-    position: relative;
-    font-weight: 500;
-    font-size: 22px;
-    text-align: left;
-    padding: 40px 43px 51px 88px;
-    line-height: 34px;
-    font-family: var(--font-family);
-    color: #323131;
+  
+  .phone {
+      background-image: url('../../assets/phone.svg');
+      background-size: cover;
+      width: 70px;
+      right: 40%;
+      height: 70px;
+      margin: 0 auto;
+      background-repeat: no-repeat;
   }
-
-  .callSvg {
-    width: 50px;
-    left: 34px;
+  
+  .title {
+      font-style: normal;
+      font-family: 'Squada One', cursive;
+      font-weight: normal;
+      font-size: 65px;
+      line-height: 68px;
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-align: center;
+      color: #323131;
   }
-
-  .cardRight {
-    top: 3252px;
-    position: none;
-    right: 70px;
-    padding: 14px 52px;
-  }
-
-  .content {
-    text-align: center;
-    left: 0;
-    top: -650px;
-    padding-top: 0;
-  }
-
-  .call b {
-    white-space: nowrap;
-    font-size: 20px;
-  }
-
-  .tel {
-    display: block;
-    padding-top: 0;
-    padding-left: 0;
-    flex-direction: column;
-  }
-  .bannerBg::after {
-    content: '';
-    position: absolute;
-    filter: blur(64px);
-    width: 100%;
-    opacity: 0.5;
-    top: 20%;
-
-    border-radius: 20%;
-    background: #fff;
-    height: 550px;
-  }
-}
-
-/* 480 width */
-@media screen and (min-width: 300px) and (max-width: 479px) {
-  .banner {
-    margin-top: -70px;
-  }
-
-  .content {
-    left: 0;
-    top: -650px;
-  }
-
-  .call {
-    background: #ffffff;
-    box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
-    border-radius: 10px;
-    width: 250px;
-    height: 148px;
-    margin: 0 auto;
-    position: relative;
-    font-weight: 500;
-    font-size: 22px;
-    text-align: left;
-    padding: 40px 43px 51px 88px;
-    line-height: 34px;
-    font-family: var(--font-family);
-    color: #323131;
-    top: -100px;
-    bottom: 116px;
-  }
-
-  .callSvg {
-    width: 50px;
-    left: 23px;
-  }
-  .content {
-    text-align: center;
-    padding-top: 0;
-  }
-
-  .tel b {
-    white-space: nowrap;
-    font-size: 20px;
-  }
-
-  .tel {
-    display: block;
-    padding-top: 0;
-    padding-left: 0;
-    flex-direction: column;
-  }
-
+  
   .description {
-    font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 0;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      color: #323131;
   }
-
-  .bannerBg::after {
-    content: '';
-    position: absolute;
-    filter: blur(64px);
-    width: 100%;
-    opacity: 0.5;
-    top: 20%;
-
-    border-radius: 20%;
-    background: #fff;
-    height: 250px;
+  
+  .buttons {
+      margin-bottom: 128px;
   }
-}
+  
+  .call {
+      background: #ffffff;
+      box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.145947);
+      border-radius: 10px;
+      width: 518px;
+      height: 166px;
+      margin: 0 auto;
+      position: relative;
+      font-weight: 500;
+      top: 100px;
+      font-size: 30px;
+      text-align: left;
+      line-height: 52px;
+      font-family: var(--font-family);
+      color: #323131;
+  }
+  
+  .tel {
+      display: flex;
+      padding-top: 35px;
+      padding-left: 155px;
+      flex-direction: column;
+  }
+  
+  .call span {
+      margin-bottom: -65px;
+  }
+  
+  .call b {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 43px;
+  }
+  
+  .callSvg {
+      position: absolute;
+      left: 72px;
+      top: 51px;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      .cardRight {
+          display: none;
+      }
+      .content {
+          left: 10%;
+          top: -650px;
+      }
+      .bannerBg::after {
+          content: '';
+          position: absolute;
+          filter: blur(64px);
+          width: 100%;
+          opacity: 0.5;
+          top: 20%;
+          border-radius: 20%;
+          background: #fff;
+          height: 550px;
+      }
+  }
+  /* 768 width+ */
+  
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+      .banner {
+          margin-top: 0;
+      }
+      .call {
+          background: #ffffff;
+          box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+          border-radius: 10px;
+          width: 265px;
+          height: 145px;
+          margin: 0 auto;
+          position: relative;
+          font-weight: 500;
+          font-size: 22px;
+          text-align: left;
+          padding: 40px 43px 51px 88px;
+          line-height: 34px;
+          font-family: var(--font-family);
+          color: #323131;
+      }
+      .callSvg {
+          width: 50px;
+          left: 34px;
+      }
+      .cardRight {
+          top: 3252px;
+          position: none;
+          right: 70px;
+          padding: 14px 52px;
+      }
+      .content {
+          text-align: center;
+          left: 0;
+          top: -650px;
+          padding-top: 0;
+      }
+      .call b {
+          white-space: nowrap;
+          font-size: 20px;
+      }
+      .tel {
+          display: block;
+          padding-top: 0;
+          padding-left: 0;
+          flex-direction: column;
+      }
+      .bannerBg::after {
+          content: '';
+          position: absolute;
+          filter: blur(64px);
+          width: 100%;
+          opacity: 0.5;
+          top: 20%;
+          border-radius: 20%;
+          background: #fff;
+          height: 550px;
+      }
+  }
+  /* 480 width */
+  
+  @media screen and (min-width: 300px) and (max-width: 479px) {
+      .banner {
+          margin-top: -70px;
+      }
+      .content {
+          left: 0;
+          top: -650px;
+      }
+      .call {
+          background: #ffffff;
+          box-shadow: 20px 20px 100px rgb(0 0 0 / 15%);
+          border-radius: 10px;
+          width: 250px;
+          height: 148px;
+          margin: 0 auto;
+          position: relative;
+          font-weight: 500;
+          font-size: 22px;
+          text-align: left;
+          padding: 40px 43px 51px 88px;
+          line-height: 34px;
+          font-family: var(--font-family);
+          color: #323131;
+          top: -100px;
+          bottom: 116px;
+      }
+      .callSvg {
+          width: 50px;
+          left: 23px;
+      }
+      .content {
+          text-align: center;
+          padding-top: 0;
+      }
+      .tel b {
+          white-space: nowrap;
+          font-size: 20px;
+      }
+      .tel {
+          display: block;
+          padding-top: 0;
+          padding-left: 0;
+          flex-direction: column;
+      }
+      .description {
+          font-weight: 700;
+      }
+      .bannerBg::after {
+          content: '';
+          position: absolute;
+          filter: blur(64px);
+          width: 100%;
+          opacity: 0.5;
+          top: 20%;
+          border-radius: 20%;
+          background: #fff;
+          height: 70%
+      }
+  }
