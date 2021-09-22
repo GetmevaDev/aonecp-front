@@ -5,6 +5,8 @@ import Fade from 'react-reveal/Fade';
 import Popup from 'reactjs-popup';
 
 export const list = [
+  { id: 1, title: 'FAQ', href: '/faq' },
+
   { id: 2, title: 'Pricing', href: '/pricing' },
   { id: 3, title: 'Credit Monitoring', href: '/credit-monitoring' },
   { id: 4, title: 'Sign Up', href: '/client-form' },
@@ -32,7 +34,7 @@ const NavBar = ({ location }) => {
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li className={styles.firstitem}>
-              <NavLink
+              {/* <NavLink
                 className={styles.item}
                 activeClassName={location.pathname === '/' ? styles.itemActive : styles.item}
                 to="/">
@@ -54,7 +56,7 @@ const NavBar = ({ location }) => {
                     <li className={styles.dropdownLink}>FAQ</li>
                   </Link>
                 </ul>
-              </Fade>
+              </Fade> */}
             </li>
             {list.map(({ title, href }, index) => (
               <NavLink

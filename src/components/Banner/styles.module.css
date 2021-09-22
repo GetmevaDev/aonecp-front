@@ -1,4 +1,4 @@
-.bannerBg {
+  .bannerBg {
   background-image: url('../../assets/Image Background.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -253,6 +253,10 @@
     padding-top: 0;
     padding-left: 0;
     flex-direction: column;
+  }
+
+  .description {
+    font-weight: 700;
   }
 
   .bannerBg::after {
