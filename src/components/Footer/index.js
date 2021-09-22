@@ -12,6 +12,7 @@ const Footer = ({ location }) => {
     { id: 2, title: 'Pricing', href: '/pricing' },
     { id: 3, title: 'Credit Monitoring', href: '/credit-monitoring' },
     { id: 4, title: 'Privacy Policy', href: '/privacy' },
+    { id: 4, title: 'Get Started Now', href: '/client-form' },
 
     // { id: 4, title: 'Credit Education Blog', href: '#' },
   ];
@@ -55,7 +56,9 @@ const Footer = ({ location }) => {
             </NavLink>
           ))}
 
-          <Popup
+
+
+          {/* <Popup
             trigger={
               <li className={styles.item} style={{ cursor: 'pointer' }}>
                 Get Started Now
@@ -70,7 +73,7 @@ const Footer = ({ location }) => {
                 <li className="dropdownLink">Affiliate Form </li>
               </Link>
             </div>
-          </Popup>
+          </Popup> */}
         </ul>
       </nav>
       <div className={styles.footerBlock}>
