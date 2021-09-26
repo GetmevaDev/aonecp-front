@@ -61,7 +61,7 @@ p {
   position: absolute;
   width: 30%;
   left: 166px;
-  bottom: -759px;
+  bottom: -827px;
   padding: 36px 50px;
 }
 
@@ -286,7 +286,7 @@ p {
 /* 480 width */
 @media screen and (min-width: 300px) and (max-width: 479px) {
   .choose {
-    margin-top: -700px;
+    margin-top: -800px;
     flex-direction: column;
   }
   .handImg {

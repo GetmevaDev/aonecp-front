@@ -7,6 +7,7 @@ import CreditMonitory from './pages/CreditMonitory';
 import OurProcess from './pages/OurProcess';
 import Consultation from './pages/Consultation';
 import Affiliate from './pages/AffiliateForm';
+import Articles from './pages/Articles';
 
 import { Switch, Route } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
@@ -63,6 +64,7 @@ function App() {
         </Route>
         <Route path="/affiliate-form" component={Affiliate} />
         <Route path="/client-form" component={ClientForm} />
+        <Route path="/articles" component={Articles} />
       </Switch>
     </div>
   );

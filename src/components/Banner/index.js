@@ -13,8 +13,10 @@ const Banner = () => {
         <div className={styles.content}>
           <div className={styles.contentInner}>
             <div className={styles.logoService}></div>
-            <h1 className={styles.title}>Restoring lives the easy way</h1>
-            {/* <p className={styles.description}>Free for the first 30 days</p>{' '} */}
+            <h1 className={styles.title}>Restoring financial independence</h1>
+            <h3 className={styles.description}>Don’t Let A Bad Credit Score Get In The Way! Start Restoring Your Life In As Little As 90 Days!</h3>
+            <p className={styles.description} style={{fontWeight: 500}}>We can show you exactly what’s hurting your score & how we can work to fix it</p>
+
           </div>
           <div className={styles.buttonsInner}>
             <div className={styles.buttons} style={{ marginTop: 20 }}>

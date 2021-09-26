@@ -1,0 +1,270 @@
+.articles {
+  margin-top: 100px;
+  max-height: 100%;
+  margin-bottom: 400px;
+}
+
+/* .articleImgUrl {
+  background-size: cover;
+  width: 100%;
+  max-height: 100px; */
+/* } */
+
+.left .accordion-wrapper .accordion-item .accordion-title {
+  width: 40%;
+}
+
+.left .accordion-title {
+  height: 10%;
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  width: 100%;
+}
+
+.right .title {
+  font-family: 'Squada One', sans-serif;
+  margin-bottom: 40px;
+  font-size: 60px;
+  line-height: 48px;
+
+  color: #323131;
+}
+
+.main {
+  display: flex;
+}
+
+.text span ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.text span ul li {
+  list-style-type: disc;
+  font-weight: 700;
+}
+
+.text {
+  margin-top: 50px;
+}
+
+.titleunder {
+  display: flex;
+}
+
+.text span {
+  font-weight: 400;
+  display: block;
+  margin-top: 25px;
+}
+
+.articleImg {
+  margin-left: 30px;
+}
+
+.left .accordion-wrapper .accordion-item h3.accordion-title button.active {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  width: 100%;
+  font-family: var(--font-family);
+  padding: 20px;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.left .accordion-item {
+  margin-right: 50px;
+  height: 100px;
+}
+
+.left .accordion-panel {
+  display: block;
+  position: relative;
+  width: 80%;
+}
+
+.left #sect-1,
+.left #sect-2,
+.left #sect-3,
+.left #sect-4,
+.left #sect-5,
+.left #sect-6,
+.left #sect-7,
+.left #sect-8,
+.left #sect-9,
+.left #sect-10,
+.left #sect-11,
+.left #sect-12,
+.left #sect-13,
+.left #sect-14 {
+  position: absolute;
+}
+
+.left #sect-2 {
+  top: -100px;
+}
+
+.left #sect-3 {
+  top: -200px;
+}
+
+.left #sect-4 {
+  top: -300px;
+}
+
+.left #sect-5 {
+  top: -400px;
+}
+
+.left #sect-6 {
+  top: -500px;
+}
+
+.left #sect-7 {
+  top: -600px;
+}
+
+.left #sect-8 {
+  top: -700px;
+}
+
+.left #sect-9 {
+  top: -800px;
+}
+
+.left #sect-10 {
+  top: -900px;
+}
+
+.left #sect-11 {
+  top: -1000px;
+}
+
+.left #sect-12 {
+  top: -1100px;
+}
+
+.left #sect-13 {
+  top: -1200px;
+}
+
+.left #sect-14 {
+  top: -1300px;
+}
+
+.left .accordion-wrapper .accordion-item h3.accordion-title button:hover {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  color: #fff;
+}
+
+.left .accordion-wrapper .accordion-item h3.accordion-title button {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #000;
+}
+
+.left .accordion-wrapper .accordion-item .accordion-panel .panel-close {
+  background: none;
+}
+
+.left .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.minus {
+  content: url('../../assets/icon-rightarrow.svg');
+}
+
+.left .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.plus {
+  content: url('../../assets/icon-rightarrow.svg');
+  transform: rotate(90deg);
+}
+
+.Collapsible {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border-top: 0;
+}
+.Collapsible__contentOuter {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.Collapsible__contentInner p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.Collapsible__contentInner p:last-child {
+  margin-bottom: 0;
+}
+
+.Collapsible__trigger.is-open {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+}
+
+.Collapsible__trigger.is-closed {
+  color: #323131;
+}
+
+.Collapsible__trigger {
+  display: block;
+  margin-bottom: 11px;
+  width: 30%;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #323131;
+  height: 66px;
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: white;
+}
+.Collapsible__trigger:after {
+  content: url('../../assets/icon-rightarrow.svg');
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: transform 300ms;
+}
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(90deg);
+}
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.CustomTriggerCSS {
+  background-color: lightcoral;
+  transition: background-color 200ms ease;
+}
+
+.CustomTriggerCSS--open {
+  background-color: darkslateblue;
+}
+
+.Collapsible__custom-sibling {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #cbb700;
+  color: black;
+}
