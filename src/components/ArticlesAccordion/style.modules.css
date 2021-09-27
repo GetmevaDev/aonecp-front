@@ -4,11 +4,9 @@
   margin-bottom: 400px;
 }
 
-/* .articleImgUrl {
-  background-size: cover;
-  width: 100%;
-  max-height: 100px; */
-/* } */
+.left ul li {
+  list-style-type: disc;
+}
 
 .left .accordion-wrapper .accordion-item .accordion-title {
   width: 40%;
@@ -39,8 +37,14 @@
   display: flex;
 }
 
+.text span {
+  padding-left: 40px;
+}
+
 .text span ul {
+  display: block;
   margin-top: 30px;
+  padding-left: 0;
   margin-bottom: 30px;
 }
 
@@ -67,123 +71,8 @@
   margin-left: 30px;
 }
 
-.left .accordion-wrapper .accordion-item h3.accordion-title button.active {
-  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-
-  width: 100%;
-  font-family: var(--font-family);
-  padding: 20px;
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.left .accordion-item {
-  margin-right: 50px;
-  height: 100px;
-}
-
-.left .accordion-panel {
-  display: block;
-  position: relative;
-  width: 80%;
-}
-
-.left #sect-1,
-.left #sect-2,
-.left #sect-3,
-.left #sect-4,
-.left #sect-5,
-.left #sect-6,
-.left #sect-7,
-.left #sect-8,
-.left #sect-9,
-.left #sect-10,
-.left #sect-11,
-.left #sect-12,
-.left #sect-13,
-.left #sect-14 {
-  position: absolute;
-}
-
-.left #sect-2 {
-  top: -100px;
-}
-
-.left #sect-3 {
-  top: -200px;
-}
-
-.left #sect-4 {
-  top: -300px;
-}
-
-.left #sect-5 {
-  top: -400px;
-}
-
-.left #sect-6 {
-  top: -500px;
-}
-
-.left #sect-7 {
-  top: -600px;
-}
-
-.left #sect-8 {
-  top: -700px;
-}
-
-.left #sect-9 {
-  top: -800px;
-}
-
-.left #sect-10 {
-  top: -900px;
-}
-
-.left #sect-11 {
-  top: -1000px;
-}
-
-.left #sect-12 {
-  top: -1100px;
-}
-
-.left #sect-13 {
-  top: -1200px;
-}
-
-.left #sect-14 {
-  top: -1300px;
-}
-
-.left .accordion-wrapper .accordion-item h3.accordion-title button:hover {
-  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
-  color: #fff;
-}
-
-.left .accordion-wrapper .accordion-item h3.accordion-title button {
-  background: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  color: #000;
-}
-
-.left .accordion-wrapper .accordion-item .accordion-panel .panel-close {
-  background: none;
-}
-
-.left .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.minus {
-  content: url('../../assets/icon-rightarrow.svg');
-}
-
-.left .accordion-wrapper .accordion-item h3.accordion-title button span.icon-wrapper span.plus {
-  content: url('../../assets/icon-rightarrow.svg');
-  transform: rotate(90deg);
+.articleImg img {
+  background-size: contain;
 }
 
 .Collapsible {
@@ -198,7 +87,7 @@
   border-top: 0;
 }
 .Collapsible__contentOuter {
-  width: 60%;
+  width: 70%;
   margin-left: 30px;
 }
 
@@ -267,4 +156,99 @@
   font-size: 12px;
   background-color: #cbb700;
   color: black;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .articles {
+    margin-top: 0;
+  }
+
+  .Collapsible__contentOuter {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Collapsible__contentInner {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right .title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+
+  .Collapsible {
+    flex-direction: column;
+  }
+
+  .Collapsible__trigger.is-closed,
+  .Collapsible__trigger.is-open {
+    width: 100%;
+  }
+
+  .articleImg {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .articleImg img {
+    width: 100%;
+  }
+
+  .titleunder {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .articles {
+    margin-top: 0;
+  }
+
+  .Collapsible__contentOuter {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Collapsible__contentInner {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right .title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+
+  .Collapsible {
+    flex-direction: column;
+  }
+
+  .Collapsible__trigger.is-closed,
+  .Collapsible__trigger.is-open {
+    width: 100%;
+  }
+
+  .articleImg {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .articleImg img {
+    width: 100%;
+  }
+
+  .titleunder {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 }

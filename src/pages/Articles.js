@@ -11,13 +11,13 @@ const Articles = () => {
   const EXCHANGE_RATES = gql`
     query articles {
       articles {
+        titleBottom
+        text
+        descBottom
         titleArticle
-        titleRight
         img {
           url
         }
-        desc
-        ItemList
       }
     }
   `;
