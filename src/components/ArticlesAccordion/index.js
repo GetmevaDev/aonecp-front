@@ -14,8 +14,8 @@ const ArticlesAccordion = ({ data }) => {
     <div className="container">
       <div className="articles ">
         <div className="left">
-          {data.articles.map(({ titleBottom, titleArticle, img, text, descBottom }) => (
-            <Collapsible trigger={titleArticle}>
+          {data.articles.map(({ open, titleBottom, titleArticle, img, text, descBottom }) => (
+            <Collapsible trigger={titleArticle} open={open === true ? true : false}>
               <div className="right">
                 <div className="title">{titleArticle}</div>
                 <div className="text">

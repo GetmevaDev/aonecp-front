@@ -13,6 +13,7 @@ const Articles = () => {
       articles {
         titleBottom
         text
+        open
         descBottom
         titleArticle
         img {
