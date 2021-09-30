@@ -1,0 +1,144 @@
+.rc-tabs-tab-btn {
+}
+
+.article-tab .title {
+  font-family: 'Squada One', sans-serif;
+  font-size: 60px;
+  line-height: 48px;
+
+  color: #323131;
+}
+.article-tab ul {
+  margin: 25px 0;
+}
+
+.article-tab ul li {
+  list-style-type: disc;
+}
+
+.article-tab .articleImg {
+  width: 100%;
+}
+
+.article-tab .articleImg img {
+  max-width: 1200px;
+  max-height: 400px;
+}
+
+.article-tab .titleunder {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-tab .desc {
+  padding-right: 30px;
+}
+
+.rc-tabs {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: none;
+}
+
+.rc-tabs-tab {
+  width: 330px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #323131;
+  padding: 20px;
+  height: 66px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+.rc-tabs-tab:after {
+  width: 16px;
+  height: 16px;
+  content: url('../../assets/icon-rightarrow.svg');
+  position: absolute;
+  transition: all 1s ease;
+  right: 10px;
+}
+
+.rc-tabs-tab-active {
+  background: linear-gradient(136.18deg, #fbda61 2.66%, #f76b1c 90.59%);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.rc-tabs-tab-active:after {
+  transform: rotateZ(90deg);
+}
+
+.rc-tabs-content-holder {
+  padding-left: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .article-tab .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .article-tab .title {
+    font-size: 40px;
+  }
+  .rc-tabs-tab {
+    width: 100%;
+  }
+  .article-tab {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .rc-tabs {
+    flex-direction: column;
+  }
+  .rc-tabs-content-holder {
+    padding-left: 0;
+  }
+  .article-tab .titleunder {
+    display: flex;
+    justify-content: start;
+  }
+  .article-tab .desc {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+  .article-tab .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .rc-tabs-tab {
+    width: 100%;
+  }
+  .article-tab {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .rc-tabs {
+    flex-direction: column;
+  }
+
+  .rc-tabs-content-holder {
+    padding-left: 0;
+  }
+
+  .article-tab .titleunder {
+    flex-direction: column;
+  }
+  .article-tab .desc {
+    padding-right: 0;
+  }
+  .articleImg img {
+    width: 100%;
+  }
+}

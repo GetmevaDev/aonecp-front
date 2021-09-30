@@ -3,9 +3,8 @@ import { BannerProps, Footer, NavBar } from '../components/';
 
 import arts from '../assets/articles.png';
 import { useQuery, gql } from '@apollo/client';
-import BeatLoader from 'react-spinners/BeatLoader';
 import { Helmet } from 'react-helmet';
-import ArticlesAccordion from '../components/ArticlesAccordion';
+import Tab from '../components/Tab';
 
 const Articles = () => {
   const EXCHANGE_RATES = gql`
@@ -13,6 +12,7 @@ const Articles = () => {
       articles {
         titleBottom
         text
+        id
         open
         descBottom
         titleArticle
@@ -24,13 +24,6 @@ const Articles = () => {
   `;
   const { loading, error, data } = useQuery(EXCHANGE_RATES);
 
-  if (loading)
-    return (
-      <div style={{ marginTop: 100, textAlign: 'center' }}>
-        <BeatLoader />
-      </div>
-    );
-  if (error) return <p>Error :(</p>;
   return (
     <div>
       <Helmet>
@@ -45,7 +38,7 @@ const Articles = () => {
       </Helmet>
       <NavBar />
       <BannerProps imgUrl={arts} title="Articles" />
-      <ArticlesAccordion data={data} />
+      <Tab data={data} loading={loading} error={error} />
       <Footer />{' '}
     </div>
   );
