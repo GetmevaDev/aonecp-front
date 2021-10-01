@@ -1,6 +1,10 @@
 .rc-tabs-tab-btn {
 }
 
+.article-tab {
+  margin-bottom: -100px;
+}
+
 .article-tab .title {
   font-family: 'Squada One', sans-serif;
   font-size: 60px;
@@ -36,7 +40,6 @@
 }
 
 .rc-tabs {
-  margin-top: 100px;
   margin-bottom: 100px;
   border: none;
 }
@@ -80,6 +83,9 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .rc-tabs {
+    margin-top: 50px;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -125,6 +131,7 @@
     margin-bottom: 0;
   }
   .rc-tabs {
+    margin-top: 100px;
     flex-direction: column;
   }
 

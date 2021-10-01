@@ -13,6 +13,8 @@ const Articles = () => {
         titleBottom
         text
         id
+        createdAt
+        updatedAt
         open
         descBottom
         titleArticle

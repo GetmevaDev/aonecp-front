@@ -1,6 +1,6 @@
 .pricing {
   margin-top: 25px;
-  height: 418px;
+  max-height: 100%;
   position: relative;
 }
 
@@ -54,6 +54,10 @@
     position: relative;
     display: block;
   }
+  .pricing {
+    margin-top: 15px;
+    height: 150px;
+  }
 
   .pricing::before {
     content: '';
@@ -81,7 +85,7 @@
 
   .pricing {
     margin-top: 15px;
-    height: 0%;
+    height: 100px;
   }
 
   .pricing::before {
