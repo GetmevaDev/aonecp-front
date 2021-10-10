@@ -13,6 +13,12 @@ const Banner = ({ imgUrl }) => {
     query faq {
       calLNows {
         tel
+        title
+        boldtext
+        paragraph
+        logo {
+          url
+        }
       }
     }
   `;
@@ -24,6 +30,9 @@ const Banner = ({ imgUrl }) => {
       </div>
     );
   if (error) return <p>Error :(</p>;
+
+  const logo = data.calLNows[0]?.logo[0]?.url;
+  console.log(data);
   return (
     <>
       <div className={styles.banner}>
@@ -34,14 +43,11 @@ const Banner = ({ imgUrl }) => {
           }}></div>
         <div className={styles.content}>
           <div className={styles.contentInner}>
-            <div className={styles.logoService}></div>
-            <h1 className={styles.title}>Restoring financial independence</h1>
-            <h3 className={styles.description}>
-              Don’t Let A Bad Credit Score Get In The Way! Start Restoring Your Life In As Little As
-              90 Days!
-            </h3>
+            <div className={styles.logoService} style={{ backgroundImage: `url(${logo})` }}></div>
+            <h1 className={styles.title}>{data.calLNows[0].title}</h1>
+            <h3 className={styles.description}>{data.calLNows[0].boldtext}</h3>
             <p className={styles.description} style={{ fontWeight: 500 }}>
-              We can show you exactly what’s hurting your score & how we can work to fix it
+              {data.calLNows[0].paragraph}
             </p>
           </div>
           <div className={styles.buttonsInner}>
