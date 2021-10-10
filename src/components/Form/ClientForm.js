@@ -7,7 +7,9 @@ import PhoneInput from 'react-phone-number-input';
 import emailjs from 'emailjs-com';
 
 import bgGray from '../../assets/woman.png';
-const Form = (props) => {
+const Form = ({ data }) => {
+  const meta = data.seos[6]?.bannerTitle;
+  const img = data.seos[6]?.bannerImg[0]?.url;
   const [firstName, setFirstName] = useState();
   const [lastname, setLastname] = useState();
   const [wouldyoulike, setWouldYouLike] = useState();
@@ -75,11 +77,9 @@ const Form = (props) => {
     <>
       <div className={styles.pricing}>
         <div>
-          <img className={styles.imgProp} src={bgGray} alt="" />
+          <img className={styles.imgProp} src={img} alt="" />
           <div className={styles.titleBlock}>
-            <h1 className={styles.title}>
-              Please fill out the information below for a free consultation
-            </h1>
+            <h1 className={styles.title}>{meta}</h1>
           </div>
         </div>
       </div>

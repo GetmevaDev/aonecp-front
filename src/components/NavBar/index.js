@@ -4,6 +4,8 @@ import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
 import Popup from 'reactjs-popup';
 
+import Background from '../../assets/logo.png';
+
 export const list = [
   { id: 1, title: 'FAQ', href: '/faq' },
 
@@ -29,7 +31,11 @@ const NavBar = ({ location }) => {
     <div className="container">
       <div className={styles.navbar}>
         <Link to="/">
-          <div className={styles.imgLogo}></div>
+          <div
+            className={styles.imgLogo}
+            style={{
+              backgroundImage: `url(${Background})`,
+            }}></div>
         </Link>
 
         <nav className={styles.nav}>

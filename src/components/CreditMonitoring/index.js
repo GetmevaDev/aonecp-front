@@ -24,8 +24,6 @@ const CreditMonitoring = () => {
     );
   if (error) return <p>Error :(</p>;
 
-  console.log(data);
-
   return (
     <div className="container">
       <div className={styles.credit}>

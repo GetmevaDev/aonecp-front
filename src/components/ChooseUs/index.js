@@ -32,8 +32,6 @@ const ChooseUs = () => {
     );
   if (error) return <p>Error :(</p>;
 
-  console.log(data);
-
   return (
     <>
       <div className={styles.choose}>

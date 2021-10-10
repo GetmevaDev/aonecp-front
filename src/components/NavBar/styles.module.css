@@ -158,7 +158,7 @@
 
 .imgLogo {
   content: '';
-  background-image: url('../../assets/logo.png');
+  /* background-image: url('../../assets/logo.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   width: 190px;

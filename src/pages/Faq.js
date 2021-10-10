@@ -5,11 +5,14 @@ import FaqBanner from '../assets/faqbg.png';
 import { Helmet } from 'react-helmet';
 import { useQuery, gql } from '@apollo/client';
 
-const Faq = () => {
+const Faq = ({ faqdata }) => {
+  const meta = faqdata.seos[2]?.bannerTitle;
+  const img = faqdata.seos[2]?.bannerImg[0]?.url;
   const EXCHANGE_RATES = gql`
     query faq {
       frequentlyAskedQuestions {
         ask
+        metaTitle
         description
       }
     }
@@ -24,8 +27,6 @@ const Faq = () => {
     );
   if (error) return <p>Error :(</p>;
 
-  console.log(data);
-
   return (
     <div>
       <Helmet>
@@ -39,7 +40,7 @@ const Faq = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <BannerProps imgUrl={FaqBanner} title="FAQ" />
+      <BannerProps title={meta} imgUrl={img} />
       <CreditScore data={data} />
       <Footer />{' '}
     </div>

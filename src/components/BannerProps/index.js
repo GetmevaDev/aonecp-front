@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-const BannerProps = ({ title, imgUrl, titleColor }) => {
+const BannerProps = ({ title, imgUrl }) => {
   return (
     <div className={styles.pricing}>
       <div>

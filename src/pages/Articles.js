@@ -6,7 +6,9 @@ import { useQuery, gql } from '@apollo/client';
 import { Helmet } from 'react-helmet';
 import Tab from '../components/Tab';
 
-const Articles = () => {
+const Articles = ({ artdata }) => {
+  const meta = artdata.seos[5]?.bannerTitle;
+  const img = artdata.seos[5]?.bannerImg[0]?.url;
   const EXCHANGE_RATES = gql`
     query articles {
       articles {
@@ -39,7 +41,7 @@ const Articles = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <BannerProps imgUrl={arts} title="Articles" />
+      <BannerProps title={meta} imgUrl={img} />
       <Tab data={data} loading={loading} error={error} />
       <Footer />{' '}
     </div>

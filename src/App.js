@@ -21,50 +21,59 @@ import Privacy from './pages/Privacy';
 
 function App() {
   useScrollToTop();
-  // const EXCHANGE_RATES = gql`
-  //   query faq {
-  //     seos {
-  //       homemeta
-  //     }
-  //   }
-  // `;
-  // const { loading, error, data } = useQuery(EXCHANGE_RATES);
-  // if (loading) return '';
-  // if (error) return <p>Error :(</p>;
-  // console.log(data);
-
   useEffect(() => {
     ReactGa.initialize('G-GFN9PQZ5KT');
     ReactGa.pageview(window.location.pathname + window.location.search);
   });
+
+  const EXCHANGE_RATES = gql`
+    query faq {
+      seos {
+        homemeta
+        bannerTitle
+        bannerImg {
+          url
+        }
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  if (loading) return '';
+  if (error) return <p>Error :(</p>;
 
   return (
     <div>
       <MobileNav pageWrapId={'page-wrap'} outerContainerId={'App'} />
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <Home data={data} />
         </Route>
         <Route path="/pricing">
-          <Pricing />
+          <Pricing data={data} />
         </Route>
         <Route path="/our-process">
-          <OurProcess />
+          <OurProcess data={data} />
         </Route>
         <Route path="/thankyou" component={Consultation} />
         <Route path="/faq">
-          <Faq />
+          <Faq faqdata={data} />
         </Route>
         <Route path="/credit-monitoring">
-          <CreditMonitory />
+          <CreditMonitory data={data} />
         </Route>
 
         <Route path="/privacy">
           <Privacy />
         </Route>
-        <Route path="/affiliate-form" component={Affiliate} />
-        <Route path="/client-form" component={ClientForm} />
-        <Route path="/articles" component={Articles} />
+        <Route path="/affiliate-form">
+          <Affiliate />
+        </Route>
+        <Route path="/client-form">
+          <ClientForm data={data} />
+        </Route>
+        <Route path="/articles">
+          <Articles artdata={data} />
+        </Route>
       </Switch>
     </div>
   );

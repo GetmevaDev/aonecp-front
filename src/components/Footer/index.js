@@ -1,13 +1,26 @@
 import React from 'react';
 import styles from './styles.module.css';
 import Fade from 'react-reveal/Fade';
-import Popup from 'reactjs-popup';
+// import Popup from 'reactjs-popup';
+
+import { useQuery, gql } from '@apollo/client';
 
 import { withRouter, NavLink, Link } from 'react-router-dom';
 
 import RGM from '../../assets/logoo.svg';
 
 const Footer = ({ location }) => {
+  const EXCHANGE_RATES = gql`
+    query footer {
+      footerCS {
+        text
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  if (loading) return <div style={{ marginTop: 100, textAlign: 'center' }}>...</div>;
+  if (error) return <p>Error :(</p>;
+
   const list = [
     { id: 2, title: 'Pricing', href: '/pricing' },
     { id: 3, title: 'Credit Monitoring', href: '/credit-monitoring' },
@@ -56,8 +69,6 @@ const Footer = ({ location }) => {
             </NavLink>
           ))}
 
-
-
           {/* <Popup
             trigger={
               <li className={styles.item} style={{ cursor: 'pointer' }}>
@@ -77,7 +88,7 @@ const Footer = ({ location }) => {
         </ul>
       </nav>
       <div className={styles.footerBlock}>
-        <h4 className={styles.footerLeft}>© 2021 A1 Credit Partners. All Rights Reserved. </h4>
+        <h4 className={styles.footerLeft}>{data.footerCS[0].text}</h4>
         <p className={styles.footerRight}>
           <div className={styles.logoInner}></div>
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import { BannerProps, CreditMonitoring, Footer, NavBar, SignUp } from '../components';
-import pricing from '../assets/pricng.png';
 import { Helmet } from 'react-helmet';
 
-const Pricing = () => {
+const Pricing = ({ data }) => {
+  const meta = data.seos[4]?.bannerTitle;
+  const img = data.seos[4]?.bannerImg[0]?.url;
+
   return (
     <div>
       <Helmet>
@@ -17,7 +19,7 @@ const Pricing = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <BannerProps title="Pricing" imgUrl={pricing} />
+      <BannerProps title={meta} imgUrl={img} />
       <SignUp />
       <CreditMonitoring />
       <Footer />

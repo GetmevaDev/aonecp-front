@@ -2,7 +2,9 @@ import React from 'react';
 import { Banner, Benefits, ChooseUs, Footer, NavBar } from '../components/';
 import { Helmet } from 'react-helmet';
 
-const Home = () => {
+const Home = ({ data }) => {
+  const img = data?.seos[0]?.bannerImg[0]?.url;
+
   return (
     <div>
       <Helmet>
@@ -17,7 +19,7 @@ const Home = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <Banner />
+      <Banner imgUrl={img} />
       <ChooseUs />
 
       <Benefits />

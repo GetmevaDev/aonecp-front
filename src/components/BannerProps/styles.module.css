@@ -86,7 +86,7 @@
 
   .pricing {
     margin-top: 15px;
-    height: 100px;
+    height: 0%;
   }
 
   .pricing::before {

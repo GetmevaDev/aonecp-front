@@ -3,7 +3,7 @@ import { BannerProps, Footer, NavBar } from '../components';
 import ClientFormTwo from '../components/Form/ClientForm';
 import bgGray from '../assets/woman.png';
 
-const ClientForm = () => {
+const ClientForm = ({ data }) => {
   return (
     <>
       <title>A1CP - ClientForm</title>
@@ -20,7 +20,7 @@ const ClientForm = () => {
         imgUrl={bgGray}
       /> */}
 
-      <ClientFormTwo />
+      <ClientFormTwo data={data} />
       <Footer />
     </>
   );

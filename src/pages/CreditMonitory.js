@@ -4,7 +4,9 @@ import WhatIsMonitoring from '../components/WhatIsMonitoring';
 import CreditMonitoring from '../assets/creditmonitoringbg.png';
 import { Helmet } from 'react-helmet';
 
-const CreditMonitory = () => {
+const CreditMonitory = ({ data }) => {
+  const meta = data.seos[1]?.bannerTitle;
+  const img = data.seos[1]?.bannerImg[0]?.url;
   return (
     <div>
       <Helmet>
@@ -19,7 +21,7 @@ const CreditMonitory = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <BannerProps title="Credit Monitoring" imgUrl={CreditMonitoring} />
+      <BannerProps title={meta} imgUrl={img} />
 
       <WhatIsMonitoring />
       <Footer />

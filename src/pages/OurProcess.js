@@ -4,7 +4,9 @@ import { Helmet } from 'react-helmet';
 
 import Process from '../assets/process.png';
 
-const OurProcess = () => {
+const OurProcess = ({ data }) => {
+  const meta = data.seos[3]?.bannerTitle;
+  const img = data.seos[3]?.bannerImg[0]?.url;
   return (
     <div>
       <Helmet>
@@ -19,7 +21,8 @@ const OurProcess = () => {
         <meta property="og:image" content="" />
       </Helmet>
       <NavBar />
-      <BannerProps title="Our process" imgUrl={Process} />
+      <BannerProps title={meta} imgUrl={img} />
+
       <ProcessBlock />
       <Footer />
     </div>
