@@ -1,8 +1,17 @@
 import React from 'react';
 import { BannerProps, CreditMonitoring, Footer, NavBar, SignUp } from '../components';
 import { Helmet } from 'react-helmet';
+import BeatLoader from 'react-spinners/BeatLoader';
 
-const Pricing = ({ data }) => {
+const Pricing = ({ data, loading, error }) => {
+  if (loading)
+    return (
+      <div style={{ marginTop: 100, textAlign: 'center' }}>
+        <BeatLoader />
+      </div>
+    );
+  if (error) return <p>Error :(</p>;
+
   const meta = data.seos[4]?.bannerTitle;
   const img = data.seos[4]?.bannerImg[0]?.url;
 

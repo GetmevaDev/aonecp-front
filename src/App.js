@@ -38,28 +38,26 @@ function App() {
     }
   `;
   const { loading, error, data } = useQuery(EXCHANGE_RATES);
-  if (loading) return '';
-  if (error) return <p>Error :(</p>;
 
   return (
     <div>
       <MobileNav pageWrapId={'page-wrap'} outerContainerId={'App'} />
       <Switch>
         <Route path="/" exact>
-          <Home data={data} />
+          <Home data={data} loading={loading} error={error} />
         </Route>
         <Route path="/pricing">
-          <Pricing data={data} />
+          <Pricing data={data} loading={loading} error={error} />
         </Route>
         <Route path="/our-process">
-          <OurProcess data={data} />
+          <OurProcess data={data} loading={loading} error={error} />
         </Route>
         <Route path="/thankyou" component={Consultation} />
         <Route path="/faq">
-          <Faq faqdata={data} />
+          <Faq faqdata={data} loading={loading} error={error} />
         </Route>
         <Route path="/credit-monitoring">
-          <CreditMonitory data={data} />
+          <CreditMonitory data={data} loading={loading} error={error} />
         </Route>
 
         <Route path="/privacy">
@@ -69,10 +67,10 @@ function App() {
           <Affiliate />
         </Route>
         <Route path="/client-form">
-          <ClientForm data={data} />
+          <ClientForm data={data} loading={loading} error={error} />
         </Route>
         <Route path="/articles">
-          <Articles artdata={data} />
+          <Articles artdata={data} loading={loading} error={error} />
         </Route>
       </Switch>
     </div>

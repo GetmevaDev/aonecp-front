@@ -5,10 +5,15 @@ import BeatLoader from 'react-spinners/BeatLoader';
 import styles from './styles.module.css';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 const SignUp = () => {
   const [firstSign, setFirstSign] = useState([]);
   const [secondSign, setSecondSign] = useState([]);
+
+  const [thirdSign, setThirdSign] = useState('');
+
   const [loading, setLoading] = useState(true);
+
   const override = css`
     display: block;
     margin: 0 auto;
@@ -17,21 +22,30 @@ const SignUp = () => {
   const fetchData = () => {
     const firstContent = 'https://a1cp-back.herokuapp.com/pricingcontents';
     const secondContent = 'https://a1cp-back.herokuapp.com/pricing-content-twos';
+    const thirdContent = 'https://a1cp-back.herokuapp.com/pricingtexts';
 
     const getApiFirst = axios.get(firstContent);
     const getApiSecond = axios.get(secondContent);
+    const getApiThird = axios.get(thirdContent);
 
-    axios.all([getApiFirst, getApiSecond]).then(
+    axios.all([getApiFirst, getApiSecond, getApiThird]).then(
       axios.spread((...allData) => {
         const allDataFirstContent = allData[0].data;
         const allDataSecondContent = allData[1].data;
+        const allDataThirdContent = allData[2].data;
 
         setFirstSign(allDataFirstContent);
         setSecondSign(allDataSecondContent);
+        setThirdSign(allDataThirdContent);
         setLoading(false);
       }),
     );
   };
+
+  // let str = thirdSign.toString().replace(/\d+\.\d+/, '', function (a, b) {
+  //   return b ? `<span >` + b + '</span>' : a;
+  // });
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -43,17 +57,17 @@ const SignUp = () => {
       </div>
     );
 
+  // const numList = thirdSign[1].content.replace(/\s(d+)/g, '<span>$1</span>');
+
+  // const result = (thirdSign[0].content.match(/\d+/g) || []).map((n) => `<span >{n}</span>`);
+
   return (
     <div className="container">
-      <h1 className={styles.easyTitle}>Easy sign up process</h1>
+      <h1 className={styles.easyTitle}>{thirdSign[0].title}</h1>
+
       <p className={styles.easyDesc}>
-        Get your credit restoration program for
-        {/* <b className={styles.color}>30 </b> */}
-        {/* <b>days!</b> Then only */}
-        <b></b>
-        <b className={styles.color}> $99/month </b>
-        {/* <b>month </b>  */}
-        for the full package which includes the following benefits:
+        {thirdSign[0].content} <b className={styles.color}> {thirdSign[2].content} </b>{' '}
+        {thirdSign[3].content}
       </p>
 
       <div className={styles.inner}>
@@ -74,14 +88,16 @@ const SignUp = () => {
         <button className="btnBlue btnAny">and more</button>
       </Link>
       <p className={styles.easyDesc}>
-        Because of our competitive rates, clients are required to signup for credit monitoring
-        services with Identiyiq.com which starts at a <b>$</b>
-        <b className={styles.color}>1</b> <b>trial for</b> <b className={styles.color}>7</b>
-        <b>days</b> and will be <b>$</b>
+        {thirdSign[1].content}
+        <b>{thirdSign[4].content}</b>
+        <b className={styles.color}>1</b> <b>{thirdSign[5].content}</b>
+        <b className={styles.color}>{thirdSign[7].content} </b>
+        <b> {thirdSign[8].content} </b> {thirdSign[6].content} <b>{thirdSign[4].content}</b>
         <b className={styles.color}>19.99</b>
-        <b>month </b>/ moving forward. By signing up for the <b>$</b>
-        <b className={styles.color}>1</b> <b>trial</b>, we will provide you with a completely free
-        analysis and you will get all of the following benefits:
+        <b>month </b>
+        {thirdSign[9].content} <b>{thirdSign[4].content}</b>
+        <b className={styles.color}>1</b> <b>trial</b>
+        {thirdSign[10].content}
       </p>
 
       <div className={styles.inner}>

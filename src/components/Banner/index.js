@@ -32,7 +32,6 @@ const Banner = ({ imgUrl }) => {
   if (error) return <p>Error :(</p>;
 
   const logo = data.calLNows[0]?.logo[0]?.url;
-  console.log(data);
   return (
     <>
       <div className={styles.banner}>
