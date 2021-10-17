@@ -93,8 +93,8 @@ const SignUp = () => {
         <b className={styles.color}>1</b> <b>{thirdSign[5].content}</b>
         <b className={styles.color}>{thirdSign[7].content} </b>
         <b> {thirdSign[8].content} </b> {thirdSign[6].content} <b>{thirdSign[4].content}</b>
-        <b className={styles.color}>19.99</b>
-        <b>month </b>
+        <b className={styles.color}>{thirdSign[11].content}</b>
+        <b>{thirdSign[12].content}</b>
         {thirdSign[9].content} <b>{thirdSign[4].content}</b>
         <b className={styles.color}>1</b> <b>trial</b>
         {thirdSign[10].content}

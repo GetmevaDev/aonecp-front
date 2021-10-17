@@ -81,12 +81,14 @@
   .title {
     position: static;
     display: block;
+    line-height: 0.9;
     font-size: 30px;
   }
 
   .pricing {
     margin-top: 15px;
     height: 0%;
+    margin-bottom: -50px;
   }
 
   .pricing::before {

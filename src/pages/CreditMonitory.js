@@ -3,8 +3,16 @@ import { BannerProps, Footer, NavBar } from '../components';
 import WhatIsMonitoring from '../components/WhatIsMonitoring';
 import CreditMonitoring from '../assets/creditmonitoringbg.png';
 import { Helmet } from 'react-helmet';
+import BeatLoader from 'react-spinners/BeatLoader';
 
-const CreditMonitory = ({ data }) => {
+const CreditMonitory = ({ data, loading, error }) => {
+  if (loading)
+    return (
+      <div style={{ marginTop: 100, textAlign: 'center' }}>
+        <BeatLoader />
+      </div>
+    );
+  if (error) return <p>Error :(</p>;
   const meta = data.seos[1]?.bannerTitle;
   const img = data.seos[1]?.bannerImg[0]?.url;
   return (

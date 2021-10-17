@@ -30,7 +30,7 @@ const TabAccordion = ({ data, loading, error }) => {
 
   return (
     <div className="container article-tab">
-      <Tabs tabPosition="left" onChange={callback} tabBarGutter={10}>
+      <Tabs tabPosition="left" onChange={callback} tabBarGutter={10} className="mt">
         {reversed.map(({ id, titleBottom, titleArticle, img, text, descBottom }) => (
           <TabPane tab={titleArticle} key={id}>
             <div className="right">

@@ -45,11 +45,6 @@ export const Mobile = ({ location }, props) => {
                   Get Started
                 </li>
               </Link>
-              <Link to="/faq">
-                <li className="dropdownLink" onClick={closeMenu}>
-                  FAQ
-                </li>
-              </Link>
             </ul>
           </Fade>
         </li>

@@ -123,6 +123,7 @@
     font-size: 40px;
     text-align: center;
   }
+
   .rc-tabs-tab {
     width: 100%;
   }
@@ -131,7 +132,7 @@
     margin-bottom: 0;
   }
   .rc-tabs {
-    margin-top: 100px;
+    margin-top: 50px;
     flex-direction: column;
   }
 
