@@ -265,6 +265,9 @@
 
     border-radius: 20%;
     background: #fff;
-    height: 250px;
+    height: 400px;
+  }
+  .bannerBg {
+    background-position: 35%;
   }
 }
